@@ -5,19 +5,11 @@ bk="nice -n 19 my_rsync $rsync_nocopy --preallocate --exclude=private*/"
 
 tr_dir=/files/travmaturg
 tr_dir_big=/big_files/travmaturg
-bk_dir_local=/big_files/backup
-
-# external hdd
-usb_dir=/mnt/backup
-bk_dir=$usb_dir/backup
-toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
-#wd_my_passport_ultra_3_tb_black="a8d610cf-a1fc-40d1-aebf-2165ba2859a4"
-wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 
 # func dir
 mk_snapshot () { mkdir -p current/$3; $bk $1 $partial/$3 $prev/$3 $2/ current/$3 || exit 1; sync --file-system .; }
-mk_copy () { mkdir -p $3; $bk --delete-before $1 $2/ $3 || exit 1; sync --file-system .; }
+mk_copy () { mkdir -p $3; $bk --delete --delete-excluded $1 $2/ $3 || exit 1; sync --file-system .; }
 
 # func part
 set_dir () { mkdir -p $1; cd $1; }
@@ -61,6 +53,13 @@ rs_filter="--exclude=*.png --exclude=*.tiff"
 
 # start external
 
+usb_dir=/mnt/backup
+bk_dir=$usb_dir/backup
+
+toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
+#wd_my_passport_ultra_3_tb_black="a8d610cf-a1fc-40d1-aebf-2165ba2859a4"
+wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
+
 if
   try_mnt $wd_my_passport_ultra_3_tb_blue $usb_dir || \
   try_mnt $toshiba_3_tb $usb_dir || \
@@ -94,6 +93,8 @@ fi
 
 
 # start local
+
+bk_dir_local=/big_files/backup
 
 if
   true
