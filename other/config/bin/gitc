@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git commit -a -m "work in progress"
+git status
+sync --file-system .

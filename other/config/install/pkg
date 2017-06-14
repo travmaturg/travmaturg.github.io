@@ -1,0 +1,100 @@
+#!/bin/sh
+
+
+#apt-get install aptitude
+#install="aptitude --without-recommends install"
+install="apt-get --no-install-recommends --ignore-missing --show-progress install"
+
+
+autotools="autoconf automake libtool"
+gtk="libgtk2.0-dev libgtk-3-dev"
+ogg="libogg-dev libvorbis-dev"
+qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
+sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
+x="libx11-dev libxt-dev"
+common_dev="$autotools cmake libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev $ogg libpango1.0-dev pkg-config $qt $sdl libsqlite3-dev $x libz-dev"
+# libssl-dev
+
+c_cpp="gcc g++ gcc-doc"
+efl="e17-dev"
+git="git git-doc gitk git-gui"
+make="make make-doc"
+man="manpages-dev manpages-posix manpages-posix-dev"
+scheme="racket racket-doc"
+tiff="libtiff5-dev libtiff-doc"
+my_dev="$c_cpp $efl $git $make $man libpng-dev $scheme $tiff"
+
+freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.2-dev"
+# glib gtk pango pkg-config sdl
+
+#geeqie="libexiv2-dev intltool"
+# gtk
+
+icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-dev libevent-dev libffi-dev libhunspell-dev libnss3-dev libvpx-dev libxft-dev"
+# freetype gtk pango sqlite x z
+
+#kiwix="aria2 libcrypto++-dev libctpp2-dev libicu-dev liblzma-dev libmagic-dev libpugixml-dev libxapian-dev libzim-dev"
+# pkg-config ssl z
+
+#marble=""
+# qt
+
+qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libtorrent-rasterbar-dev"
+# qt
+
+#quiterss="qt4-qmake libqtwebkit-dev"
+# qt sqlite
+
+raw="libjasper-dev"
+
+openal="libopenal-dev libalut-dev"
+scorched3d="libglew-dev libjpeg-dev $openal libfftw3-dev libwxgtk3.0-dev"
+# expat freetype jpeg ogg sdl z
+
+#sylpheed="bison bogofilter flex libsylph-dev"
+# glib gtk ssl x
+
+#vim=""
+# glib gtk
+
+dev="$common_dev $my_dev $freeciv $icecat $qbittorrent $raw $scorched3d"
+# $geeqie $kiwix $marble $quiterss $sylpheed $vim
+
+
+www="tor quiterss"
+download="wget youtube-dl cclive"
+firewall="shorewall shorewall-doc"
+web_server="lighttpd lighttpd-doc webalizer"
+sylpheed="sylpheed bogofilter"
+net="$www $download $firewall $web_server $sylpheed"
+
+dict_en_ru="dict-freedict-eng-rus mueller7-dict"
+dict_comp="dict-foldoc dict-jargon dict-vera"
+dict_list="$dict_en_ru $dict_comp dict-elements dict-gcide dict-wn"
+dict="dict dictd $dict_list"
+diff="kdiff3-qt kdiff3-doc meld"
+view="qpdfview xpdf gv djview4"
+tex="texlive texlive-lang-cyrillic texlive-htmlxml"
+vim="vim-gtk vim-doc"
+text="$dict $diff $view $tex $vim asciidoc"
+
+space="gdmap ncdu fslint fdupes"
+archives="zip unzip unar p7zip"
+files="$space $archives mc rsync"
+disk="eject gparted gsmartcontrol unetbootin"
+encfs="encfs libpam-encfs libpam-mount"
+apt="apt-doc aptitude aptitude-doc-en"
+debian="debmirror debtree $apt apt-transport-tor"
+system="$files $disk $encfs $debian bum htop roxterm"
+
+images="geeqie ufraw rawtherapee hugin"
+cue="cuetools shntool flac"
+players="audacious vlc $cue"
+other="$images $players alsa-utils"
+
+
+pkg_list="$dev $net $text $system $other"
+
+
+$install $pkg_list
+

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+youtube-dl --no-call-home --prefer-free-formats "$1"
+

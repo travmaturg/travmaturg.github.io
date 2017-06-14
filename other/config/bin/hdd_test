@@ -1,0 +1,6 @@
+#!/bin/sh
+
+sync
+badblocks -N -s -v $1
+sync
+

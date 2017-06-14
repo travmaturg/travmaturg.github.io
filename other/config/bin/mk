@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nice -n 1 make -j 8 --output-sync=line
+

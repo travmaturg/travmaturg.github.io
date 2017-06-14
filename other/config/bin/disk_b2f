@@ -1,0 +1,15 @@
+#!/bin/sh
+
+dir=`pwd -P`
+
+mkdir -p $dir/travmaturg || exit 1
+
+mv -v $dir/backup/personal/latest/семейное $dir/travmaturg
+
+mv -v $dir/backup/downloadable/latest/archive $dir/travmaturg
+mv -v $dir/backup/downloadable/latest/public $dir/travmaturg
+
+mv -v $dir/backup/other/mirror $dir/travmaturg
+mv -v $dir/backup/other/porn $dir/travmaturg
+mv -v $dir/backup/other/unsorted $dir/travmaturg
+

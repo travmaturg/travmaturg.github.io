@@ -1,0 +1,6 @@
+#!/bin/sh
+
+./configure --help > conf.txt
+
+cmake -LAH > conf_cmake.txt
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sync
+umount $1
+e2fsck -D -f -t -v -y $1
+sync
+

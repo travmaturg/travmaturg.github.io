@@ -1,0 +1,24 @@
+#!/bin/sh
+
+dir=`pwd -P`
+
+
+mv -v $dir/travmaturg/семейное $dir/backup/personal/latest || exit 1
+
+
+#mkdir -p $dir/backup/downloadable
+#cd $dir/backup/downloadable
+#bk_new=`date +%Y/%m/%d/%T`
+#mkdir -p $bk_new
+#ln -s -T $bk_new latest
+
+mv -v $dir/travmaturg/archive $dir/backup/downloadable/latest/archive
+mv -v $dir/travmaturg/public $dir/backup/downloadable/latest/public
+
+
+mkdir -p $dir/backup/other
+
+mv -v $dir/travmaturg/mirror $dir/backup/other
+mv -v $dir/travmaturg/porn $dir/backup/other
+mv -v $dir/travmaturg/unsorted $dir/backup/other
+

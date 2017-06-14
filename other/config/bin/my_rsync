@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rsync_msg="--verbose --human-readable --progress"
+rsync_misc="--recursive --times --delete-excluded"
+rsync $rsync_msg $rsync_misc $@
+
