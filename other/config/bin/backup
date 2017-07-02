@@ -51,67 +51,95 @@ home_filter="$hf_config $hf_ext $hf_dir $hf_other"
 rs_filter="--exclude=*.png --exclude=*.tiff"
 
 
-# start external
+# external
 
 usb_dir=/mnt/backup
 bk_dir=$usb_dir/backup
 
 toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
-#wd_my_passport_ultra_3_tb_black="a8d610cf-a1fc-40d1-aebf-2165ba2859a4"
+wd_my_passport_ultra_3_tb_black="a8d610cf-a1fc-40d1-aebf-2165ba2859a4"
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
-  try_mnt $wd_my_passport_ultra_3_tb_blue $usb_dir || \
   try_mnt $toshiba_3_tb $usb_dir || \
+  try_mnt $wd_my_passport_ultra_3_tb_black $usb_dir || \
+  try_mnt $wd_my_passport_ultra_3_tb_blue $usb_dir || \
   false
 then
-  # personal to external
   bk_part_start $bk_dir/personal
   mk_snapshot "$my_filter" $tr_dir/my my
   mk_snapshot "$home_filter" /home/misha home
   mk_snapshot "" $tr_dir_big/семейное семейное
   bk_part_end
 
-  # downloadable to external
   bk_part_start $bk_dir/downloadable
   mk_snapshot "" $tr_dir_big/archive archive
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
   mk_snapshot "" $tr_dir_big/public public
   bk_part_end
 
-  # other to external
   set_dir $bk_dir/other
-  mk_copy "" $tr_dir_big/mirror mirror
+  #mk_copy "" $tr_dir_big/mirror mirror
   mk_copy "" $tr_dir_big/porn porn
   mk_copy "" $tr_dir_big/unsorted unsorted
 
-  # finish external
   bk_disk_end $bk_dir
   umount $usb_dir
   exit 0
 fi
 
 
-# start local
+# DAS
 
-bk_dir_local=/big_files/backup
+usb_dir=/big_files_copy
+bk_dir=$usb_dir/backup
+
+hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
+
+if
+  try_mnt $hgst_ultrastar_6_tb $usb_dir || \
+  false
+then
+  bk_part_start $bk_dir/personal
+  mk_snapshot "$my_filter" $tr_dir/my my
+  mk_snapshot "$home_filter" /home/misha home
+  mk_snapshot "" $tr_dir_big/семейное семейное
+  bk_part_end
+
+  bk_part_start $bk_dir/downloadable
+  mk_snapshot "" $tr_dir_big/archive archive
+  mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
+  mk_snapshot "" $tr_dir_big/public public
+  bk_part_end
+
+  set_dir $bk_dir/other
+  mk_copy "" $tr_dir_big/mirror mirror
+  mk_copy "" $tr_dir_big/porn porn
+  mk_copy "" $tr_dir_big/unsorted unsorted
+
+  bk_disk_end $bk_dir
+  umount $usb_dir
+  exit 0
+fi
+
+
+# local
+
+bk_dir=/big_files/backup
 
 if
   true
 then
-  # personal to local
-  bk_part_start $bk_dir_local/personal
+  bk_part_start $bk_dir/personal
   mk_snapshot "$my_filter" $tr_dir/my my
   mk_snapshot "$home_filter" /home/misha home
   bk_part_end
 
-  # downloadable to local
-  bk_part_start $bk_dir_local/downloadable
+  bk_part_start $bk_dir/downloadable
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
   bk_part_end
 
-  # finish local
-  bk_disk_end $bk_dir_local
+  bk_disk_end $bk_dir
   exit 0
 fi
 
