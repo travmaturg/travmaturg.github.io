@@ -8,21 +8,18 @@ install="apt-get --no-install-recommends --ignore-missing --show-progress instal
 
 autotools="autoconf automake libtool"
 gtk="libgtk2.0-dev libgtk-3-dev"
-ogg="libogg-dev libvorbis-dev"
 qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
 sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
 x="libx11-dev libxt-dev"
-common_dev="$autotools cmake libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev $ogg libpango1.0-dev pkg-config $qt $sdl libsqlite3-dev $x libz-dev"
-# libssl-dev
+common_dev="$autotools cmake libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev libpango1.0-dev pkg-config $qt $sdl libsqlite3-dev libssl-dev $x libz-dev"
 
 c_cpp="gcc g++ gcc-doc"
-efl="e17-dev"
 git="git git-doc gitk git-gui"
 make="make make-doc"
 man="manpages-dev manpages-posix manpages-posix-dev"
 scheme="racket racket-doc"
 tiff="libtiff5-dev libtiff-doc"
-my_dev="$c_cpp $efl $git $make $man libpng-dev $scheme $tiff"
+my_dev="$c_cpp $git $make $man libpng-dev $scheme $tiff"
 
 freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.2-dev"
 # glib gtk pango pkg-config sdl
@@ -36,20 +33,19 @@ icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-de
 #kiwix="aria2 libcrypto++-dev libctpp2-dev libicu-dev liblzma-dev libmagic-dev libpugixml-dev libxapian-dev libzim-dev"
 # pkg-config ssl z
 
-#marble=""
-# qt
-
-qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libtorrent-rasterbar-dev"
-# qt
+torrent_rasterbar="libboost-chrono-dev libgeoip-dev"
+qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev $torrent_rasterbar"
+# qt ssl
 
 #quiterss="qt4-qmake libqtwebkit-dev"
 # qt sqlite
 
 raw="libjasper-dev"
 
+ogg="libogg-dev libvorbis-dev"
 openal="libopenal-dev libalut-dev"
-scorched3d="libglew-dev libjpeg-dev $openal libfftw3-dev libwxgtk3.0-dev"
-# expat freetype jpeg ogg sdl z
+scorched3d="libfftw3-dev libglew-dev libjpeg-dev $ogg $openal libwxgtk3.0-dev"
+# expat freetype jpeg sdl z
 
 #sylpheed="bison bogofilter flex libsylph-dev"
 # glib gtk ssl x
@@ -58,7 +54,7 @@ scorched3d="libglew-dev libjpeg-dev $openal libfftw3-dev libwxgtk3.0-dev"
 # glib gtk
 
 dev="$common_dev $my_dev $freeciv $icecat $qbittorrent $raw $scorched3d"
-# $geeqie $kiwix $marble $quiterss $sylpheed $vim
+# $geeqie $kiwix$quiterss $sylpheed $vim
 
 
 www="tor quiterss"

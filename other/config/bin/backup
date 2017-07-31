@@ -40,7 +40,7 @@ mf_firefox="$firefox/9,jTLhB778DOzjYYY0pcQ4uG $firefox/FDxnMKa6FqZizbMaOf3pvaUA"
 my_filter="--exclude=out/ --exclude=*.swp $mf_icecat $mf_firefox"
 
 conf="--exclude=/.config"
-hf_config="$conf/audacious/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/smplayer/ $conf/vlc/"
+hf_config="$conf/audacious/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/"
 hf_ext="--exclude=*.bak* --exclude=*.db"
 hf_dir="--exclude=*[cC]ache*/ --exclude=/.dbus/ --exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/ --exclude=/.texlive*/ --exclude=*thumbnails/"
 hf_other="--exclude=/.freeciv* --exclude=*[.-]log --exclude=/*session* --exclude=/*[._]tmp --exclude=/.Xauthority"
@@ -57,7 +57,7 @@ usb_dir=/mnt/backup
 bk_dir=$usb_dir/backup
 
 toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
-wd_my_passport_ultra_3_tb_black="a8d610cf-a1fc-40d1-aebf-2165ba2859a4"
+wd_my_passport_ultra_3_tb_black="66abc11f-3a13-4c77-ae69-8b0154f47774"
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
@@ -79,7 +79,6 @@ then
   bk_part_end
 
   set_dir $bk_dir/other
-  #mk_copy "" $tr_dir_big/mirror mirror
   mk_copy "" $tr_dir_big/porn porn
   mk_copy "" $tr_dir_big/unsorted unsorted
 
