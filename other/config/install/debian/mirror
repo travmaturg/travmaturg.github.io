@@ -1,7 +1,0 @@
-#!/bin/sh
-
-apt-spy update
-
-#apt-spy -d testing -a Europe
-#apt-spy -d testing -s "EE,FI,RU,SE"
-apt-spy -d testing -s FI
