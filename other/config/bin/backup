@@ -5,6 +5,7 @@ bk="nice -n 19 my_rsync $rsync_nocopy --preallocate --exclude=private*/"
 
 tr_dir=/files/travmaturg
 tr_dir_big=/big_files/travmaturg
+usb_dir=/mnt/backup
 
 
 # func dir
@@ -21,7 +22,7 @@ bk_part_end () { rm -rf partial; mk_dst; ln -f -s -T $bk_new latest; }
 # func disk
 rnd_fn="random numbers because I can"
 rnd () { dd if=/dev/urandom of="$1/$rnd_fn" bs=1024000 count=1 > /dev/null 2>&1; }
-try_mnt () { umount $2 > /dev/null 2>&1; mount -U $1 > /dev/null 2>&1; }
+try_mnt () { umount $usb_dir > /dev/null 2>&1; mount -U $1 > /dev/null 2>&1; }
 bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
 
 
@@ -50,10 +51,11 @@ home_filter="$hf_config $hf_ext $hf_dir $hf_other"
 
 rs_filter="--exclude=*.png --exclude=*.tiff"
 
+pub_ext_filter="--exclude=/openstreetmap/"
+
 
 # external
 
-usb_dir=/mnt/backup
 bk_dir=$usb_dir/backup
 
 toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
@@ -61,9 +63,9 @@ wd_my_passport_ultra_3_tb_black="66abc11f-3a13-4c77-ae69-8b0154f47774"
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
-  try_mnt $toshiba_3_tb $usb_dir || \
-  try_mnt $wd_my_passport_ultra_3_tb_black $usb_dir || \
-  try_mnt $wd_my_passport_ultra_3_tb_blue $usb_dir || \
+  try_mnt $toshiba_3_tb || \
+  try_mnt $wd_my_passport_ultra_3_tb_black || \
+  try_mnt $wd_my_passport_ultra_3_tb_blue || \
   false
 then
   bk_part_start $bk_dir/personal
@@ -75,7 +77,7 @@ then
   bk_part_start $bk_dir/downloadable
   mk_snapshot "" $tr_dir_big/archive archive
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
-  mk_snapshot "" $tr_dir_big/public public
+  mk_snapshot "$pub_ext_filter" $tr_dir_big/public public
   bk_part_end
 
   set_dir $bk_dir/other
@@ -90,13 +92,12 @@ fi
 
 # DAS
 
-usb_dir=/big_files_copy
 bk_dir=$usb_dir/backup
 
 hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
 
 if
-  try_mnt $hgst_ultrastar_6_tb $usb_dir || \
+  try_mnt $hgst_ultrastar_6_tb || \
   false
 then
   bk_part_start $bk_dir/personal
