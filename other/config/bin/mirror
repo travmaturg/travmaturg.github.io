@@ -1,6 +1,6 @@
 #!/bin/sh
 
-m="debmirror --no-check-gpg"
+m="debmirror --no-check-gpg --ignore-small-errors --allow-dist-rename"
 m_dir=/big_files/travmaturg/mirror
 
 
