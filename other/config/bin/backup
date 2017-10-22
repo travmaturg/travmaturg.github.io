@@ -53,6 +53,37 @@ rs_filter="--exclude=*.png --exclude=*.tiff"
 
 pub_ext_filter="--exclude=/openstreetmap/"
 
+flash_ext_filter="$pub_ext_filter --exclude=/*Gutenberg/ --exclude=/soft/iso/ --exclude=/wikimedia/"
+
+
+# flash
+
+bk_dir=$usb_dir/backup
+
+corsair_survivor_stealth_128_gb_1="09557915-f343-4b16-9811-fba73c2eb956"
+corsair_survivor_stealth_128_gb_2="f2072345-0c25-48fc-ac7d-19934ab021a1"
+
+if
+  try_mnt $corsair_survivor_stealth_128_gb_1 || \
+  try_mnt $corsair_survivor_stealth_128_gb_2 || \
+  false
+then
+  bk_part_start $bk_dir/personal
+  mk_snapshot "$my_filter" $tr_dir/my my
+  mk_snapshot "$home_filter" /home/misha home
+  mk_snapshot "" $tr_dir_big/семейное семейное
+  bk_part_end
+
+  bk_part_start $bk_dir/downloadable
+  mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
+  mk_snapshot "$flash_ext_filter" $tr_dir_big/public public
+  bk_part_end
+
+  bk_disk_end $bk_dir
+  umount $usb_dir
+  exit 0
+fi
+
 
 # external
 

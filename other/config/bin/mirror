@@ -32,7 +32,7 @@ dst=$m_dir/ubuntu
 echo "update started " `date` >> $dst/last_update.txt
 
 mkdir -p $dst/ubuntu
-$m --root=ubuntu --dist="zesty,zesty-updates,zesty-security,artful,artful-updates,artful-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
+$m --root=ubuntu --dist="artful,artful-updates,artful-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
 sync --file-system $dst
 
 echo "update done " `date` > $dst/last_update.txt
