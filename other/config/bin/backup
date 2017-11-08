@@ -125,10 +125,12 @@ fi
 
 bk_dir=$usb_dir/backup
 
-hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
+#hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
+toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
 
 if
-  try_mnt $hgst_ultrastar_6_tb || \
+  #try_mnt $hgst_ultrastar_6_tb || \
+  try_mnt $toshiba_n300_6_tb || \
   false
 then
   bk_part_start $bk_dir/personal
