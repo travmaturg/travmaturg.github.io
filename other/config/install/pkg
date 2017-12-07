@@ -34,7 +34,7 @@ icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-de
 # pkg-config ssl z
 
 torrent_rasterbar="libboost-chrono-dev libgeoip-dev"
-qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev $torrent_rasterbar"
+qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libqt5svg5-dev $torrent_rasterbar"
 # qt ssl
 
 #quiterss="qt4-qmake libqtwebkit-dev"
