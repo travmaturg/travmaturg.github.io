@@ -4,11 +4,11 @@ regex/\.([aAcCmMsS][rR][wW]|[cC][rR]2|[dD]([nN][gG]|[cC][rR])|[nNpP][eE][fF]|[oO
   Open=ufraw %f
   View=
 
-regex/\.([bB][mM][pP]|[gG][iI][fF]|[jJ][pP][eE]?[gG]|[pP][nN][gG]|[tT][iI][fF][fF]?)$
+regex/\.([bB][mM][pP]|[jJ][pP][eE]?[gG]|[pP][nN][gG]|[tT][iI][fF][fF]?)$
   Open=geeqie %f
 
-regex/\.([aA][vV][iI]|[dD][iI][vV][xX]|[fF][lL][vV]|[mM][4kKoO][vV]|[mM][pP](4|[eE]?[gG])|[oO][gG][vV]|([mM]2)?[tT][sS]|[vV][oO][bB]|[wW]([eE][bB][mM]|[mM][vV]))$
-  Open=smplayer %f
+regex/\.([aA][vV][iI]|[dD][iI][vV][xX]|[fF][lL][vV]|[mM][4kKoO][vV]|[mM][pP](4|[eE]?[gG])|[oO][gG][vV]|([mM]2)?[tT][sS]|[vV][oO][bB]|[wW][eE][bB][mM]|[wW][mM][vV])$
+  Open=vlc %f
 
 regex/\.([dD][jJ][vV][uU]?)$
   Open=djview %f
@@ -16,10 +16,10 @@ regex/\.([dD][jJ][vV][uU]?)$
 regex/\.([dD][jJ][vV][uU]?|[pP]([dD][fF]|[sS]))$
   Open=qpdfview %f
 
-regex/\.([sS]?[hH][tT][mM][lL]?)$
+regex/\.([sS]?[hH][tT][mM][lL]?|[gG][iI][fF])$
   Open=icecat -new-window %f
 
-regex/\.([aA][zZ][wW]3|[eE][pP][uU][bB]|[fF][bB]2(\.[zZ][iI][pP])?|[mM][oO][bB][iI])$
+regex/\.([eE][pP][uU][bB]|[fF][bB]2(\.[zZ][iI][pP])?|[mM][oO][bB][iI])$
   Open=fbreader %f
 
 regex/\.([dD][oO][cC][xX]?|[rR][tT][fF])$
@@ -164,6 +164,16 @@ regex/\.t(ar\.lzma|lz)$
 	Open=%cd %p/utar://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view tar.lzma
 
+# .tar.lz
+shell/.tar.lz
+	Open=%cd %p/utar://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view tar.lz
+
+# .tar.lz4, .tlz4
+regex/\.t(ar\.lz4|lz4)$
+	Open=%cd %p/utar://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view tar.lz4
+
 # .tar.xz, .txz
 regex/\.t(ar\.xz|xz)$
 	Open=%cd %p/utar://
@@ -219,6 +229,14 @@ shell/.cpio.Z
 	Open=%cd %p/ucpio://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio.z
 
+shell/.cpio.lz
+	Open=%cd %p/ucpio://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio.lz
+
+shell/.cpio.lz4
+	Open=%cd %p/ucpio://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio.lz4
+
 shell/.cpio.xz
 	Open=%cd %p/ucpio://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio.xz
@@ -228,6 +246,11 @@ shell/.cpio.gz
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio.gz
 
 shell/i/.cpio
+	Open=%cd %p/ucpio://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio
+
+# initrd
+regex/^(initramfs.*\.img|initrd(-.+)?\.img(-.+)?)$
 	Open=%cd %p/ucpio://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view cpio
 
@@ -244,6 +267,10 @@ regex/\.(diff|patch)(\.bz2)$
 regex/\.(diff|patch)(\.(gz|Z))$
 	Open=%cd %p/patchfs://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+regex/\.(diff|patch)(\.xz)$
+    Open=%cd %p/patchfs://
+    View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view xz
 
 # ls-lR
 regex/(^|\.)ls-?lR(\.gz|Z|bz2)$
@@ -388,6 +415,14 @@ regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.bz$
 regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.bz2$
 	Open=/usr/lib/mc/ext.d/text.sh open man.bz2 %var{PAGER:more}
 	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.bz2 %var{PAGER:more}
+
+regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.lz$
+	Open=/usr/lib/mc/ext.d/text.sh open man.lz %var{PAGER:more}
+	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.lz %var{PAGER:more}
+
+regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.lz4$
+	Open=/usr/lib/mc/ext.d/text.sh open man.lz4 %var{PAGER:more}
+	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.lz4 %var{PAGER:more}
 
 regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.lzma$
 	Open=/usr/lib/mc/ext.d/text.sh open man.lzma %var{PAGER:more}
@@ -633,8 +668,8 @@ regex/i/\.djvu?$
 regex/i/\.cb[zr]$
 	Open=/usr/lib/mc/ext.d/doc.sh open comic
 
-# Epub
-shell/i/.epub
+# Epub & mobi
+regex/i/\.(epub|mobi)$
 	Open=/usr/lib/mc/ext.d/doc.sh open epub
 	View=%view{ascii} /usr/lib/mc/ext.d/doc.sh view epub
 
@@ -646,15 +681,15 @@ shell/.class
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view javaclass
 
 # Makefile
-regex/[Mm]akefile$
+regex/^[Mm]akefile$
 	Open=make -f %f %{Enter parameters}
 
 # Imakefile
 shell/Imakefile
-	Open=/usr/lib/mc/ext.d/misc.sh open imakefile
+	Open=xmkmf -a
 
 # Makefile.PL (MakeMaker)
-regex/^Makefile.(PL|pl)$
+regex/^Makefile\.(PL|pl)$
 	Open=%var{PERL:perl} %f
 
 # sqlite3.db
@@ -682,8 +717,12 @@ shell/i/.glade
 	Open=/usr/lib/mc/ext.d/misc.sh open glade
 
 # Gettext Catalogs
-shell/.mo
+regex/\.g?mo$
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view mo
+
+# po
+shell/.po
+	Open=/usr/lib/mc/ext.d/misc.sh open po
 
 # lyx
 shell/i/.lyx
@@ -720,7 +759,7 @@ type/i/^zip\ archive
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
 
 # jar(zip)
-type/i/^Java\ Jar\ file\ data\ \(zip\)
+type/i/^Java\ (Jar\ file|archive)\ data\ \((zip|JAR)\)
 	Open=%cd %p/uzip://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
 
@@ -754,6 +793,21 @@ type/^bzip
 type/^compress
 	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+# lz
+regex/\.lz$
+	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
+
+# lz
+type/^LZIP
+	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
+
+# lz4
+regex/\.lz4$
+	Open=/usr/lib/mc/ext.d/archive.sh view lz4 %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz4
 
 # lzma
 regex/\.lzma$
