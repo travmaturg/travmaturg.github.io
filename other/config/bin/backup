@@ -33,12 +33,7 @@ sync
 
 # filters personal
 
-mozilla="--exclude=/.private/hybmh4rp09wut-EgzfQcyyWd/u-WmuuGZnKOuNvM1UYZlyHIg"
-icecat="$mozilla/srID3,YoDfQ-xXBjtF-0Sj31/-ty2YmwZn6JshqExzHSz6YtefJACHzyiIIggGklKJ2c3e1"
-mf_icecat="$icecat/CMh5ZT3BZUIJZXLPvPK8bRUb $icecat/ROQxLR0ZgBNqYGd,2gkYbe5y"
-firefox="$mozilla/3wFckYjTtr5lurYwpvlYQTUe/TmNKSWoD57GAbUAb3aNm1LNGLy-R8NeZ4geRZtfDEa0uO,"
-mf_firefox="$firefox/9,jTLhB778DOzjYYY0pcQ4uG $firefox/FDxnMKa6FqZizbMaOf3pvaUA"
-my_filter="--exclude=out/ --exclude=*.swp $mf_icecat $mf_firefox"
+my_filter="--exclude=out/ --exclude=*.swp"
 
 conf="--exclude=/.config"
 hf_config="$conf/audacious/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/"
@@ -51,9 +46,9 @@ home_filter="$hf_config $hf_ext $hf_dir $hf_other"
 
 rs_filter="--exclude=*.png --exclude=*.tiff"
 
-ext_pub_filter="--exclude=/openstreetmap/"
+ext_pub_filter=""
 
-flash_pub_filter="$ext_pub_filter --exclude=/*Gutenberg/ --exclude=/soft/iso/ --exclude=/wikimedia/"
+flash_pub_filter="$ext_pub_filter --exclude=/*Gutenberg/ --exclude=/openstreetmap/ --exclude=/soft/iso/ --exclude=/wikimedia/"
 
 
 # flash
@@ -89,7 +84,7 @@ fi
 
 bk_dir=$usb_dir/backup
 
-toshiba_3_tb="9c976deb-a31d-4e50-b388-fd608e2611e1"
+toshiba_3_tb="9a4da0f3-fed6-4b18-aa48-903d8fc586e3"
 wd_my_passport_ultra_3_tb_black="66abc11f-3a13-4c77-ae69-8b0154f47774"
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
@@ -125,12 +120,12 @@ fi
 
 bk_dir=$usb_dir/backup
 
-#hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
-toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
+hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
+#toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
 
 if
-  #try_mnt $hgst_ultrastar_6_tb || \
-  try_mnt $toshiba_n300_6_tb || \
+  try_mnt $hgst_ultrastar_6_tb || \
+  #try_mnt $toshiba_n300_6_tb || \
   false
 then
   bk_part_start $bk_dir/personal
