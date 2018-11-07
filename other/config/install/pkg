@@ -21,13 +21,13 @@ scheme="racket racket-doc"
 tiff="libtiff5-dev libtiff-doc"
 my_dev="$c_cpp $git $make $man libpng-dev $scheme $tiff"
 
-freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.3-dev"
+#freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.3-dev"
 # glib gtk pango pkg-config sdl
 
 #geeqie="libexiv2-dev intltool"
 # gtk
 
-icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-dev libevent-dev libffi-dev libhunspell-dev libnss3-dev libvpx-dev libxft-dev"
+#icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-dev libevent-dev libffi-dev libhunspell-dev libnss3-dev libvpx-dev libxft-dev"
 # freetype gtk pango sqlite x z
 
 #kiwix="aria2 libcrypto++-dev libctpp2-dev libicu-dev liblzma-dev libmagic-dev libpugixml-dev libxapian-dev libzim-dev"
@@ -42,9 +42,9 @@ qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database
 
 raw="libjasper-dev"
 
-ogg="libogg-dev libvorbis-dev"
-openal="libopenal-dev libalut-dev"
-scorched3d="libfftw3-dev libglew-dev libjpeg-dev $ogg $openal libwxgtk3.0-dev"
+#ogg="libogg-dev libvorbis-dev"
+#openal="libopenal-dev libalut-dev"
+#scorched3d="libfftw3-dev libglew-dev libjpeg-dev $ogg $openal libwxgtk3.0-dev"
 # expat freetype jpeg sdl z
 
 #sylpheed="bison bogofilter flex libsylph-dev"
@@ -53,17 +53,16 @@ scorched3d="libfftw3-dev libglew-dev libjpeg-dev $ogg $openal libwxgtk3.0-dev"
 #vim=""
 # glib gtk
 
-dev="$common_dev $my_dev $freeciv $icecat $qbittorrent $raw $scorched3d"
-# $geeqie $kiwix$quiterss $sylpheed $vim
+dev="$common_dev $my_dev $qbittorrent $raw"
+# $freeciv $geeqie $icecat $kiwix$quiterss $scorched3d $sylpheed $vim
 
 
-www="tor quiterss"
 download="wget youtube-dl cclive"
-firewall="shorewall shorewall-doc"
+#firewall="shorewall shorewall-doc"
 #web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bogofilter"
-net="$www $download $firewall $sylpheed"
-# $web_server
+net="tor quiterss $download $sylpheed"
+# $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"

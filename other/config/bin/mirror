@@ -13,11 +13,7 @@ dst=$m_dir/debian
 echo "update started " `date` >> $dst/last_update.txt
 
 mkdir -p $dst/debian
-$m --root=debian --dist="testing,testing-updates,sid" --section="main,contrib,non-free" $dst/debian
-sync --file-system $dst
-
-mkdir -p $dst/debian-security
-$m --root=debian-security --dist="testing/updates" --section="main,contrib,non-free" $dst/debian-security
+$m --root=debian --dist="testing,sid" --section="main,contrib,non-free" $dst/debian
 sync --file-system $dst
 
 mkdir -p $dst/debian-multimedia
@@ -34,7 +30,7 @@ dst=$m_dir/ubuntu
 echo "update started " `date` >> $dst/last_update.txt
 
 mkdir -p $dst/ubuntu
-$m --root=ubuntu --dist="artful,artful-updates,artful-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
+$m --root=ubuntu --dist="cosmic,cosmic-updates,cosmic-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
 sync --file-system $dst
 
 echo "update done " `date` > $dst/last_update.txt

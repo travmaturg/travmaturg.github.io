@@ -9,15 +9,40 @@ usb_dir=/mnt/backup
 
 
 # func dir
-mk_snapshot () { mkdir -p current/$3; $bk $1 $partial/$3 $prev/$3 $2/ current/$3 || exit 1; sync --file-system .; }
-mk_copy () { mkdir -p $3; $bk --delete --delete-excluded $1 $2/ $3 || exit 1; sync --file-system .; }
+
+mk_snapshot () {
+  mkdir -p current/$3
+  $bk $1 $partial/$3 $latest/$3 $2/ current/$3 || exit 1
+  sync --file-system .
+  }
+
+mk_copy () {
+  mkdir -p $3
+  $bk --delete --delete-excluded $1 $2/ $3 || exit 1
+  sync --file-system .
+  }
+
 
 # func part
-set_dir () { mkdir -p $1; cd $1; }
-set_link_dest () { partial="--link-dest=$1/partial"; prev="--link-dest=$1/latest"; }
-bk_part_start () { set_dir $1; rm -rf partial; mv -f current partial > /dev/null 2>&1; set_link_dest $1; }
-mk_dst () { bk_new=`date +%Y/%m/%d/%T`; mkdir -p $bk_new; mv -T current $bk_new; }
-bk_part_end () { rm -rf partial; mk_dst; ln -f -s -T $bk_new latest; }
+
+set_dir () { mkdir -p $1 || exit 1; cd $1; }
+
+bk_part_start () {
+  set_dir $1
+  rm -rf partial
+  mv -f current partial > /dev/null 2>&1
+  partial="--link-dest=$1/partial"
+  latest="--link-dest=$1/latest"
+  }
+
+bk_part_end () {
+  rm -rf partial
+  bk_new=`date +%Y/%m/%d/%T`
+  mkdir -p $bk_new
+  mv -T current $bk_new
+  ln -f -s -T $bk_new latest
+  }
+
 
 # func disk
 rnd_fn="random numbers because I can"
@@ -55,12 +80,14 @@ flash_pub_filter="$ext_pub_filter --exclude=/*Gutenberg/ --exclude=/openstreetma
 
 bk_dir=$usb_dir/backup
 
-corsair_survivor_stealth_128_gb_1="09557915-f343-4b16-9811-fba73c2eb956"
-corsair_survivor_stealth_128_gb_2="f2072345-0c25-48fc-ac7d-19934ab021a1"
+corsair_survivor_stealth_128_gb_1="087eb000-52fb-4748-8376-f15c95af7bd9"
+corsair_survivor_stealth_128_gb_2="d3c2b096-ded1-4ab3-8b8e-953c97191990"
+corsair_voyager_64_gb="ed3b5e4d-cfd7-459f-8f44-9cf63abf6dd8"
 
 if
   try_mnt $corsair_survivor_stealth_128_gb_1 || \
   try_mnt $corsair_survivor_stealth_128_gb_2 || \
+  try_mnt $corsair_voyager_64_gb || \
   false
 then
   bk_part_start $bk_dir/personal
@@ -122,10 +149,12 @@ bk_dir=$usb_dir/backup
 
 hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
 #toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
+toshiba_x300_8_tb="d5dc79ba-7f3a-4fe8-998c-5692e17da1f8"
 
 if
   try_mnt $hgst_ultrastar_6_tb || \
   #try_mnt $toshiba_n300_6_tb || \
+  try_mnt $toshiba_x300_8_tb || \
   false
 then
   bk_part_start $bk_dir/personal
