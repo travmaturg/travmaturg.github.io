@@ -62,7 +62,7 @@ $timeout=300;
 
 # Rsync options
 $rsync_batch=200;
-$rsync_options="-aIL --partial";
+$rsync_options="-aIL --partial --preallocate";
 
 # FTP/HTTP options
 $passive=0;

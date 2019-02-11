@@ -14,12 +14,13 @@ x="libx11-dev libxt-dev"
 common_dev="$autotools cmake libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev libpango1.0-dev pkg-config $qt $sdl libsqlite3-dev libssl-dev $x libz-dev"
 
 c_cpp="gcc g++ gcc-doc"
+check="cppcheck splint"
 git="git git-doc gitk git-gui"
 make="make make-doc"
 man="manpages-dev manpages-posix manpages-posix-dev"
 scheme="racket racket-doc"
 tiff="libtiff5-dev libtiff-doc"
-my_dev="$c_cpp $git $make $man libpng-dev $scheme $tiff"
+my_dev="$c_cpp $check $git $make $man libpng-dev $scheme $tiff"
 
 #freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.3-dev"
 # glib gtk pango pkg-config sdl
@@ -34,7 +35,7 @@ my_dev="$c_cpp $git $make $man libpng-dev $scheme $tiff"
 # pkg-config ssl z
 
 #torrent_rasterbar="libboost-chrono-dev libgeoip-dev"
-qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libqt5svg5-dev libtorrent-rasterbar-dev"
+#qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libqt5svg5-dev libtorrent-rasterbar-dev"
 # qt ssl $torrent_rasterbar
 
 #quiterss="qt4-qmake libqtwebkit-dev"
@@ -53,15 +54,15 @@ raw="libjasper-dev"
 #vim=""
 # glib gtk
 
-dev="$common_dev $my_dev $qbittorrent $raw"
-# $freeciv $geeqie $icecat $kiwix$quiterss $scorched3d $sylpheed $vim
+dev="$common_dev $my_dev $raw"
+# $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $scorched3d $sylpheed $vim
 
 
 download="wget youtube-dl cclive"
-#firewall="shorewall shorewall-doc"
+#firewall="shorewall shorewall6 shorewall-doc"
 #web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bogofilter"
-net="tor quiterss $download $sylpheed"
+net="tor quiterss ufw $download $sylpheed"
 # $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
