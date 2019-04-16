@@ -129,12 +129,10 @@ fi
 bk_dir=$usb_dir/backup
 
 toshiba_3_tb="9a4da0f3-fed6-4b18-aa48-903d8fc586e3"
-wd_my_passport_ultra_3_tb_black="66abc11f-3a13-4c77-ae69-8b0154f47774"
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
   try_mnt $toshiba_3_tb || \
-  try_mnt $wd_my_passport_ultra_3_tb_black || \
   try_mnt $wd_my_passport_ultra_3_tb_blue || \
   false
 then
@@ -148,14 +146,12 @@ fi
 
 bk_dir=$usb_dir/backup
 
-hgst_ultrastar_6_tb="4cdc3a1d-e7c5-4899-b98c-a36b040f680e"
-#toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
+toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
 toshiba_x300_8_tb="d5dc79ba-7f3a-4fe8-998c-5692e17da1f8"
 
 if
-  try_mnt $hgst_ultrastar_6_tb || \
-  #try_mnt $toshiba_n300_6_tb || \
-  try_mnt $toshiba_x300_8_tb || \
+  try_mnt $toshiba_n300_6_tb || \
+  #try_mnt $toshiba_x300_8_tb || \
   false
 then
   process 4
