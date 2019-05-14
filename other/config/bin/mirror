@@ -30,7 +30,7 @@ dst=$m_dir/ubuntu
 echo "update started " `date` >> $dst/last_update.txt
 
 mkdir -p $dst/ubuntu
-$m --root=ubuntu --dist="cosmic,cosmic-updates,cosmic-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
+$m --root=ubuntu --dist="disco,disco-updates,disco-security" --section="main,restricted,universe,multiverse" $dst/ubuntu
 sync --file-system $dst
 
 echo "update done " `date` > $dst/last_update.txt

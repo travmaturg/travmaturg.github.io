@@ -16,7 +16,7 @@ conf="--exclude=/.config"
 hf_config="$conf/audacious/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/"
 hf_ext="--exclude=*.bak* --exclude=*.db"
 hf_tmp="--exclude=*[cC]ache*/ --exclude=/.dbus/ --exclude=/.texlive*/ --exclude=*thumbnails/"
-hf_dir="--exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/"
+hf_dir="--exclude=/.bsfilter/ --exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/"
 hf_other="--exclude=/.freeciv* --exclude=*[.-]log --exclude=/*session* --exclude=/*[._]tmp --exclude=/.Xauthority"
 home_filter="$hf_config $hf_ext $hf_tmp $hf_dir $hf_other"
 
@@ -71,27 +71,30 @@ bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
 
 
 # backup all
-# 1 - local; 2 - flash; 3 - external; 4 - DAS
+lvl_local=1
+lvl_flash=2
+lvl_ext=3
+lvl_das=4
 
 process () {
   bk_part_start $bk_dir/personal
   mk_snapshot "$my_filter" $tr_dir/my my
   mk_snapshot "$home_filter" /home/misha home
-  if [ $1 -gt 1 ]; then mk_snapshot "" $tr_dir_big/семейное семейное; fi
+  if [ $1 -ge $lvl_flash ]; then mk_snapshot "" $tr_dir_big/семейное семейное; fi
   bk_part_end
 
   bk_part_start $bk_dir/downloadable
-  if [ $1 -gt 2 ]; then mk_snapshot "" $tr_dir_big/archive archive; fi
+  if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/archive archive; fi
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
 
-  if [ $1 -gt 2 ]; then mk_snapshot "" $tr_dir_big/public public; fi
-  if [ $1 -eq 2 ]; then mk_snapshot "$flash_pub_filter" $tr_dir_big/public public; fi
+  if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/public public; fi
+  if [ $1 -eq $lvl_flash ]; then mk_snapshot "$flash_pub_filter" $tr_dir_big/public public; fi
 
   bk_part_end
 
-  if [ $1 -gt 2 ]; then
+  if [ $1 -ge $lvl_ext ]; then
     set_dir $bk_dir/other
-    if [ $1 -gt 3 ]; then mk_copy "" $tr_dir_big/mirror mirror; fi
+    if [ $1 -ge $lvl_das ]; then mk_copy "" $tr_dir_big/mirror mirror; fi
     mk_copy "" $tr_dir_big/porn porn
     mk_copy "" $tr_dir_big/unsorted unsorted
   fi
@@ -118,7 +121,7 @@ if
   try_mnt $corsair_voyager_64_gb || \
   false
 then
-  process 2
+  process $lvl_flash
   umount $usb_dir
   exit 0
 fi
@@ -136,7 +139,7 @@ if
   try_mnt $wd_my_passport_ultra_3_tb_blue || \
   false
 then
-  process 3
+  process $lvl_ext
   umount $usb_dir
   exit 0
 fi
@@ -154,7 +157,7 @@ if
   #try_mnt $toshiba_x300_8_tb || \
   false
 then
-  process 4
+  process $lvl_das
   umount $usb_dir
   exit 0
 fi
@@ -167,7 +170,7 @@ bk_dir=/big_files/backup
 if
   true
 then
-  process 1
+  process $lvl_local
   exit 0
 fi
 
