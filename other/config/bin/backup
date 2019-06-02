@@ -113,12 +113,10 @@ bk_dir=$usb_dir/backup
 
 corsair_survivor_stealth_128_gb_1="087eb000-52fb-4748-8376-f15c95af7bd9"
 corsair_survivor_stealth_128_gb_2="d3c2b096-ded1-4ab3-8b8e-953c97191990"
-corsair_voyager_64_gb="ed3b5e4d-cfd7-459f-8f44-9cf63abf6dd8"
 
 if
   try_mnt $corsair_survivor_stealth_128_gb_1 || \
   try_mnt $corsair_survivor_stealth_128_gb_2 || \
-  try_mnt $corsair_voyager_64_gb || \
   false
 then
   process $lvl_flash
@@ -153,8 +151,8 @@ toshiba_n300_6_tb="b70e2abf-5210-4d6f-bace-5d0d0536ce2e"
 toshiba_x300_8_tb="d5dc79ba-7f3a-4fe8-998c-5692e17da1f8"
 
 if
-  try_mnt $toshiba_n300_6_tb || \
-  #try_mnt $toshiba_x300_8_tb || \
+  #try_mnt $toshiba_n300_6_tb || \
+  try_mnt $toshiba_x300_8_tb || \
   false
 then
   process $lvl_das
