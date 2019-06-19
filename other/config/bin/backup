@@ -24,7 +24,9 @@ home_filter="$hf_config $hf_ext $hf_tmp $hf_dir $hf_other"
 
 rs_filter="--exclude=*.png --exclude=*.tiff"
 
-flash_pub_filter="$ext_pub_filter --exclude=/*Gutenberg/ --exclude=/openstreetmap/ --exclude=/soft/iso/ --exclude=/wikimedia/"
+deb="--exclude=/soft/iso/debian"
+ext_pub_filter="$deb/dvd/ $deb/source/ --exclude=/*Gutenberg/ --exclude=/openstreetmap/ --exclude=/wikimedia/"
+flash_pub_filter="$ext_pub_filter --exclude=/soft/iso/"
 
 
 # func dir
@@ -70,7 +72,7 @@ try_mnt () { umount $usb_dir > /dev/null 2>&1; mount -U $1 > /dev/null 2>&1; }
 bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
 
 
-# backup all
+# backup levels
 lvl_local=1
 lvl_flash=2
 lvl_ext=3
@@ -84,10 +86,12 @@ process () {
   bk_part_end
 
   bk_part_start $bk_dir/downloadable
+
   if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/archive archive; fi
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
 
-  if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/public public; fi
+  if [ $1 -ge $lvl_das ]; then mk_snapshot "" $tr_dir_big/public public; fi
+  if [ $1 -eq $lvl_ext ]; then mk_snapshot "$ext_pub_filter" $tr_dir_big/public public; fi
   if [ $1 -eq $lvl_flash ]; then mk_snapshot "$flash_pub_filter" $tr_dir_big/public public; fi
 
   bk_part_end
