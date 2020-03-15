@@ -7,11 +7,12 @@ install="apt-get --no-install-recommends --ignore-missing --show-progress instal
 
 
 autotools="autoconf automake libtool"
-gtk="libgtk2.0-dev libgtk-3-dev"
-qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
-sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
-x="libx11-dev libxt-dev"
-common_dev="$autotools cmake libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev libpango1.0-dev pkg-config $qt $sdl libsqlite3-dev libssl-dev $x libz-dev"
+#gtk="libgtk2.0-dev libgtk-3-dev"
+#qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
+#sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
+#x="libx11-dev libxt-dev"
+common_dev="$autotools cmake libexpat-dev libflac-dev libjpeg-dev pkg-config libz-dev"
+# libfreetype6-dev libglib2.0-dev $gtk libpango1.0-dev $qt $sdl libsqlite3-dev libssl-dev $x
 
 c_cpp="gcc g++ gcc-doc"
 check="cppcheck splint"
@@ -58,11 +59,12 @@ dev="$common_dev $my_dev $raw"
 # $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $scorched3d $sylpheed $vim
 
 
-download="wget youtube-dl cclive"
+download="wget youtube-dl"
+# cclive
 #firewall="shorewall shorewall6 shorewall-doc"
 #web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bogofilter"
-net="tor quiterss ufw $download $sylpheed"
+net="tor liferea ufw $download $sylpheed"
 # $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
@@ -72,19 +74,20 @@ dict="dict dictd $dict_list"
 diff="kdiff3-qt kdiff3-doc meld"
 view="qpdfview xpdf gv djview4"
 tex="texlive texlive-lang-cyrillic texlive-htmlxml"
-vim="vim-gtk vim-doc"
+vim="vim-gtk3 vim-doc"
 text="$dict $diff $view $tex $vim asciidoc"
 
 space="gdmap qdirstat ncdu fslint fdupes"
 archives="zip unzip unar p7zip"
 files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"
-encfs="encfs libpam-encfs libpam-mount"
+encfs="encfs libpam-encfs"
+# libpam-mount
 apt="apt-doc aptitude aptitude-doc-en"
 debian="debmirror debtree $apt apt-transport-tor"
-system="$files $disk $encfs $debian bum htop roxterm"
+system="$files $disk $debian $encfs bum htop roxterm"
 
-images="geeqie ufraw rawtherapee hugin"
+images="geeqie rawtherapee hugin"
 cue="cuetools shntool flac"
 players="audacious vlc $cue"
 other="$images $players alsa-utils"

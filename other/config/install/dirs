@@ -5,8 +5,8 @@ bf=/big_files/travmaturg
 
 l="ln -s -T"
 
-mkdir -p $f/my/private
-$l $f/my/private/ssh ~/.ssh
+#mkdir -p $f/my/private
+#$l $f/my/private/ssh ~/.ssh
 
 $l /media ~/0_media
 $l /usr/share/doc ~/0_doc
@@ -27,7 +27,6 @@ $l $f/my ~/0_my
 $l $f/raw_samples ~/0_raw_samples
 
 $l $bf/archive ~/0_archive
-$l $bf/mirror ~/0_mirror
 $l $bf/porn ~/0_porn
 $l $bf/public ~/0_public
 $l $bf/unsorted ~/0_unsorted
