@@ -11,17 +11,15 @@ autotools="autoconf automake libtool"
 #qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
 #sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
 #x="libx11-dev libxt-dev"
-common_dev="$autotools cmake libexpat-dev libflac-dev libjpeg-dev pkg-config libz-dev"
-# libfreetype6-dev libglib2.0-dev $gtk libpango1.0-dev $qt $sdl libsqlite3-dev libssl-dev $x
+common_dev="$autotools cmake pkg-config"
+# libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev libpango1.0-dev $qt $sdl libsqlite3-dev libssl-dev $x libz-dev
 
-c_cpp="gcc g++ gcc-doc"
+c_cpp="gcc g++"
 check="cppcheck splint"
 git="git git-doc gitk git-gui"
-make="make make-doc"
-man="manpages-dev manpages-posix manpages-posix-dev"
 scheme="racket racket-doc"
 tiff="libtiff5-dev libtiff-doc"
-my_dev="$c_cpp $check $git $make $man libpng-dev $scheme $tiff"
+my_dev="build-essential $c_cpp $check $git make manpages-dev libpng-dev $scheme $tiff"
 
 #freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.3-dev"
 # glib gtk pango pkg-config sdl
@@ -42,7 +40,7 @@ my_dev="$c_cpp $check $git $make $man libpng-dev $scheme $tiff"
 #quiterss="qt4-qmake libqtwebkit-dev"
 # qt sqlite
 
-raw="libjasper-dev"
+raw=""
 
 #ogg="libogg-dev libvorbis-dev"
 #openal="libopenal-dev libalut-dev"
@@ -52,20 +50,22 @@ raw="libjasper-dev"
 #sylpheed="bison bogofilter flex libsylph-dev"
 # glib gtk ssl x
 
+unetbootin="mtools libqt4-dev qt4-qmake syslinux"
+
 #vim=""
 # glib gtk
 
-dev="$common_dev $my_dev $raw"
+dev="$common_dev $my_dev $raw $unetbootin"
 # $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $scorched3d $sylpheed $vim
 
 
 download="wget youtube-dl"
 # cclive
-#firewall="shorewall shorewall6 shorewall-doc"
+#firewall="shorewall shorewall6 shorewall-doc ufw"
 #web_server="lighttpd lighttpd-doc webalizer"
-sylpheed="sylpheed bogofilter"
-net="tor liferea ufw $download $sylpheed"
-# $firewall $web_server
+sylpheed="sylpheed bsfilter"
+net="liferea $download $sylpheed"
+# tor $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
@@ -75,21 +75,23 @@ diff="kdiff3-qt kdiff3-doc meld"
 view="qpdfview xpdf gv djview4"
 tex="texlive texlive-lang-cyrillic texlive-htmlxml"
 vim="vim-gtk3 vim-doc"
-text="$dict $diff $view $tex $vim asciidoc"
+text="$dict $diff $view $tex $vim asciidoc pandoc"
 
 space="gdmap qdirstat ncdu fslint fdupes"
 archives="zip unzip unar p7zip"
 files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"
 encfs="encfs libpam-encfs"
-# libpam-mount
 apt="apt-doc aptitude aptitude-doc-en"
-debian="debmirror debtree $apt apt-transport-tor"
-system="$files $disk $debian $encfs bum htop roxterm"
+debian="debtree $apt"
+# debmirror apt-transport-tor
+system="$files $disk $debian $encfs htop"
+# bum
 
 images="geeqie rawtherapee hugin"
-cue="cuetools shntool flac"
-players="audacious vlc $cue"
+#cue="cuetools shntool flac"
+players="audacious vlc"
+# $cue
 other="$images $players alsa-utils"
 
 

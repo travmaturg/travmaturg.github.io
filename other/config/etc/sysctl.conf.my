@@ -70,4 +70,4 @@
 # useless memory should not be allocated in the first place
 vm.overcommit_memory = 2
 vm.overcommit_ratio = 100
-vm.swappiness = 0
+vm.swappiness = 1
