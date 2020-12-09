@@ -8,27 +8,6 @@ tr_dir_big=/big_files/travmaturg
 usb_dir=/mnt/backup
 
 
-# filters personal
-
-my_filter="--exclude=out/ --exclude=*.swp"
-
-conf="--exclude=/.config"
-hf_config="$conf/audacious/ $conf/dconf/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/ $conf/xfce*/"
-hf_ext="--exclude=*.bak* --exclude=*.db"
-hf_tmp="--exclude=*[cC]ache*/ --exclude=/.dbus/ --exclude=/.texlive*/ --exclude=*thumbnails/ --exclude=/*[._]tmp"
-hf_dir="--exclude=/.bsfilter/ --exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/"
-hf_other="--exclude=/.freeciv* --exclude=*[.-]log --exclude=/*session* --exclude=/.Xauthority"
-home_filter="$hf_config $hf_ext $hf_tmp $hf_dir $hf_other"
-
-# filters downloadable
-
-rs_filter="--exclude=*.png --exclude=*.tiff"
-
-deb="--exclude=/soft/iso/debian"
-ext_pub_filter="$deb/dvd/ $deb/source/ --exclude=/*Gutenberg/ --exclude=/openstreetmap/ --exclude=/wikimedia/"
-flash_pub_filter="$ext_pub_filter --exclude=/soft/iso/"
-
-
 # func dir
 
 mk_snapshot () {
@@ -72,6 +51,25 @@ try_mnt () { umount $usb_dir > /dev/null 2>&1; mount -U $1 > /dev/null 2>&1; }
 bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
 
 
+# filters personal
+
+my_filter="--exclude=out/ --exclude=*.swp"
+
+conf="--exclude=/.config"
+hf_config="$conf/audacious/ $conf/dconf/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/ $conf/xfce*/"
+hf_ext="--exclude=*.bak* --exclude=*.db"
+hf_tmp="--exclude=*[cC]ache*/ --exclude=/.dbus/ --exclude=/.texlive*/ --exclude=*thumbnails/ --exclude=/*[._]tmp"
+hf_dir="--exclude=/.bsfilter/ --exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/"
+hf_other="--exclude=/.freeciv* --exclude=*[.-]log --exclude=/*session* --exclude=/.Xauthority"
+home_filter="$hf_config $hf_ext $hf_tmp $hf_dir $hf_other"
+
+# filters downloadable
+
+rs_filter="--exclude=*.png --exclude=*.tiff"
+
+flash_pub_filter="--exclude=/iso/"
+
+
 # backup levels
 lvl_local=1
 lvl_flash=2
@@ -90,9 +88,10 @@ process () {
   if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/archive archive; fi
   mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
 
-  if [ $1 -ge $lvl_das ]; then mk_snapshot "" $tr_dir_big/public public; fi
-  if [ $1 -eq $lvl_ext ]; then mk_snapshot "$ext_pub_filter" $tr_dir_big/public public; fi
+  if [ $1 -ge $lvl_ext ]; then mk_snapshot "" $tr_dir_big/public public; fi
   if [ $1 -eq $lvl_flash ]; then mk_snapshot "$flash_pub_filter" $tr_dir_big/public public; fi
+
+  if [ $1 -ge $lvl_das ]; then mk_snapshot "" $tr_dir_big/public_extra public_extra; fi
 
   bk_part_end
 

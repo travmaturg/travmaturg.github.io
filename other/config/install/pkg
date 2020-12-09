@@ -40,7 +40,7 @@ my_dev="build-essential $c_cpp $check $git make manpages-dev libpng-dev $scheme 
 #quiterss="qt4-qmake libqtwebkit-dev"
 # qt sqlite
 
-raw=""
+#raw=""
 
 #ogg="libogg-dev libvorbis-dev"
 #openal="libopenal-dev libalut-dev"
@@ -55,8 +55,8 @@ unetbootin="mtools libqt4-dev qt4-qmake syslinux"
 #vim=""
 # glib gtk
 
-dev="$common_dev $my_dev $raw $unetbootin"
-# $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $scorched3d $sylpheed $vim
+dev="$common_dev $my_dev $unetbootin"
+# $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $raw $scorched3d $sylpheed $vim
 
 
 download="wget youtube-dl"
@@ -64,8 +64,8 @@ download="wget youtube-dl"
 #firewall="shorewall shorewall6 shorewall-doc ufw"
 #web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bsfilter"
-net="liferea $download $sylpheed"
-# tor $firewall $web_server
+net="liferea tor $download $sylpheed"
+# $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
@@ -83,8 +83,8 @@ files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"
 encfs="encfs libpam-encfs"
 apt="apt-doc aptitude aptitude-doc-en"
-debian="debtree $apt"
-# debmirror apt-transport-tor
+debian="debtree apt-transport-tor $apt"
+# debmirror
 system="$files $disk $debian $encfs htop"
 # bum
 
