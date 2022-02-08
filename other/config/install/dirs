@@ -23,12 +23,12 @@ torrent=$bf/torrent
 mkdir -p $torrent
 $l $torrent ~/0_torrent
 
+$l $f/archive ~/0_archive
 $l $f/my ~/0_my
+$l $f/public ~/0_public
 $l $f/raw_samples ~/0_raw_samples
 
-$l $bf/archive ~/0_archive
 $l $bf/porn ~/0_porn
-$l $bf/public ~/0_public
 $l $bf/public_extra ~/0_public_extra
 $l $bf/unsorted ~/0_unsorted
 

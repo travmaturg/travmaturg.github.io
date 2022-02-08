@@ -136,6 +136,7 @@ regex/\.([dD][oO][cC][xX]?|[rR][tT][fF])$
 ### Changes ###
 #
 # Reorganization: 2012-03-07 Slava Zanko <slavazanko@gmail.com>
+#                 2021-03-28 Andrew Borodin <aborodin@vmail.ru>
 
 
 ### GIT Repo ###
@@ -144,7 +145,9 @@ regex/^\[git\]
 	Open=%cd %p/changesetfs://
 	View=%cd %p/patchsetfs://
 
+
 ### Archives ###
+# Since we use "file -z", we should use regex/ and shell/ at first, then type/.
 
 # .tgz, .tpz, .tar.gz, .tar.z, .tar.Z, .ipk, .gem
 regex/\.t([gp]?z|ar\.g?[zZ])$|\.ipk$|\.gem$
@@ -198,11 +201,6 @@ regex/\.qp[rk]$
 shell/i/.tar
 	Open=%cd %p/utar://
 	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view tar
-
-# lha
-type/^LHa\ .*archive
-	Open=%cd %p/ulha://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lha
 
 # arj
 regex/i/\.a(rj|[0-9][0-9])$
@@ -323,7 +321,6 @@ shell/i/.iso
 	Open=%cd %p/iso9660://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view iso9660
 
-
 regex/\.(diff|patch)$
 	Open=%cd %p/patchfs://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view cat
@@ -339,6 +336,102 @@ shell/i/.lib
 	Open=%cd %p/ulib://
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view lib
 
+# ace
+shell/i/.ace
+	Open=%cd %p/uace://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view ace
+	Extract=unace x %f
+
+# arc
+shell/i/.arc
+	Open=%cd %p/uarc://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view arc
+	Extract=arc x %f '*'
+	Extract (with flags)=I=%{Enter any Arc flags:}; if test -n "$I"; then arc x $I %f; fi
+
+# zip
+shell/i/.zip
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# zoo
+shell/i/.zoo
+	Open=%cd %p/uzoo://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zoo
+
+# lz4
+regex/\.lz4$
+	Open=/usr/lib/mc/ext.d/archive.sh view lz4 %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz4
+
+# WIM
+shell/i/\.wim
+	Open=%cd %p/uwim://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view wim
+
+# gzip
+type/\(gzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+# bzip2
+type/\(bzip2 compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view bzip2 %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bz2
+
+# bzip
+type/\(bzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view bzip %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bzip
+
+# compress
+type/\(compress'd
+	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
+
+# lz
+type/\(lzip compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
+
+# lzma
+type/\(LZMA compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view lzma %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lzma
+
+# xz
+type/\(XZ compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view xz %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view xz
+
+# zstd
+type/\(Zstandard compressed
+	Open=/usr/lib/mc/ext.d/archive.sh view zst %var{PAGER:more}
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zst
+
+# zip
+type/\(Zip archive
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# jar(zip)
+type/i/^Java\ (Jar\ file|archive)\ data\ \((zip|JAR)\)
+	Open=%cd %p/uzip://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+
+# lha
+type/^LHa\ .*archive
+	Open=%cd %p/ulha://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lha
+
+# PAK
+type/^PAK\ .*archive
+	Open=%cd %p/unar://
+	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view pak
+
+# Parity Archive
+type/^Parity\ Archive\ Volume\ Set
+	Open=/usr/lib/mc/ext.d/archive.sh open par2
 
 # Mailboxes
 type/^ASCII\ mail\ text
@@ -363,9 +456,6 @@ shell/i/.f
 regex/i/\.(s|asm)$
 	Include=editor
 
-include/editor
-	Open=%var{EDITOR:editor} %f
-
 # .so libraries
 regex/\.(so|so\.[0-9\.]*)$
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view so
@@ -374,6 +464,7 @@ regex/\.(so|so\.[0-9\.]*)$
 type/^ELF
 	#Open=%var{PAGER:more} %f
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view elf
+
 
 ### Documentation ###
 
@@ -391,16 +482,6 @@ shell/.info
 shell/i/.3gp
 	Include=video
 
-# Manual page
-regex/(([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])|\.man)$
-	Open=/usr/lib/mc/ext.d/text.sh open man %var{PAGER:more}
-	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man %var{PAGER:more}
-
-# Perl pod page
-shell/.pod
-	Open=/usr/lib/mc/ext.d/text.sh open pod %var{PAGER:more}
-	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view pod %var{PAGER:more}
-
 # Troff with me macros.
 # Exception - "read.me" is not a nroff file.
 shell/read.me
@@ -417,17 +498,27 @@ shell/.ms
 	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view nroff.ms %var{PAGER:more}
 
 # Manual page - compressed
-regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.g?[Zz]$
+type/^(ASCII )?troff.*gzip compressed
 	Open=/usr/lib/mc/ext.d/text.sh open man.gz %var{PAGER:more}
 	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.gz %var{PAGER:more}
 
-regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.bz$
+type/^(ASCII )?troff.*bzip compressed
 	Open=/usr/lib/mc/ext.d/text.sh open man.bz %var{PAGER:more}
 	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.bz %var{PAGER:more}
 
-regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.bz2$
+type/^(ASCII )?troff.*bzip2 compressed
 	Open=/usr/lib/mc/ext.d/text.sh open man.bz2 %var{PAGER:more}
 	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man.bz2 %var{PAGER:more}
+
+# Manual page
+type/^(ASCII )?troff
+	Open=/usr/lib/mc/ext.d/text.sh open man %var{PAGER:more}
+	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view man %var{PAGER:more}
+
+# Perl pod page
+shell/.pod
+	Open=/usr/lib/mc/ext.d/text.sh open pod %var{PAGER:more}
+	View=%view{ascii,nroff} /usr/lib/mc/ext.d/text.sh view pod %var{PAGER:more}
 
 regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.lz$
 	Open=/usr/lib/mc/ext.d/text.sh open man.lz %var{PAGER:more}
@@ -452,6 +543,7 @@ regex/([^0-9]|^[^\.]*)\.([1-9][A-Za-z]*|[ln])\.zst$
 # CHM
 shell/i/.chm
 	Open=/usr/lib/mc/ext.d/text.sh open chm
+
 
 ### Images ###
 
@@ -506,10 +598,6 @@ shell/i/.svg
 	View=%view{ascii} /usr/lib/mc/ext.d/image.sh view svg
 	Open=/usr/lib/mc/ext.d/image.sh open svg
 
-include/image
-	Open=/usr/lib/mc/ext.d/image.sh open ALL_FORMATS
-	View=%view{ascii} /usr/lib/mc/ext.d/image.sh view ALL_FORMATS
-
 
 ### Sound files ###
 
@@ -529,6 +617,10 @@ shell/i/.mp3
 regex/i/\.og[gax]$
 	Open=/usr/lib/mc/ext.d/sound.sh open ogg
 	View=%view{ascii} /usr/lib/mc/ext.d/sound.sh view ogg
+
+shell/i/.opus
+	Open=/usr/lib/mc/ext.d/sound.sh open opus
+	View=%view{ascii} /usr/lib/mc/ext.d/sound.sh view opus
 
 regex/i/\.(spx|flac)$
 	Open=/usr/lib/mc/ext.d/sound.sh open common
@@ -596,10 +688,6 @@ shell/i/.webm
 type/WebM
     Include=video
 
-include/video
-	Open=/usr/lib/mc/ext.d/video.sh open ALL_FORMATS
-	View=%view{ascii} /usr/lib/mc/ext.d/video.sh view ALL_FORMATS
-
 
 ### Documents ###
 
@@ -623,7 +711,7 @@ shell/.sdw
 	Open=/usr/lib/mc/ext.d/doc.sh open ooffice
 
 # StarOffice 6 and OpenOffice.org formats
-regex/i/\.(odt|ott|sxw|stw|ods|ots|sxc|stc|odp|otp|sxi|sti|odg|otg|sxd|std|odb|odf|sxm|odm|sxg)$
+regex/i/\.(odt|fodt|ott|sxw|stw|ods|fods|ots|sxc|stc|odp|fodp|otp|sxi|sti|odg|fodg|otg|sxd|std|odb|odf|sxm|odm|sxg)$
 	Open=/usr/lib/mc/ext.d/doc.sh open ooffice
 	View=%view{ascii} /usr/lib/mc/ext.d/doc.sh view odt
 
@@ -679,6 +767,10 @@ shell/i/.dvi
 shell/i/.tex
 	Include=editor
 
+# Markdown
+shell/i/.md
+	Include=editor
+
 # DjVu
 regex/i/\.djvu?$
 	Open=/usr/lib/mc/ext.d/doc.sh open djvu
@@ -700,10 +792,6 @@ regex/i/\.(epub|mobi)$
 shell/.class
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view javaclass
 
-# Makefile
-regex/^[Mm]akefile$
-	Open=make -f %f %{Enter parameters}
-
 # Imakefile
 shell/Imakefile
 	Open=xmkmf -a
@@ -711,6 +799,10 @@ shell/Imakefile
 # Makefile.PL (MakeMaker)
 regex/^Makefile\.(PL|pl)$
 	Open=%var{PERL:perl} %f
+
+# Makefile
+regex/[Mm]akefile
+	Open=make -f %f %{Enter parameters}
 
 # sqlite3.db
 type/^SQLite 3.x database
@@ -753,100 +845,24 @@ shell/i/.lyx
 shell/i/.torrent
 	View=%view{ascii} /usr/lib/mc/ext.d/misc.sh view torrent
 
+
 ### Plain compressed files ###
 
-# ace
-shell/i/.ace
-	Open=%cd %p/uace://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view ace
-	Extract=unace x %f
 
-# arc
-shell/i/.arc
-	Open=%cd %p/uarc://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view arc
-	Extract=arc x %f '*'
-	Extract (with flags)=I=%{Enter any Arc flags:}; if test -n "$I"; then arc x $I %f; fi
+### Includes
+# includes should be at end of bindings
 
-# zip
-shell/i/.zip
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+include/editor
+	Open=%var{EDITOR:editor} %f
 
-# zip
-type/i/^zip\ archive
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+include/image
+	Open=/usr/lib/mc/ext.d/image.sh open ALL_FORMATS
+	View=%view{ascii} /usr/lib/mc/ext.d/image.sh view ALL_FORMATS
 
-# jar(zip)
-type/i/^Java\ (Jar\ file|archive)\ data\ \((zip|JAR)\)
-	Open=%cd %p/uzip://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zip
+include/video
+	Open=/usr/lib/mc/ext.d/video.sh open ALL_FORMATS
+	View=%view{ascii} /usr/lib/mc/ext.d/video.sh view ALL_FORMATS
 
-# zoo
-shell/i/.zoo
-	Open=%cd %p/uzoo://
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zoo
-
-# gzip
-type/^gzip
-	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
-
-regex/\.(gz|Z)$
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
-
-# bzip2
-type/^bzip2
-	Open=/usr/lib/mc/ext.d/archive.sh view bzip2 %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bz2
-
-regex/\.bz2?$
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bz2
-
-# bzip
-type/^bzip
-	Open=/usr/lib/mc/ext.d/archive.sh view bzip %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view bzip
-
-# compress
-type/^compress
-	Open=/usr/lib/mc/ext.d/archive.sh view gz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view gz
-
-# lz
-regex/\.lz$
-	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
-
-# lz
-type/^LZIP
-	Open=/usr/lib/mc/ext.d/archive.sh view lz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz
-
-# lz4
-regex/\.lz4$
-	Open=/usr/lib/mc/ext.d/archive.sh view lz4 %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lz4
-
-# lzma
-regex/\.lzma$
-	Open=/usr/lib/mc/ext.d/archive.sh view lzma %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view lzma
-
-# xz
-regex/\.xz$
-	Open=/usr/lib/mc/ext.d/archive.sh view xz %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view xz
-
-# zstd
-regex/\.zst$
-	Open=/usr/lib/mc/ext.d/archive.sh view zst %var{PAGER:more}
-	View=%view{ascii} /usr/lib/mc/ext.d/archive.sh view zst
-
-# Parity Archive
-type/^Parity\ Archive\ Volume\ Set
-	Open=/usr/lib/mc/ext.d/archive.sh open par2
 
 ### Default ###
 

@@ -50,7 +50,7 @@ my_dev="build-essential $c_cpp $check $git make manpages-dev libpng-dev $scheme 
 #sylpheed="bison bogofilter flex libsylph-dev"
 # glib gtk ssl x
 
-unetbootin="mtools libqt4-dev qt4-qmake syslinux"
+unetbootin="mtools qt5-qmake qtbase5-dev qttools5-dev-tools syslinux"
 
 #vim=""
 # glib gtk
@@ -59,19 +59,18 @@ dev="$common_dev $my_dev $unetbootin"
 # $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $raw $scorched3d $sylpheed $vim
 
 
-download="wget youtube-dl"
-# cclive
+download="wget yt-dlp"
 #firewall="shorewall shorewall6 shorewall-doc ufw"
 #web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bsfilter"
-net="liferea tor $download $sylpheed"
+net="liferea qbittorrent tor $download $sylpheed"
 # $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
 dict_list="$dict_en_ru $dict_comp dict-elements dict-gcide dict-wn"
 dict="dict dictd $dict_list"
-diff="kdiff3-qt kdiff3-doc meld"
+diff="kdiff3 kdiff3-doc meld"
 view="qpdfview xpdf gv djview4"
 tex="texlive texlive-lang-cyrillic texlive-htmlxml"
 vim="vim-gtk3 vim-doc"

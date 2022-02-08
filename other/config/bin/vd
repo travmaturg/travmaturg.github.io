@@ -1,4 +1,5 @@
 #!/bin/sh
 
-youtube-dl --no-call-home --prefer-free-formats "$1"
+#youtube-dl --no-call-home --prefer-free-formats "$1"
+yt-dlp --geo-bypass --prefer-free-formats "$1"
 
