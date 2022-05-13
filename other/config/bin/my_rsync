@@ -2,5 +2,5 @@
 
 rsync_msg="--verbose --human-readable --progress"
 rsync_misc="--recursive --times"
-rsync $rsync_msg $rsync_misc $@
+rsync ${rsync_msg} ${rsync_misc} $@
 

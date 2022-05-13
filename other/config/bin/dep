@@ -1,4 +1,4 @@
 #!/bin/sh
 
-debtree --show-installed --no-versions --condense $1 | dot -T png -o $1-dep.png
+debtree --show-installed --no-versions --condense "$1" | dot -T png -o "$1"-dep.png
 

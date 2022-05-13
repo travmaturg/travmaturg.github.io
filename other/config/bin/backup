@@ -1,7 +1,7 @@
 #!/bin/sh
 
 rsync_nocopy="--links --hard-links"
-bk="nice -n 19 my_rsync $rsync_nocopy --preallocate --exclude=private*/"
+bk="nice -n 19 my_rsync ${rsync_nocopy} --preallocate --exclude=private*/"
 
 tr_dir=/files/travmaturg
 tr_dir_big=/big_files/travmaturg
@@ -11,24 +11,24 @@ usb_dir=/mnt/backup
 # func dir
 
 mk_snapshot () {
-  mkdir -p current/$3
-  $bk $1 $partial/$3 $latest/$3 $2/ current/$3 || exit 1
+  mkdir -p current/"$3"
+  ${bk} $1 "${partial}"/"$3" "${latest}"/"$3" "$2"/ current/"$3" || exit 1
   sync --file-system .
   }
 
 mk_copy () {
-  mkdir -p $3
-  $bk --delete-before --delete-excluded $1 $2/ $3 || exit 1
+  mkdir -p "$3"
+  ${bk} --delete-before --delete-excluded $1 "$2"/ "$3" || exit 1
   sync --file-system .
   }
 
 
 # func part
 
-set_dir () { mkdir -p $1 || exit 1; cd $1; }
+set_dir () { mkdir -p "$1" || exit 1; cd "$1" || exit 1; }
 
 bk_part_start () {
-  set_dir $1
+  set_dir "$1"
   rm -rf partial
   mv -f current partial > /dev/null 2>&1
   partial="--link-dest=$1/partial"
@@ -37,18 +37,18 @@ bk_part_start () {
 
 bk_part_end () {
   rm -rf partial
-  bk_new=`date +%Y/%m/%d/%T`
-  mkdir -p $bk_new
-  mv -T current $bk_new
-  ln -f -s -T $bk_new latest
+  bk_new=$(date +%Y/%m/%d/%T)
+  mkdir -p "${bk_new}"
+  mv -T current "${bk_new}"
+  ln -f -s -T "${bk_new}" latest
   }
 
 
 # func disk
 rnd_fn="random numbers because I can"
-rnd () { dd if=/dev/urandom of="$1/$rnd_fn" bs=1024000 count=1 > /dev/null 2>&1; }
-try_mnt () { umount $usb_dir > /dev/null 2>&1; mount -U $1 > /dev/null 2>&1; }
-bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
+rnd () { dd if=/dev/urandom of="$1/${rnd_fn}" bs=1024000 count=1 > /dev/null 2>&1; }
+try_mnt () { umount "${usb_dir}" > /dev/null 2>&1; mount -U "$1" > /dev/null 2>&1; }
+bk_disk_end () { cd /; rnd "$1"; df -h -t ext4; }
 
 
 # filters personal
@@ -56,12 +56,12 @@ bk_disk_end () { cd /; rnd $1; df -h -t ext4; }
 my_filter="--exclude=out/ --exclude=*.swp"
 
 conf="--exclude=/.config"
-hf_config="$conf/audacious/ $conf/dconf/ $conf/geeqie/ $conf/gsmartcontrol/ $conf/gtk-*/ $conf/libreoffice/ $conf/pulse/ $conf/vlc/ $conf/xfce*/"
+hf_config="${conf}/audacious/ ${conf}/dconf/ ${conf}/geeqie/ ${conf}/gsmartcontrol/ ${conf}/gtk-*/ ${conf}/libreoffice/ ${conf}/pulse/ ${conf}/vlc/ ${conf}/xfce*/"
 hf_ext="--exclude=*.bak* --exclude=*.db"
 hf_tmp="--exclude=*[cC]ache*/ --exclude=/.dbus/ --exclude=/.texlive*/ --exclude=*thumbnails/ --exclude=/*[._]tmp"
 hf_dir="--exclude=/.bsfilter/ --exclude=/.gnupg/ --exclude=/.gstreamer-*/ --exclude=/.gconf/ --exclude=/.gimp*/ --exclude=/.kde/ --exclude=/.local/ --exclude=/.scorched3d/"
 hf_other="--exclude=/.freeciv* --exclude=*[.-]log --exclude=/*session* --exclude=/.Xauthority"
-home_filter="$hf_config $hf_ext $hf_tmp $hf_dir $hf_other"
+home_filter="${hf_config} ${hf_ext} ${hf_tmp} ${hf_dir} ${hf_other}"
 
 # filters downloadable
 
@@ -78,103 +78,105 @@ lvl_ext_2=4
 lvl_das=5
 
 process () {
-  bk_part_start $bk_dir/personal
-  mk_snapshot "$my_filter" $tr_dir/my my
-  mk_snapshot "$home_filter" /home/misha home
-  if [ $1 -ge $lvl_flash ]; then mk_snapshot "" $tr_dir_big/семейное семейное; fi
-  if [ $1 -ge $lvl_ext_1 ] || [ $1 -eq $lvl_local ]; then mk_snapshot "" $tr_dir/work work; fi
+  bk_part_start "${bk_dir}"/personal
+  mk_snapshot "${my_filter}" "${tr_dir}"/my my
+  mk_snapshot "${home_filter}" /home/misha home
+  if [ "$1" -ge "${lvl_flash}" ]; then mk_snapshot "" "${tr_dir_big}"/семейное семейное; fi
+  if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/work work; fi
   bk_part_end
 
-  bk_part_start $bk_dir/downloadable
+  bk_part_start "${bk_dir}"/downloadable
 
-  if [ $1 -ge $lvl_ext_1 ] || [ $1 -eq $lvl_local ]; then mk_snapshot "" $tr_dir/archive archive; fi
-  mk_snapshot "$rs_filter" $tr_dir/raw_samples raw_samples
+  if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/archive archive; fi
+  mk_snapshot "${rs_filter}" "${tr_dir}"/raw_samples raw_samples
 
-  if [ $1 -ge $lvl_ext_1 ] || [ $1 -eq $lvl_local ]; then mk_snapshot "" $tr_dir/public public; fi
-  if [ $1 -eq $lvl_flash ]; then mk_snapshot "$flash_pub_filter" $tr_dir/public public; fi
+  if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/public public; fi
+  if [ "$1" -eq "${lvl_flash}" ]; then mk_snapshot "${flash_pub_filter}" "${tr_dir}"/public public; fi
 
-  if [ $1 -ge $lvl_das ]; then mk_snapshot "" $tr_dir_big/public_extra public_extra; fi
+  if [ "$1" -ge "${lvl_das}" ]; then mk_snapshot "" "${tr_dir_big}"/public_extra public_extra; fi
 
   bk_part_end
 
-  if [ $1 -ge $lvl_ext_1 ]; then
-    set_dir $bk_dir/other
-    if [ $1 -ge $lvl_ext_2 ]; then mk_copy "" $tr_dir_big/porn porn; fi
-    mk_copy "" $tr_dir_big/unsorted unsorted
+  if [ "$1" -ge "${lvl_ext_1}" ]; then
+    set_dir "${bk_dir}"/other
+    if [ "$1" -ge "${lvl_ext_2}" ]; then mk_copy "" "${tr_dir_big}"/porn porn; fi
+    mk_copy "" "${tr_dir_big}"/unsorted unsorted
   fi
 
-  bk_disk_end $bk_dir
+  bk_disk_end "${bk_dir}"
   }
 
-rnd $tr_dir
-rnd $tr_dir_big
+rnd "${tr_dir}"
+rnd "${tr_dir_big}"
 sync
 
 
 # flash
 
-bk_dir=$usb_dir/backup
+bk_dir="${usb_dir}"/backup
 
 corsair_survivor_stealth_128_gb="087eb000-52fb-4748-8376-f15c95af7bd9"
 
 if
-  try_mnt $corsair_survivor_stealth_128_gb || \
+  try_mnt "${corsair_survivor_stealth_128_gb}" || \
   false
 then
-  process $lvl_flash
-  umount $usb_dir
+  process "${lvl_flash}"
+  umount "${usb_dir}"
   exit 0
 fi
 
 
 # external 1
 
-bk_dir=$usb_dir/backup
+bk_dir="${usb_dir}"/backup
 
 wd_1_tb="461996db-0a81-4d7e-98dc-334a6c3857c1"
 
 if
-  try_mnt $wd_1_tb || \
+  try_mnt "${wd_1_tb}" || \
   false
 then
-  process $lvl_ext_1
-  umount $usb_dir
+  process "${lvl_ext_1}"
+  umount "${usb_dir}"
   exit 0
 fi
 
 
 # external 2
 
-bk_dir=$usb_dir/backup
+bk_dir="${usb_dir}"/backup
 
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
-  try_mnt $wd_my_passport_ultra_3_tb_blue || \
+  try_mnt "${wd_my_passport_ultra_3_tb_blue}" || \
   false
 then
-  process $lvl_ext_2
-  umount $usb_dir
+  process "${lvl_ext_2}"
+  umount "${usb_dir}"
   exit 0
 fi
 
 
 # DAS
 
-bk_dir=$usb_dir/backup
+bk_dir="${usb_dir}"/backup
 
+seagate_ironwolf_6_tb="6f119c3f-6f27-4770-a74d-e272ed13ed4a"
+toshiba_mg_6_tb="f39dc3e6-6176-4877-8959-0d9ae8060b18"
 toshiba_n300_6_tb="a23c6653-062e-4461-a692-3e17863ebf28"
 toshiba_x300_8_tb="b5cfffe4-7e0c-46f1-a7ed-2bd533a1b442"
-toshiba_mg_6_tb="f39dc3e6-6176-4877-8959-0d9ae8060b18"
 
 if
-  try_mnt $toshiba_n300_6_tb || \
-  #try_mnt $toshiba_x300_8_tb || \
-  try_mnt $toshiba_mg_6_tb || \
+  #try_mnt "${seagate_ironwolf_6_tb}" || \
+  try_mnt "${toshiba_mg_6_tb}" || \
+  try_mnt "${toshiba_n300_6_tb}" || \
+  try_mnt "${toshiba_x300_8_tb}" || \
   false
 then
-  process $lvl_das
-  umount $usb_dir
+  process "${lvl_das}"
+  umount "${usb_dir}"
   exit 0
 fi
 
@@ -186,7 +188,7 @@ bk_dir=/big_files/backup
 if
   true
 then
-  process $lvl_local
+  process "${lvl_local}"
   exit 0
 fi
 
