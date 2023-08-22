@@ -4,7 +4,7 @@
 #  Open=ufraw %f
 #  View=
 
-regex/\.([bB][mM][pP]|[jJ][pP][eE]?[gG]|[pP][nN][gG]|[tT][iI][fF][fF]?)$
+regex/\.([bB][mM][pP]|[jJ][pP][eE]?[gG]|[pP][nN][gG]|[tT][iI][fF][fF]?|[wW][eE][bB][pP])$
   Open=geeqie %f
 
 regex/\.([aA][vV][iI]|[dD][iI][vV][xX]|[fF][lL][vV]|[mM][4kKoO][vV]|[mM][pP](4|[eE]?[gG])|[oO][gG][vV]|([mM]2)?[tT][sS]|[vV][oO][bB]|[wW][eE][bB][mM]|[wW][mM][vV])$

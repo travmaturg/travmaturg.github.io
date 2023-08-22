@@ -1,70 +1,37 @@
 #!/bin/sh
 
 
-#apt-get install aptitude
 #install="aptitude --without-recommends install"
 install="apt-get --no-install-recommends --ignore-missing --show-progress install"
 
 
 autotools="autoconf automake libtool"
-#gtk="libgtk2.0-dev libgtk-3-dev"
-#qt="libqt4-dev qtbase5-dev qttools5-dev-tools"
+#gtk="libgtk-3-dev"
+qt="libqt4-dev qt5-qmake qtbase5-dev qttools5-dev-tools"
 #sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
-#x="libx11-dev libxt-dev"
-common_dev="$autotools cmake pkg-config"
-# libexpat-dev libflac-dev libfreetype6-dev libglib2.0-dev $gtk libjpeg-dev libpango1.0-dev $qt $sdl libsqlite3-dev libssl-dev $x libz-dev
+common_dev="$autotools build-essential cmake pkg-config $qt"
+# libglib2.0-dev $gtk libpango1.0-dev $sdl libsqlite3-dev libssl-dev libz-dev
 
 c_cpp="gcc g++"
 check="cppcheck splint"
 git="git git-doc gitk git-gui"
 scheme="racket racket-doc"
-tiff="libtiff5-dev libtiff-doc"
-my_dev="build-essential $c_cpp $check $git make manpages-dev libpng-dev $scheme $tiff"
+tiff="libtiff-dev libtiff-doc"
+my_dev="$c_cpp $check $git make manpages-dev libpng-dev $scheme $tiff"
 
-#freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev liblua5.3-dev"
+#freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev libicu-dev liblua5.4-dev"
 # glib gtk pango pkg-config sdl
 
-#geeqie="libexiv2-dev intltool"
-# gtk
-
-#icecat="libbz2-dev libdbus-glib-1-dev libgtkmm-2.4-dev libicu-dev libpixman-1-dev libevent-dev libffi-dev libhunspell-dev libnss3-dev libvpx-dev libxft-dev"
-# freetype gtk pango sqlite x z
-
-#kiwix="aria2 libcrypto++-dev libctpp2-dev libicu-dev liblzma-dev libmagic-dev libpugixml-dev libxapian-dev libzim-dev"
-# pkg-config ssl z
-
-#torrent_rasterbar="libboost-chrono-dev libgeoip-dev"
-#qbittorrent="libboost-dev libboost-random-dev libboost-system-dev geoip-database libqjson-dev libqt5svg5-dev libtorrent-rasterbar-dev"
-# qt ssl $torrent_rasterbar
-
-#quiterss="qt4-qmake libqtwebkit-dev"
-# qt sqlite
-
-#raw=""
-
-#ogg="libogg-dev libvorbis-dev"
-#openal="libopenal-dev libalut-dev"
-#scorched3d="libfftw3-dev libglew-dev libjpeg-dev $ogg $openal libwxgtk3.0-dev"
-# expat freetype jpeg sdl z
-
-#sylpheed="bison bogofilter flex libsylph-dev"
-# glib gtk ssl x
-
-unetbootin="mtools qt5-qmake qtbase5-dev qttools5-dev-tools syslinux"
-
-#vim=""
-# glib gtk
+unetbootin="mtools syslinux"
+# qt
 
 dev="$common_dev $my_dev $unetbootin"
-# $freeciv $geeqie $icecat $kiwix $qbittorrents $quiters $raw $scorched3d $sylpheed $vim
+# $freeciv
 
 
 download="wget yt-dlp"
-#firewall="shorewall shorewall6 shorewall-doc ufw"
-#web_server="lighttpd lighttpd-doc webalizer"
 sylpheed="sylpheed bsfilter"
 net="liferea qbittorrent tor $download $sylpheed"
-# $firewall $web_server
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
@@ -84,7 +51,7 @@ encfs="encfs libpam-encfs"
 apt="apt-doc aptitude aptitude-doc-en"
 debian="debtree apt-transport-tor $apt"
 # debmirror
-system="$files $disk $debian $encfs htop"
+system="$files $disk $debian $encfs htop shellcheck"
 # bum
 
 images="geeqie rawtherapee hugin"
