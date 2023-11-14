@@ -6,12 +6,153 @@
   <meta name="generator" content="pandoc" />
   <title>books</title>
   <style type="text/css">
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     span.underline{text-decoration: underline;}
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
 <body>
@@ -19,194 +160,532 @@
 <h2>CS</h2>
 <h3>algorithms</h3>
 <ul>
-<li>Algorithms by S. Dasgupta, C.H. Papadimitriou, and U.V. Vazirani: <a href="http://www.cs.berkeley.edu/~vazirani/algorithms.html" class="uri">http://www.cs.berkeley.edu/~vazirani/algorithms.html</a>, <a href="https://book.huihoo.com/pdf/algorithms/" class="uri">https://book.huihoo.com/pdf/algorithms/</a></li>
-<li>Algorithms by Jeff Erickson: <a href="http://jeffe.cs.illinois.edu/teaching/algorithms/" class="uri">http://jeffe.cs.illinois.edu/teaching/algorithms/</a>, <a href="http://algorithms.wtf" class="uri">http://algorithms.wtf</a>, <a href="https://github.com/jeffgerickson/algorithms" class="uri">https://github.com/jeffgerickson/algorithms</a>, <a href="https://archive.org/details/Algorithms-Jeff-Erickson" class="uri">https://archive.org/details/Algorithms-Jeff-Erickson</a></li>
-<li><a href="https://open.umn.edu/opentextbooks/textbooks/150">Algorithms and Data Structures With Applications to Graphics and Geometry</a></li>
+<li>Algorithms by S. Dasgupta, C.H. Papadimitriou, and U.V. Vazirani: <a
+href="http://www.cs.berkeley.edu/~vazirani/algorithms.html"
+class="uri">http://www.cs.berkeley.edu/~vazirani/algorithms.html</a>, <a
+href="https://book.huihoo.com/pdf/algorithms/"
+class="uri">https://book.huihoo.com/pdf/algorithms/</a></li>
+<li>Algorithms by Jeff Erickson: <a
+href="http://jeffe.cs.illinois.edu/teaching/algorithms/"
+class="uri">http://jeffe.cs.illinois.edu/teaching/algorithms/</a>, <a
+href="http://algorithms.wtf" class="uri">http://algorithms.wtf</a>, <a
+href="https://github.com/jeffgerickson/algorithms"
+class="uri">https://github.com/jeffgerickson/algorithms</a>, <a
+href="https://archive.org/details/Algorithms-Jeff-Erickson"
+class="uri">https://archive.org/details/Algorithms-Jeff-Erickson</a></li>
+<li><a
+href="https://open.umn.edu/opentextbooks/textbooks/150">Algorithms and
+Data Structures With Applications to Graphics and Geometry</a></li>
 <li><a href="https://algowiki-project.org/">AlgoWiki</a></li>
-<li><a href="https://www.cse.iitd.ernet.in/~ssen/csl356/admin356.html">Analysis and Design of Algorithms - Sandeep Sen</a></li>
-<li><a href="https://sarielhp.org/teach/notes/algos/">Class notes for graduate algorithms class</a></li>
-<li><a href="https://sarielhp.org/teach/notes/rand_alg/">Class notes for Randomized Algorithms</a></li>
-<li><a href="https://xlinux.nist.gov/dads/">Dictionary of Algorithms and Data Structures</a></li>
-<li>Elementary Algorithms: <a href="https://github.com/liuxinyu95/AlgoXY" class="uri">https://github.com/liuxinyu95/AlgoXY</a>, <a href="https://sites.google.com/site/algoxy/" class="uri">https://sites.google.com/site/algoxy/</a></li>
-<li><a href="http://luc.devroye.org/books-luc.html">Lecture Notes on Bucket Algorithms</a></li>
-<li><a href="http://www.cs.yale.edu/homes/aspnes/classes/469/">Notes on Randomized Algorithms</a></li>
-<li><a href="https://www.epaperpress.com/sortsearch/index.html">Sorting and Searching Algorithms</a></li>
-<li>The Arcane Algorithm Archive: <a href="https://www.algorithm-archive.org/" class="uri">https://www.algorithm-archive.org/</a>, <a href="https://github.com/algorithm-archivists/algorithm-archive" class="uri">https://github.com/algorithm-archivists/algorithm-archive</a></li>
-<li>Topics in Algorithm Design: <a href="http://people.scs.carleton.ca/~maheshwa/" class="uri">http://people.scs.carleton.ca/~maheshwa/</a>, <a href="http://people.scs.carleton.ca/~maheshwa/Notes/DAA-Grad/notes.pdf" class="uri">http://people.scs.carleton.ca/~maheshwa/Notes/DAA-Grad/notes.pdf</a></li>
-<li><a href="http://discopal.ispras.ru/%D0%A4%D0%B0%D0%B9%D0%BB:Book-advanced-algorithms.pdf">Эффективные алгоритмы и сложность вычислений - Н. Н. Кузюрин, С. А. Фомин</a></li>
+<li><a
+href="https://www.cse.iitd.ernet.in/~ssen/csl356/admin356.html">Analysis
+and Design of Algorithms - Sandeep Sen</a></li>
+<li><a href="https://sarielhp.org/teach/notes/algos/">Class notes for
+graduate algorithms class</a></li>
+<li><a href="https://sarielhp.org/teach/notes/rand_alg/">Class notes for
+Randomized Algorithms</a></li>
+<li><a href="https://xlinux.nist.gov/dads/">Dictionary of Algorithms and
+Data Structures</a></li>
+<li>Elementary Algorithms: <a
+href="https://github.com/liuxinyu95/AlgoXY"
+class="uri">https://github.com/liuxinyu95/AlgoXY</a>, <a
+href="https://sites.google.com/site/algoxy/"
+class="uri">https://sites.google.com/site/algoxy/</a></li>
+<li><a href="http://luc.devroye.org/books-luc.html">Lecture Notes on
+Bucket Algorithms</a></li>
+<li><a href="http://www.cs.yale.edu/homes/aspnes/classes/469/">Notes on
+Randomized Algorithms</a></li>
+<li><a href="https://www.epaperpress.com/sortsearch/index.html">Sorting
+and Searching Algorithms</a></li>
+<li>The Arcane Algorithm Archive: <a
+href="https://www.algorithm-archive.org/"
+class="uri">https://www.algorithm-archive.org/</a>, <a
+href="https://github.com/algorithm-archivists/algorithm-archive"
+class="uri">https://github.com/algorithm-archivists/algorithm-archive</a></li>
+<li>Topics in Algorithm Design: <a
+href="http://people.scs.carleton.ca/~maheshwa/"
+class="uri">http://people.scs.carleton.ca/~maheshwa/</a>, <a
+href="http://people.scs.carleton.ca/~maheshwa/Notes/DAA-Grad/notes.pdf"
+class="uri">http://people.scs.carleton.ca/~maheshwa/Notes/DAA-Grad/notes.pdf</a></li>
+<li><a
+href="http://discopal.ispras.ru/%D0%A4%D0%B0%D0%B9%D0%BB:Book-advanced-algorithms.pdf">Эффективные
+алгоритмы и сложность вычислений - Н. Н. Кузюрин, С. А. Фомин</a></li>
 </ul>
 <h3>database</h3>
 <ul>
-<li>Architecture of a Database System: <a href="https://dsf.berkeley.edu/jmh/" class="uri">https://dsf.berkeley.edu/jmh/</a>, <a href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf" class="uri">http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf</a></li>
-<li><a href="https://opentextbc.ca/dbdesign01/">Database Design by Adrienne Watt and Nelson Eng</a></li>
-<li><a href="http://infolab.stanford.edu/pub/gio/dbd/acm/toc.html">Database Design - Gio Wiederhold</a></li>
-<li><a href="http://www.dcs.warwick.ac.uk/~hugh/TTM/Database-Explorations-revision-2.pdf">Database Explorations by C.J. Date and Hugh Darwen</a></li>
-<li><a href="http://www.dcs.warwick.ac.uk/~hugh/TTM/DTATRM.pdf">Databases, Types, and The Relational Model: The Third Manifesto by C.J. Date and Hugh Darwen</a></li>
-<li><a href="https://www2.cs.arizona.edu/people/rts/publications.html">Developing Time-Oriented Database Applications in SQL, Richard T. Snodgrass</a></li>
-<li><a href="http://webdam.inria.fr/Alice/">Foundations of Databases - Abiteboul, Hull, Vianu</a></li>
-<li><a href="https://people.cs.aau.dk/~csj/Thesis/">Temporal Database Management by Christian S. Jensen</a></li>
-<li><a href="http://web.cecs.pdx.edu/~maier/TheoryBook/TRD.html">The Theory of Relational Databases, David Maier</a></li>
-<li><a href="https://postgrespro.ru/education/books/dbtech">Основы технологий баз данных - Б. А. Новиков, Е. А. Горшкова, Н. Г. Графеева</a></li>
+<li>Architecture of a Database System: <a
+href="https://dsf.berkeley.edu/jmh/"
+class="uri">https://dsf.berkeley.edu/jmh/</a>, <a
+href="http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf"
+class="uri">http://db.cs.berkeley.edu/papers/fntdb07-architecture.pdf</a></li>
+<li><a href="https://opentextbc.ca/dbdesign01/">Database Design by
+Adrienne Watt and Nelson Eng</a></li>
+<li><a
+href="http://infolab.stanford.edu/pub/gio/dbd/acm/toc.html">Database
+Design - Gio Wiederhold</a></li>
+<li><a
+href="http://www.dcs.warwick.ac.uk/~hugh/TTM/Database-Explorations-revision-2.pdf">Database
+Explorations by C.J. Date and Hugh Darwen</a></li>
+<li><a
+href="http://www.dcs.warwick.ac.uk/~hugh/TTM/DTATRM.pdf">Databases,
+Types, and The Relational Model: The Third Manifesto by C.J. Date and
+Hugh Darwen</a></li>
+<li><a
+href="https://www2.cs.arizona.edu/people/rts/publications.html">Developing
+Time-Oriented Database Applications in SQL, Richard T.
+Snodgrass</a></li>
+<li><a href="http://webdam.inria.fr/Alice/">Foundations of Databases -
+Abiteboul, Hull, Vianu</a></li>
+<li><a href="https://people.cs.aau.dk/~csj/Thesis/">Temporal Database
+Management by Christian S. Jensen</a></li>
+<li><a href="http://web.cecs.pdx.edu/~maier/TheoryBook/TRD.html">The
+Theory of Relational Databases, David Maier</a></li>
+<li><a href="https://postgrespro.ru/education/books/dbtech">Основы
+технологий баз данных - Б. А. Новиков, Е. А. Горшкова, Н. Г.
+Графеева</a></li>
 </ul>
 <h3>graphics</h3>
 <ul>
-<li><a href="http://www.realtimerendering.com/blog/an-introduction-to-ray-tracing-is-now-free-for-download/">An Introduction to Ray Tracing</a></li>
-<li><a href="https://www.pbr-book.org/">Physically Based Rendering</a></li>
-<li>Principles of Digital Image Synthesis: <a href="http://www.realtimerendering.com/blog/principles-of-digital-image-synthesis-now-free-for-download/" class="uri">http://www.realtimerendering.com/blog/principles-of-digital-image-synthesis-now-free-for-download/</a>, <a href="http://realtimerendering.com/Principles_of_Digital_Image_Synthesis_v1.0.1.pdf" class="uri">http://realtimerendering.com/Principles_of_Digital_Image_Synthesis_v1.0.1.pdf</a></li>
+<li><a
+href="http://www.realtimerendering.com/blog/an-introduction-to-ray-tracing-is-now-free-for-download/">An
+Introduction to Ray Tracing</a></li>
+<li><a href="https://www.pbr-book.org/">Physically Based
+Rendering</a></li>
+<li>Principles of Digital Image Synthesis: <a
+href="http://www.realtimerendering.com/blog/principles-of-digital-image-synthesis-now-free-for-download/"
+class="uri">http://www.realtimerendering.com/blog/principles-of-digital-image-synthesis-now-free-for-download/</a>,
+<a
+href="http://realtimerendering.com/Principles_of_Digital_Image_Synthesis_v1.0.1.pdf"
+class="uri">http://realtimerendering.com/Principles_of_Digital_Image_Synthesis_v1.0.1.pdf</a></li>
 </ul>
 <h3>languages</h3>
 <ul>
-<li><a href="http://hjemmesider.diku.dk/~torbenm/Basics/index.html">Basics of Compiler Design</a></li>
-<li>Build Your Own Lisp: <a href="https://www.buildyourownlisp.com/" class="uri">https://www.buildyourownlisp.com/</a>, <a href="https://github.com/orangeduck/BuildYourOwnLisp" class="uri">https://github.com/orangeduck/BuildYourOwnLisp</a></li>
-<li><a href="https://www.inf.ethz.ch/personal/wirth/CompilerConstruction/index.html">Compiler Construction, Niklaus Wirth</a></li>
-<li>Compiler Construction by William M. Waite: <a href="http://www.e-booksdirectory.com/details.php?ebook=10771" class="uri">http://www.e-booksdirectory.com/details.php?ebook=10771</a>, <a href="https://www.cs.cmu.edu/~aplatzer/course/compiler12.html" class="uri">https://www.cs.cmu.edu/~aplatzer/course/compiler12.html</a>, <a href="ftp://i44ftp.info.uni-karlsruhe.de/pub/papers/ggoos/" class="uri">ftp://i44ftp.info.uni-karlsruhe.de/pub/papers/ggoos/</a></li>
-<li><a href="http://elvis.rowan.edu/~bergmann/books/cd/books.html">Compiler Design by Seth D. Bergmann</a></li>
+<li><a
+href="http://hjemmesider.diku.dk/~torbenm/Basics/index.html">Basics of
+Compiler Design</a></li>
+<li>Build Your Own Lisp: <a href="https://www.buildyourownlisp.com/"
+class="uri">https://www.buildyourownlisp.com/</a>, <a
+href="https://github.com/orangeduck/BuildYourOwnLisp"
+class="uri">https://github.com/orangeduck/BuildYourOwnLisp</a></li>
+<li><a
+href="https://www.inf.ethz.ch/personal/wirth/CompilerConstruction/index.html">Compiler
+Construction, Niklaus Wirth</a></li>
+<li>Compiler Construction by William M. Waite: <a
+href="http://www.e-booksdirectory.com/details.php?ebook=10771"
+class="uri">http://www.e-booksdirectory.com/details.php?ebook=10771</a>,
+<a href="https://www.cs.cmu.edu/~aplatzer/course/compiler12.html"
+class="uri">https://www.cs.cmu.edu/~aplatzer/course/compiler12.html</a>,
+<a href="ftp://i44ftp.info.uni-karlsruhe.de/pub/papers/ggoos/"
+class="uri">ftp://i44ftp.info.uni-karlsruhe.de/pub/papers/ggoos/</a></li>
+<li><a
+href="http://elvis.rowan.edu/~bergmann/books/cd/books.html">Compiler
+Design by Seth D. Bergmann</a></li>
 <li><a href="https://holub.com/compiler/">Compiler Design in C</a></li>
-<li><a href="http://www.craftinginterpreters.com/">Crafting Interpreters</a></li>
-<li><a href="https://github.com/panicz/master-thesis">Data Structure Optimization for Functional Programs</a></li>
-<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/">Functional Data Structures - Prabhakar Ragde</a></li>
+<li><a href="http://www.craftinginterpreters.com/">Crafting
+Interpreters</a></li>
+<li><a href="https://github.com/panicz/master-thesis">Data Structure
+Optimization for Functional Programs</a></li>
+<li><a href="https://cs.uwaterloo.ca/~plragde/flaneries/FDS/">Functional
+Data Structures - Prabhakar Ragde</a></li>
 <li><a href="https://hop.perl.plover.com/">Higher-Order Perl</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/publication/implementing-functional-languages-a-tutorial/">Implementing functional languages: a tutorial</a></li>
-<li><a href="http://www.civilized.com/getlisp.html">Interpreting Lisp</a></li>
+<li><a
+href="https://www.microsoft.com/en-us/research/publication/implementing-functional-languages-a-tutorial/">Implementing
+functional languages: a tutorial</a></li>
+<li><a href="http://www.civilized.com/getlisp.html">Interpreting
+Lisp</a></li>
 <li>Introduction to Functional Programming - John Harrison
 <ul>
-<li><a href="https://www.cl.cam.ac.uk/teaching/Lectures/funprog-jrh-1996/">Introduction to Functional Programming - John Harrison</a></li>
-<li>Введение в функциональное программирование - Д. Харрисон: <a href="https://funprog-ru.github.io/" class="uri">https://funprog-ru.github.io/</a>, <a href="https://github.com/funprog-ru/funprog-ru" class="uri">https://github.com/funprog-ru/funprog-ru</a></li>
+<li><a
+href="https://www.cl.cam.ac.uk/teaching/Lectures/funprog-jrh-1996/">Introduction
+to Functional Programming - John Harrison</a></li>
+<li>Введение в функциональное программирование - Д. Харрисон: <a
+href="https://funprog-ru.github.io/"
+class="uri">https://funprog-ru.github.io/</a>, <a
+href="https://github.com/funprog-ru/funprog-ru"
+class="uri">https://github.com/funprog-ru/funprog-ru</a></li>
 </ul></li>
-<li><a href="https://dickgrune.com/Books/PTAPG_1st_Edition/">Parsing Techniques - A Practical Guide</a></li>
-<li><a href="https://www.itu.dk/people/sestoft/pebook/">Partial Evaluation and Automatic Program Generation - Jones, Gomard, Sestoft</a></li>
-<li><a href="http://pl.cs.jhu.edu/pl/book/">Principles of Programming Languages - Scott F. Smith</a></li>
-<li>Programming Languages: Application and Interpretation: <a href="https://www.plai.org/" class="uri">https://www.plai.org/</a>, <a href="http://cs.brown.edu/courses/cs173/2012/book/" class="uri">http://cs.brown.edu/courses/cs173/2012/book/</a>, <a href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/" class="uri">http://cs.brown.edu/~sk/Publications/Books/ProgLangs/</a></li>
-<li><a href="https://cs.au.dk/%7Eamoeller/spa/">Static Program Analysis - Anders Møller and Michael I. Schwartzbach</a></li>
-<li><a href="https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/">The Implementation of Functional Programming Languages</a></li>
-<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Type Theory and Functional Programming</a></li>
-<li><a href="http://www.weizmann.ac.il/sci-tea/benari/research-activities/understanding-programming-languages">Understanding Programming Languages</a></li>
-<li>Warren's Abstract Machine: A Tutorial Reconstruction: <a href="https://adamo.wordpress.com/2009/07/06/warrens-abstract-machine-a-tutorial-reconstruction/" class="uri">https://adamo.wordpress.com/2009/07/06/warrens-abstract-machine-a-tutorial-reconstruction/</a>, <a href="https://github.com/a-yiorgos/wambook" class="uri">https://github.com/a-yiorgos/wambook</a>, <a href="http://wambook.sourceforge.net/" class="uri">http://wambook.sourceforge.net/</a></li>
-<li>Write You a Haskell: <a href="http://dev.stephendiehl.com/fun/" class="uri">http://dev.stephendiehl.com/fun/</a>, <a href="https://github.com/sdiehl/write-you-a-haskell" class="uri">https://github.com/sdiehl/write-you-a-haskell</a></li>
-<li>Интерпретация Лиспа и Scheme: <a href="https://github.com/ilammy/lisp" class="uri">https://github.com/ilammy/lisp</a>, <a href="http://ilammy.github.io/lisp/" class="uri">http://ilammy.github.io/lisp/</a></li>
-<li><a href="http://newstar.rinet.ru/~goga/tapl/">Типы в языках программирования</a></li>
+<li><a href="https://dickgrune.com/Books/PTAPG_1st_Edition/">Parsing
+Techniques - A Practical Guide</a></li>
+<li><a href="https://www.itu.dk/people/sestoft/pebook/">Partial
+Evaluation and Automatic Program Generation - Jones, Gomard,
+Sestoft</a></li>
+<li><a href="http://pl.cs.jhu.edu/pl/book/">Principles of Programming
+Languages - Scott F. Smith</a></li>
+<li>Programming Languages: Application and Interpretation: <a
+href="https://www.plai.org/" class="uri">https://www.plai.org/</a>, <a
+href="http://cs.brown.edu/courses/cs173/2012/book/"
+class="uri">http://cs.brown.edu/courses/cs173/2012/book/</a>, <a
+href="http://cs.brown.edu/~sk/Publications/Books/ProgLangs/"
+class="uri">http://cs.brown.edu/~sk/Publications/Books/ProgLangs/</a></li>
+<li><a href="https://cs.au.dk/%7Eamoeller/spa/">Static Program Analysis
+- Anders Møller and Michael I. Schwartzbach</a></li>
+<li><a
+href="https://www.microsoft.com/en-us/research/publication/the-implementation-of-functional-programming-languages/">The
+Implementation of Functional Programming Languages</a></li>
+<li><a href="https://www.cs.kent.ac.uk/people/staff/sjt/TTFP/">Type
+Theory and Functional Programming</a></li>
+<li><a
+href="http://www.weizmann.ac.il/sci-tea/benari/research-activities/understanding-programming-languages">Understanding
+Programming Languages</a></li>
+<li>Warren's Abstract Machine: A Tutorial Reconstruction: <a
+href="https://adamo.wordpress.com/2009/07/06/warrens-abstract-machine-a-tutorial-reconstruction/"
+class="uri">https://adamo.wordpress.com/2009/07/06/warrens-abstract-machine-a-tutorial-reconstruction/</a>,
+<a href="https://github.com/a-yiorgos/wambook"
+class="uri">https://github.com/a-yiorgos/wambook</a>, <a
+href="http://wambook.sourceforge.net/"
+class="uri">http://wambook.sourceforge.net/</a></li>
+<li>Write You a Haskell: <a href="http://dev.stephendiehl.com/fun/"
+class="uri">http://dev.stephendiehl.com/fun/</a>, <a
+href="https://github.com/sdiehl/write-you-a-haskell"
+class="uri">https://github.com/sdiehl/write-you-a-haskell</a></li>
+<li>Интерпретация Лиспа и Scheme: <a
+href="https://github.com/ilammy/lisp"
+class="uri">https://github.com/ilammy/lisp</a>, <a
+href="http://ilammy.github.io/lisp/"
+class="uri">http://ilammy.github.io/lisp/</a></li>
+<li><a href="http://newstar.rinet.ru/~goga/tapl/">Типы в языках
+программирования</a></li>
 </ul>
 <h3>operating systems</h3>
 <ul>
-<li>An operating systems Vade Mecum: <a href="http://www.cs.uky.edu/~raphael/" class="uri">http://www.cs.uky.edu/~raphael/</a>, <a href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.pdf" class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.pdf</a>, <a href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.ps" class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.ps</a>, <a href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.tar.gz" class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.tar.gz</a></li>
-<li><a href="http://www.usingcsp.com/">Communicating Sequential Processes</a></li>
-<li>Operating System: From 0 to 1: <a href="https://tuhdo.github.io/os01/" class="uri">https://tuhdo.github.io/os01/</a>, <a href="https://github.com/tuhdo/os01" class="uri">https://github.com/tuhdo/os01</a></li>
-<li><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems: Three Easy Pieces</a></li>
-<li>Operating Systems and Middleware: Supporting Controlled Interaction: <a href="https://gustavus.edu/mcs/max/os-book/" class="uri">https://gustavus.edu/mcs/max/os-book/</a>, <a href="https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction" class="uri">https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction</a></li>
-<li><a href="http://www.nobius.org/~dbg/">Practical File System Design</a></li>
-<li>The Design and Implementation of the Ulix Operating System: <a href="http://ulixos.org/" class="uri">http://ulixos.org/</a>, <a href="https://github.com/hgesser/ulix" class="uri">https://github.com/hgesser/ulix</a></li>
-<li>The little book about OS development: <a href="https://littleosbook.github.io/" class="uri">https://littleosbook.github.io/</a>, <a href="https://github.com/littleosbook/littleosbook/" class="uri">https://github.com/littleosbook/littleosbook/</a></li>
+<li>An operating systems Vade Mecum: <a
+href="http://www.cs.uky.edu/~raphael/"
+class="uri">http://www.cs.uky.edu/~raphael/</a>, <a
+href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.pdf"
+class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.pdf</a>, <a
+href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.ps"
+class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.ps</a>, <a
+href="ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.tar.gz"
+class="uri">ftp://ftp.cs.uky.edu/cs/manuscripts/vade.mecum.2.tar.gz</a></li>
+<li><a href="http://www.usingcsp.com/">Communicating Sequential
+Processes</a></li>
+<li>Operating System: From 0 to 1: <a
+href="https://tuhdo.github.io/os01/"
+class="uri">https://tuhdo.github.io/os01/</a>, <a
+href="https://github.com/tuhdo/os01"
+class="uri">https://github.com/tuhdo/os01</a></li>
+<li><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">Operating Systems:
+Three Easy Pieces</a></li>
+<li>Operating Systems and Middleware: Supporting Controlled Interaction:
+<a href="https://gustavus.edu/mcs/max/os-book/"
+class="uri">https://gustavus.edu/mcs/max/os-book/</a>, <a
+href="https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction"
+class="uri">https://github.com/Max-Hailperin/Operating-Systems-and-Middleware--Supporting-Controlled-Interaction</a></li>
+<li><a href="http://www.nobius.org/~dbg/">Practical File System
+Design</a></li>
+<li>The Design and Implementation of the Ulix Operating System: <a
+href="http://ulixos.org/" class="uri">http://ulixos.org/</a>, <a
+href="https://github.com/hgesser/ulix"
+class="uri">https://github.com/hgesser/ulix</a></li>
+<li>The little book about OS development: <a
+href="https://littleosbook.github.io/"
+class="uri">https://littleosbook.github.io/</a>, <a
+href="https://github.com/littleosbook/littleosbook/"
+class="uri">https://github.com/littleosbook/littleosbook/</a></li>
 </ul>
 <h3>parallel</h3>
 <ul>
-<li><a href="http://www.parallel-algorithms-book.com/">Algorithm Design: Parallel and Sequential</a></li>
-<li><a href="https://dl.acm.org/doi/book/10.1145/3335772">Concurrency: the Works of Leslie Lamport</a></li>
-<li><a href="http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/csci493.65/csci493.65_lecture_notes.php">CSci 493.65 Parallel Computing</a></li>
-<li>Distributed Algorithms - Jukka Suomela: <a href="https://jukkasuomela.fi/da2020/" class="uri">https://jukkasuomela.fi/da2020/</a>, <a href="https://github.com/suomela/da2020" class="uri">https://github.com/suomela/da2020</a>, <a href="https://jukkasuomela.fi/da/" class="uri">https://jukkasuomela.fi/da/</a>, <a href="https://github.com/suomela/da" class="uri">https://github.com/suomela/da</a>, <a href="https://bitbucket.org/suomela/da" class="uri">https://bitbucket.org/suomela/da</a></li>
-<li>Introduction to High-Performance Scientific Computing: <a href="https://web.corral.tacc.utexas.edu/CompEdu/pdf/stc/" class="uri">https://web.corral.tacc.utexas.edu/CompEdu/pdf/stc/</a>, <a href="https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html" class="uri">https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html</a></li>
-<li><a href="https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial">Introduction to Parallel Computing</a></li>
-<li><a href="http://www.cs.yale.edu/homes/aspnes/classes/465/">Notes on Theory of Distributed Systems</a></li>
-<li><a href="https://www.researchgate.net/publication/241684993_Parallel_Algorithms">Parallel Algorithms - Henri Casanova, Arnaud R Legrand, Yves Robert</a></li>
-<li><a href="https://dspace.mit.edu/handle/1721.1/3719">Parallel and Distributed Computation:Numerical Methods</a></li>
-<li>Programming on Parallel Machines; GPU, Multicore, Clusters and More: <a href="https://heather.cs.ucdavis.edu/parprocbook" class="uri">https://heather.cs.ucdavis.edu/parprocbook</a>, <a href="https://heather.cs.ucdavis.edu/~matloff/158/PLN/" class="uri">https://heather.cs.ucdavis.edu/~matloff/158/PLN/</a></li>
-<li><a href="https://people.mpi-inf.mpg.de/~mehlhorn/ToolboxNew.html">Sequential and Parallel Data Structures and Algorithms</a></li>
+<li><a href="http://www.parallel-algorithms-book.com/">Algorithm Design:
+Parallel and Sequential</a></li>
+<li><a href="https://dl.acm.org/doi/book/10.1145/3335772">Concurrency:
+the Works of Leslie Lamport</a></li>
+<li><a
+href="http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/csci493.65/csci493.65_lecture_notes.php">CSci
+493.65 Parallel Computing</a></li>
+<li>Distributed Algorithms - Jukka Suomela: <a
+href="https://jukkasuomela.fi/da2020/"
+class="uri">https://jukkasuomela.fi/da2020/</a>, <a
+href="https://github.com/suomela/da2020"
+class="uri">https://github.com/suomela/da2020</a>, <a
+href="https://jukkasuomela.fi/da/"
+class="uri">https://jukkasuomela.fi/da/</a>, <a
+href="https://github.com/suomela/da"
+class="uri">https://github.com/suomela/da</a>, <a
+href="https://bitbucket.org/suomela/da"
+class="uri">https://bitbucket.org/suomela/da</a></li>
+<li>Introduction to High-Performance Scientific Computing: <a
+href="https://web.corral.tacc.utexas.edu/CompEdu/pdf/stc/"
+class="uri">https://web.corral.tacc.utexas.edu/CompEdu/pdf/stc/</a>, <a
+href="https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html"
+class="uri">https://pages.tacc.utexas.edu/~eijkhout/istc/istc.html</a></li>
+<li><a
+href="https://hpc.llnl.gov/training/tutorials/introduction-parallel-computing-tutorial">Introduction
+to Parallel Computing</a></li>
+<li><a href="http://www.cs.yale.edu/homes/aspnes/classes/465/">Notes on
+Theory of Distributed Systems</a></li>
+<li><a
+href="https://www.researchgate.net/publication/241684993_Parallel_Algorithms">Parallel
+Algorithms - Henri Casanova, Arnaud R Legrand, Yves Robert</a></li>
+<li><a href="https://dspace.mit.edu/handle/1721.1/3719">Parallel and
+Distributed Computation:Numerical Methods</a></li>
+<li>Programming on Parallel Machines; GPU, Multicore, Clusters and More:
+<a href="https://heather.cs.ucdavis.edu/parprocbook"
+class="uri">https://heather.cs.ucdavis.edu/parprocbook</a>, <a
+href="https://heather.cs.ucdavis.edu/~matloff/158/PLN/"
+class="uri">https://heather.cs.ucdavis.edu/~matloff/158/PLN/</a></li>
+<li><a
+href="https://people.mpi-inf.mpg.de/~mehlhorn/ToolboxNew.html">Sequential
+and Parallel Data Structures and Algorithms</a></li>
 </ul>
 <h3>other</h3>
 <ul>
-<li><a href="http://ocaml-book.com/a-machine-made-this-book-ten-sketches-of-computer-science/">A Machine Made This Book</a></li>
-<li><a href="https://mfleck.cs.illinois.edu/building-blocks/">Building Blocks for Theoretical Computer Science</a></li>
-<li>Communication Complexity (for Algorithm Designers): <a href="http://timroughgarden.org/w15/w15.html" class="uri">http://timroughgarden.org/w15/w15.html</a>, <a href="https://arxiv.org/abs/1509.06257" class="uri">https://arxiv.org/abs/1509.06257</a></li>
-<li><a href="http://hjemmesider.diku.dk/~neil/Comp2book.html">Computability and Complexity from a Programming Perspective</a></li>
-<li>Computer Architecture and Organization: From Software to Hardware: <a href="http://www.freetechbooks.com/computer-architecture-and-organization-from-software-to-hardware-t1040.html" class="uri">http://www.freetechbooks.com/computer-architecture-and-organization-from-software-to-hardware-t1040.html</a>, <a href="http://www.ece.umd.edu/~manoj/350/notes/book.pdf" class="uri">http://www.ece.umd.edu/~manoj/350/notes/book.pdf</a></li>
-<li>Computer Science from the Bottom Up: <a href="https://www.bottomupcs.com/" class="uri">https://www.bottomupcs.com/</a>, <a href="https://github.com/ianw/bottomupcs" class="uri">https://github.com/ianw/bottomupcs</a></li>
-<li><a href="https://sarielhp.org/teach/notes/373/">CS 373: (Intro to) Theory of Computation</a></li>
-<li><a href="http://mattmahoney.net/dc/dce.html">Data Compression Explained</a></li>
-<li><a href="https://www.arl.wustl.edu/~jst/cse/260/">Designing Digital Circuits</a></li>
-<li><a href="https://math.dartmouth.edu/archive/m19f03/public_html/">Discrete Mathematics in Computer Science</a></li>
-<li><a href="https://cglab.ca/~michiel/DiscreteStructures/">Discrete Structures for Computer Science: Counting, Recursion, and Probability</a></li>
-<li><a href="https://math.hws.edu/FoundationsOfComputation/">Foundations of Computation</a></li>
-<li><a href="http://infolab.stanford.edu/~ullman/focs.html">Foundations of Computer Science - Al Aho and Jeff Ullman</a></li>
-<li><a href="http://www-igm.univ-mlv.fr/~lecroq/string/">Handbook of Exact String Matching Algorithms</a></li>
-<li><a href="http://bwlampson.site/87-HintsAndPrinciples/HintsAndPrinciplesAbstract.htm">Hints and Principles for Computer System Design</a></li>
-<li><a href="http://computingbook.org/">Introduction to Computing</a></li>
-<li><a href="https://ptolemy.berkeley.edu/books/leeseshia/">Introduction to Embedded Systems - Lee and Seshia</a></li>
-<li>Introduction to Theoretical Computer Science: <a href="https://introtcs.org/" class="uri">https://introtcs.org/</a>, <a href="https://github.com/boazbk/tcs" class="uri">https://github.com/boazbk/tcs</a></li>
-<li><a href="https://cglab.ca/~michiel/TheoryOfComputation/">Introduction to Theory of Computation</a></li>
-<li><a href="https://github.com/liuxinyu95/unplugged">Isomorphism - Mathematics of Programming</a></li>
-<li><a href="https://www.math.ias.edu/avi/book">Mathematics and Computation - Avi Wigderson</a></li>
-<li><a href="https://stellar.mit.edu/S/course/6/sp17/6.042/">Mathematics for Computer Science</a></li>
-<li><a href="https://www.jjj.de/fxt/fxtpage.html#fxtbook">Matters Computational</a></li>
-<li><a href="https://www.memorymanagement.org/">Memory Management Reference</a></li>
+<li><a
+href="http://ocaml-book.com/a-machine-made-this-book-ten-sketches-of-computer-science/">A
+Machine Made This Book</a></li>
+<li><a href="https://mfleck.cs.illinois.edu/building-blocks/">Building
+Blocks for Theoretical Computer Science</a></li>
+<li>Communication Complexity (for Algorithm Designers): <a
+href="http://timroughgarden.org/w15/w15.html"
+class="uri">http://timroughgarden.org/w15/w15.html</a>, <a
+href="https://arxiv.org/abs/1509.06257"
+class="uri">https://arxiv.org/abs/1509.06257</a></li>
+<li><a
+href="http://hjemmesider.diku.dk/~neil/Comp2book.html">Computability and
+Complexity from a Programming Perspective</a></li>
+<li>Computer Architecture and Organization: From Software to Hardware:
+<a
+href="http://www.freetechbooks.com/computer-architecture-and-organization-from-software-to-hardware-t1040.html"
+class="uri">http://www.freetechbooks.com/computer-architecture-and-organization-from-software-to-hardware-t1040.html</a>,
+<a href="http://www.ece.umd.edu/~manoj/350/notes/book.pdf"
+class="uri">http://www.ece.umd.edu/~manoj/350/notes/book.pdf</a></li>
+<li>Computer Science from the Bottom Up: <a
+href="https://www.bottomupcs.com/"
+class="uri">https://www.bottomupcs.com/</a>, <a
+href="https://github.com/ianw/bottomupcs"
+class="uri">https://github.com/ianw/bottomupcs</a></li>
+<li><a href="https://sarielhp.org/teach/notes/373/">CS 373: (Intro to)
+Theory of Computation</a></li>
+<li><a href="http://mattmahoney.net/dc/dce.html">Data Compression
+Explained</a></li>
+<li><a href="https://www.arl.wustl.edu/~jst/cse/260/">Designing Digital
+Circuits</a></li>
+<li><a
+href="https://math.dartmouth.edu/archive/m19f03/public_html/">Discrete
+Mathematics in Computer Science</a></li>
+<li><a href="https://cglab.ca/~michiel/DiscreteStructures/">Discrete
+Structures for Computer Science: Counting, Recursion, and
+Probability</a></li>
+<li><a href="https://math.hws.edu/FoundationsOfComputation/">Foundations
+of Computation</a></li>
+<li><a href="http://infolab.stanford.edu/~ullman/focs.html">Foundations
+of Computer Science - Al Aho and Jeff Ullman</a></li>
+<li><a href="http://www-igm.univ-mlv.fr/~lecroq/string/">Handbook of
+Exact String Matching Algorithms</a></li>
+<li><a
+href="http://bwlampson.site/87-HintsAndPrinciples/HintsAndPrinciplesAbstract.htm">Hints
+and Principles for Computer System Design</a></li>
+<li><a href="http://computingbook.org/">Introduction to
+Computing</a></li>
+<li><a href="https://ptolemy.berkeley.edu/books/leeseshia/">Introduction
+to Embedded Systems - Lee and Seshia</a></li>
+<li>Introduction to Theoretical Computer Science: <a
+href="https://introtcs.org/" class="uri">https://introtcs.org/</a>, <a
+href="https://github.com/boazbk/tcs"
+class="uri">https://github.com/boazbk/tcs</a></li>
+<li><a
+href="https://cglab.ca/~michiel/TheoryOfComputation/">Introduction to
+Theory of Computation</a></li>
+<li><a href="https://github.com/liuxinyu95/unplugged">Isomorphism -
+Mathematics of Programming</a></li>
+<li><a href="https://www.math.ias.edu/avi/book">Mathematics and
+Computation - Avi Wigderson</a></li>
+<li><a href="https://stellar.mit.edu/S/course/6/sp17/6.042/">Mathematics
+for Computer Science</a></li>
+<li><a href="https://www.jjj.de/fxt/fxtpage.html#fxtbook">Matters
+Computational</a></li>
+<li><a href="https://www.memorymanagement.org/">Memory Management
+Reference</a></li>
 <li><a href="http://www.mmds.org/">Mining of Massive Datasets</a></li>
-<li>Models Of Computation: <a href="http://www.modelsofcomputation.org" class="uri">http://www.modelsofcomputation.org</a>, <a href="https://cs.brown.edu/people/jes/book/" class="uri">https://cs.brown.edu/people/jes/book/</a></li>
-<li>Modern Computer Arithmetic: <a href="https://maths-people.anu.edu.au/~brent/pub/pub226.html" class="uri">https://maths-people.anu.edu.au/~brent/pub/pub226.html</a>, <a href="https://members.loria.fr/PZimmermann/mca/pub226.html" class="uri">https://members.loria.fr/PZimmermann/mca/pub226.html</a></li>
-<li><a href="http://cs.yale.edu/homes/aspnes/classes/468/">Notes on Computational Complexity Theory</a></li>
-<li>Papers We Love: <a href="https://paperswelove.org/" class="uri">https://paperswelove.org/</a>, <a href="https://github.com/papers-we-love/papers-we-love" class="uri">https://github.com/papers-we-love/papers-we-love</a></li>
-<li><a href="https://ocw.mit.edu/resources/res-6-004-principles-of-computer-system-design-an-introduction-spring-2009/">Principles of Computer System Design</a></li>
-<li><a href="https://ciir.cs.umass.edu/irbook/">Search Engines Information Retrieval in Practice</a></li>
-<li><a href="https://www.dwheeler.com/secure-programs/">Secure Programming HOWTO</a></li>
-<li><a href="http://monge.univ-mlv.fr/~mac/REC/B1.html">Text Algorithms</a></li>
-<li><a href="https://www.thecshandbook.com/">The Computer Science Handbook</a></li>
-<li>The Computer Science of TeX and LaTeX: <a href="http://eijkhout.net/texsci/" class="uri">http://eijkhout.net/texsci/</a>, <a href="https://bitbucket.org/VictorEijkhout/tex-latex-science-book/src/master/" class="uri">https://bitbucket.org/VictorEijkhout/tex-latex-science-book/src/master/</a></li>
-<li>The Logical Foundations of Computer Science and Mathematics: <a href="https://cs.wallawalla.edu/research/KU/Logic/" class="uri">https://cs.wallawalla.edu/research/KU/Logic/</a>, <a href="http://www.cs.wwc.edu/~aabyan/Logic/" class="uri">http://www.cs.wwc.edu/~aabyan/Logic/</a></li>
-<li>Theory of Computation - Jim Hefferon: <a href="https://hefferon.net/computation/index.html" class="uri">https://hefferon.net/computation/index.html</a>, <a href="https://joshua.smcvt.edu/computation/" class="uri">https://joshua.smcvt.edu/computation/</a>, <a href="https://gitlab.com/jim.hefferon/toc" class="uri">https://gitlab.com/jim.hefferon/toc</a></li>
-<li><a href="http://davidsalomon.name/cORGadvertis/cORG.html">Topics In Computer Organization</a></li>
-<li><a href="https://okmij.org/ftp/" class="uri">https://okmij.org/ftp/</a></li>
+<li>Models Of Computation: <a href="http://www.modelsofcomputation.org"
+class="uri">http://www.modelsofcomputation.org</a>, <a
+href="https://cs.brown.edu/people/jes/book/"
+class="uri">https://cs.brown.edu/people/jes/book/</a></li>
+<li>Modern Computer Arithmetic: <a
+href="https://maths-people.anu.edu.au/~brent/pub/pub226.html"
+class="uri">https://maths-people.anu.edu.au/~brent/pub/pub226.html</a>,
+<a href="https://members.loria.fr/PZimmermann/mca/pub226.html"
+class="uri">https://members.loria.fr/PZimmermann/mca/pub226.html</a></li>
+<li><a href="http://cs.yale.edu/homes/aspnes/classes/468/">Notes on
+Computational Complexity Theory</a></li>
+<li>Papers We Love: <a href="https://paperswelove.org/"
+class="uri">https://paperswelove.org/</a>, <a
+href="https://github.com/papers-we-love/papers-we-love"
+class="uri">https://github.com/papers-we-love/papers-we-love</a></li>
+<li><a
+href="https://ocw.mit.edu/resources/res-6-004-principles-of-computer-system-design-an-introduction-spring-2009/">Principles
+of Computer System Design</a></li>
+<li><a href="https://ciir.cs.umass.edu/irbook/">Search Engines
+Information Retrieval in Practice</a></li>
+<li><a href="https://www.dwheeler.com/secure-programs/">Secure
+Programming HOWTO</a></li>
+<li><a href="http://monge.univ-mlv.fr/~mac/REC/B1.html">Text
+Algorithms</a></li>
+<li><a href="https://www.thecshandbook.com/">The Computer Science
+Handbook</a></li>
+<li>The Computer Science of TeX and LaTeX: <a
+href="http://eijkhout.net/texsci/"
+class="uri">http://eijkhout.net/texsci/</a>, <a
+href="https://bitbucket.org/VictorEijkhout/tex-latex-science-book/src/master/"
+class="uri">https://bitbucket.org/VictorEijkhout/tex-latex-science-book/src/master/</a></li>
+<li>The Logical Foundations of Computer Science and Mathematics: <a
+href="https://cs.wallawalla.edu/research/KU/Logic/"
+class="uri">https://cs.wallawalla.edu/research/KU/Logic/</a>, <a
+href="http://www.cs.wwc.edu/~aabyan/Logic/"
+class="uri">http://www.cs.wwc.edu/~aabyan/Logic/</a></li>
+<li>Theory of Computation - Jim Hefferon: <a
+href="https://hefferon.net/computation/index.html"
+class="uri">https://hefferon.net/computation/index.html</a>, <a
+href="https://joshua.smcvt.edu/computation/"
+class="uri">https://joshua.smcvt.edu/computation/</a>, <a
+href="https://gitlab.com/jim.hefferon/toc"
+class="uri">https://gitlab.com/jim.hefferon/toc</a></li>
+<li><a href="http://davidsalomon.name/cORGadvertis/cORG.html">Topics In
+Computer Organization</a></li>
+<li><a href="https://okmij.org/ftp/"
+class="uri">https://okmij.org/ftp/</a></li>
 </ul>
 <h2>документация</h2>
 <h3>C and C++</h3>
 <ul>
 <li>C
 <ul>
-<li><a href="https://www.open-std.org/jtc1/sc22/wg14/">ISO C Working Group</a></li>
-<li><a href="https://www.iso-9899.info/" class="uri">https://www.iso-9899.info/</a></li>
-<li><a href="http://www-personal.acfr.usyd.edu.au/tbailey/ctext/">An Introduction to the C Programming Language and Software Design</a></li>
-<li><a href="https://github.com/AnthonyCalandra/modern-c-features">A cheatsheet of modern C language and library features</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg14/">ISO C Working
+Group</a></li>
+<li><a href="https://www.iso-9899.info/"
+class="uri">https://www.iso-9899.info/</a></li>
+<li><a href="http://www-personal.acfr.usyd.edu.au/tbailey/ctext/">An
+Introduction to the C Programming Language and Software Design</a></li>
+<li><a href="https://github.com/AnthonyCalandra/modern-c-features">A
+cheatsheet of modern C language and library features</a></li>
 </ul></li>
 <li>C++
 <ul>
-<li>C++ Annotations: <a href="https://fbb-git.gitlab.io/cppannotations/" class="uri">https://fbb-git.gitlab.io/cppannotations/</a>, <a href="https://gitlab.com/fbb-git/cppannotations" class="uri">https://gitlab.com/fbb-git/cppannotations</a>, <a href="https://gitlab.com/fbb-git/cppannotations-zip" class="uri">https://gitlab.com/fbb-git/cppannotations-zip</a></li>
+<li>C++ Annotations: <a href="https://fbb-git.gitlab.io/cppannotations/"
+class="uri">https://fbb-git.gitlab.io/cppannotations/</a>, <a
+href="https://gitlab.com/fbb-git/cppannotations"
+class="uri">https://gitlab.com/fbb-git/cppannotations</a>, <a
+href="https://gitlab.com/fbb-git/cppannotations-zip"
+class="uri">https://gitlab.com/fbb-git/cppannotations-zip</a></li>
 <li><a href="https://isocpp.org/">Standard C++</a></li>
-<li><a href="https://www.open-std.org/jtc1/sc22/wg21/">The C++ Standards Committee</a></li>
-<li><a href="https://github.com/cplusplus/draft" class="uri">https://github.com/cplusplus/draft</a></li>
-<li><a href="https://github.com/AnthonyCalandra/modern-cpp-features">A cheatsheet of modern C++ language and library features</a></li>
-<li>Awesome Modern C++: <a href="https://awesomecpp.com/" class="uri">https://awesomecpp.com/</a>, <a href="https://github.com/rigtorp/awesome-modern-cpp" class="uri">https://github.com/rigtorp/awesome-modern-cpp</a></li>
-<li><a href="https://hackingcpp.com/cpp/cheat_sheets.html">C++ Cheat Sheets &amp; Infographics</a></li>
+<li><a href="https://www.open-std.org/jtc1/sc22/wg21/">The C++ Standards
+Committee</a></li>
+<li><a href="https://github.com/cplusplus/draft"
+class="uri">https://github.com/cplusplus/draft</a></li>
+<li><a href="https://github.com/AnthonyCalandra/modern-cpp-features">A
+cheatsheet of modern C++ language and library features</a></li>
+<li>Awesome Modern C++: <a href="https://awesomecpp.com/"
+class="uri">https://awesomecpp.com/</a>, <a
+href="https://github.com/rigtorp/awesome-modern-cpp"
+class="uri">https://github.com/rigtorp/awesome-modern-cpp</a></li>
+<li><a href="https://hackingcpp.com/cpp/cheat_sheets.html">C++ Cheat
+Sheets &amp; Infographics</a></li>
 </ul></li>
-<li>cppreference: <a href="https://en.cppreference.com/w/" class="uri">https://en.cppreference.com/w/</a>, <a href="https://github.com/PeterFeicht/cppreference-doc" class="uri">https://github.com/PeterFeicht/cppreference-doc</a></li>
-<li>Writing a C library: <a href="https://davidz25.blogspot.com/2011/07/writing-c-library-intro-conclusion-and.html">0</a>, <a href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-1.html">1</a>, <a href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-2.html">2</a>, <a href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-3.html">3</a>, <a href="https://davidz25.blogspot.com/2011/07/writing-c-library-part-4.html">4</a>, <a href="https://davidz25.blogspot.com/2011/07/writing-c-library-part-5.html">5</a></li>
+<li>cppreference: <a href="https://en.cppreference.com/w/"
+class="uri">https://en.cppreference.com/w/</a>, <a
+href="https://github.com/PeterFeicht/cppreference-doc"
+class="uri">https://github.com/PeterFeicht/cppreference-doc</a></li>
+<li>Writing a C library: <a
+href="https://davidz25.blogspot.com/2011/07/writing-c-library-intro-conclusion-and.html">0</a>,
+<a
+href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-1.html">1</a>,
+<a
+href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-2.html">2</a>,
+<a
+href="https://davidz25.blogspot.com/2011/06/writing-c-library-part-3.html">3</a>,
+<a
+href="https://davidz25.blogspot.com/2011/07/writing-c-library-part-4.html">4</a>,
+<a
+href="https://davidz25.blogspot.com/2011/07/writing-c-library-part-5.html">5</a></li>
 </ul>
 <h3>Git</h3>
 <ul>
-<li><a href="https://github.com/pluralsight/git-internals-pdf">Git Internals</a></li>
-<li>Git Magic: <a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/" class="uri">http://www-cs-students.stanford.edu/~blynn/gitmagic/</a>, <a href="https://github.com/blynn/gitmagic" class="uri">https://github.com/blynn/gitmagic</a></li>
-<li>Pro Git: <a href="https://git-scm.com/book/" class="uri">https://git-scm.com/book/</a>, <a href="https://github.com/progit" class="uri">https://github.com/progit</a></li>
-<li><a href="https://github.com/k88hudson/git-flight-rules/blob/master/README_ru.md">Правила полета на Git</a>, <a href="https://github.com/k88hudson/git-flight-rules">Flight rules for Git</a></li>
+<li><a href="https://github.com/pluralsight/git-internals-pdf">Git
+Internals</a></li>
+<li>Git Magic: <a
+href="http://www-cs-students.stanford.edu/~blynn/gitmagic/"
+class="uri">http://www-cs-students.stanford.edu/~blynn/gitmagic/</a>, <a
+href="https://github.com/blynn/gitmagic"
+class="uri">https://github.com/blynn/gitmagic</a></li>
+<li>Pro Git: <a href="https://git-scm.com/book/"
+class="uri">https://git-scm.com/book/</a>, <a
+href="https://github.com/progit"
+class="uri">https://github.com/progit</a></li>
+<li><a
+href="https://github.com/k88hudson/git-flight-rules/blob/master/README_ru.md">Правила
+полета на Git</a>, <a
+href="https://github.com/k88hudson/git-flight-rules">Flight rules for
+Git</a></li>
 </ul>
 <h3>Markdown</h3>
 <ul>
-<li><a href="https://warpedvisions.org/projects/markdown-cheat-sheet/">Markdown Cheat Sheet</a></li>
-<li><a href="https://daringfireball.net/projects/markdown/">Daring Fireball: Markdown</a></li>
+<li><a
+href="https://warpedvisions.org/projects/markdown-cheat-sheet/">Markdown
+Cheat Sheet</a></li>
+<li><a href="https://daringfireball.net/projects/markdown/">Daring
+Fireball: Markdown</a></li>
 <li><a href="https://commonmark.org/">CommonMark</a></li>
 </ul>
 <h3>network</h3>
 <ul>
-<li><a href="http://intronetworks.cs.luc.edu/">An Introduction to Computer Networks</a></li>
-<li>Beej's Guide to Network Programming: <a href="https://beej.us/guide/bgnet/" class="uri">https://beej.us/guide/bgnet/</a>, <a href="https://github.com/beejjorgensen/bgnet" class="uri">https://github.com/beejjorgensen/bgnet</a></li>
-<li><a href="http://www.pragsoft.com/download.html">Communication Networks</a></li>
-<li>Computer Networking: Principles, Protocols and Practice: <a href="https://www.computer-networking.info/" class="uri">https://www.computer-networking.info/</a>, <a href="https://github.com/cnp3/ebook" class="uri">https://github.com/cnp3/ebook</a></li>
-<li>Computer Networks: A Systems Approach: <a href="https://book.systemsapproach.org/" class="uri">https://book.systemsapproach.org/</a>, <a href="https://github.com/SystemsApproach/book" class="uri">https://github.com/SystemsApproach/book</a></li>
-<li>Introduction to Networking: How the Internet Works: <a href="https://www.net-intro.com/" class="uri">https://www.net-intro.com/</a>, <a href="https://github.com/csev/net-intro" class="uri">https://github.com/csev/net-intro</a></li>
+<li><a href="http://intronetworks.cs.luc.edu/">An Introduction to
+Computer Networks</a></li>
+<li>Beej's Guide to Network Programming: <a
+href="https://beej.us/guide/bgnet/"
+class="uri">https://beej.us/guide/bgnet/</a>, <a
+href="https://github.com/beejjorgensen/bgnet"
+class="uri">https://github.com/beejjorgensen/bgnet</a></li>
+<li><a href="http://www.pragsoft.com/download.html">Communication
+Networks</a></li>
+<li>Computer Networking: Principles, Protocols and Practice: <a
+href="https://www.computer-networking.info/"
+class="uri">https://www.computer-networking.info/</a>, <a
+href="https://github.com/cnp3/ebook"
+class="uri">https://github.com/cnp3/ebook</a></li>
+<li>Computer Networks: A Systems Approach: <a
+href="https://book.systemsapproach.org/"
+class="uri">https://book.systemsapproach.org/</a>, <a
+href="https://github.com/SystemsApproach/book"
+class="uri">https://github.com/SystemsApproach/book</a></li>
+<li>Introduction to Networking: How the Internet Works: <a
+href="https://www.net-intro.com/"
+class="uri">https://www.net-intro.com/</a>, <a
+href="https://github.com/csev/net-intro"
+class="uri">https://github.com/csev/net-intro</a></li>
 </ul>
 <h3>OCaml</h3>
 <ul>
-<li><a href="https://caml.inria.fr/pub/docs/oreilly-book/">Developing applications with Objective Caml</a></li>
-<li>OCaml Cheat Sheets: <a href="https://www.ocamlpro.com/2019/09/13/updated-cheat-sheets-ocaml-language-and-ocaml-standard-library/" class="uri">https://www.ocamlpro.com/2019/09/13/updated-cheat-sheets-ocaml-language-and-ocaml-standard-library/</a>, <a href="https://github.com/OCamlPro/ocaml-cheat-sheets" class="uri">https://github.com/OCamlPro/ocaml-cheat-sheets</a></li>
-<li>OCaml From the Ground Up: <a href="https://ocamlbook.org/" class="uri">https://ocamlbook.org/</a>, <a href="https://github.com/dmbaturin/ocaml-book" class="uri">https://github.com/dmbaturin/ocaml-book</a></li>
-<li>OCaml Programming: Correct + Efficient + Beautiful: <a href="https://www.cs.cornell.edu/courses/cs3110" class="uri">https://www.cs.cornell.edu/courses/cs3110</a>, <a href="https://cs3110.github.io/textbook/" class="uri">https://cs3110.github.io/textbook/</a>, <a href="https://github.com/cs3110/textbook" class="uri">https://github.com/cs3110/textbook</a></li>
-<li>Real World OCaml: <a href="https://dev.realworldocaml.org/" class="uri">https://dev.realworldocaml.org/</a>, <a href="https://github.com/realworldocaml/book" class="uri">https://github.com/realworldocaml/book</a></li>
-<li>Unix system programming in OCaml: <a href="https://ocaml.github.io/ocamlunix/" class="uri">https://ocaml.github.io/ocamlunix/</a>, <a href="https://github.com/ocaml/ocamlunix/" class="uri">https://github.com/ocaml/ocamlunix/</a></li>
-<li>Using, Understanding, and Unraveling The OCaml Language: <a href="https://caml.inria.fr/pub/docs/u3-ocaml/" class="uri">https://caml.inria.fr/pub/docs/u3-ocaml/</a>, <a href="http://pauillac.inria.fr/~remy/cours/appsem/" class="uri">http://pauillac.inria.fr/~remy/cours/appsem/</a></li>
+<li><a href="https://caml.inria.fr/pub/docs/oreilly-book/">Developing
+applications with Objective Caml</a></li>
+<li>OCaml Cheat Sheets: <a
+href="https://www.ocamlpro.com/2019/09/13/updated-cheat-sheets-ocaml-language-and-ocaml-standard-library/"
+class="uri">https://www.ocamlpro.com/2019/09/13/updated-cheat-sheets-ocaml-language-and-ocaml-standard-library/</a>,
+<a href="https://github.com/OCamlPro/ocaml-cheat-sheets"
+class="uri">https://github.com/OCamlPro/ocaml-cheat-sheets</a></li>
+<li>OCaml From the Ground Up: <a href="https://ocamlbook.org/"
+class="uri">https://ocamlbook.org/</a>, <a
+href="https://github.com/dmbaturin/ocaml-book"
+class="uri">https://github.com/dmbaturin/ocaml-book</a></li>
+<li>OCaml Programming: Correct + Efficient + Beautiful: <a
+href="https://www.cs.cornell.edu/courses/cs3110"
+class="uri">https://www.cs.cornell.edu/courses/cs3110</a>, <a
+href="https://cs3110.github.io/textbook/"
+class="uri">https://cs3110.github.io/textbook/</a>, <a
+href="https://github.com/cs3110/textbook"
+class="uri">https://github.com/cs3110/textbook</a></li>
+<li>Real World OCaml: <a href="https://dev.realworldocaml.org/"
+class="uri">https://dev.realworldocaml.org/</a>, <a
+href="https://github.com/realworldocaml/book"
+class="uri">https://github.com/realworldocaml/book</a></li>
+<li>Unix system programming in OCaml: <a
+href="https://ocaml.github.io/ocamlunix/"
+class="uri">https://ocaml.github.io/ocamlunix/</a>, <a
+href="https://github.com/ocaml/ocamlunix/"
+class="uri">https://github.com/ocaml/ocamlunix/</a></li>
+<li>Using, Understanding, and Unraveling The OCaml Language: <a
+href="https://caml.inria.fr/pub/docs/u3-ocaml/"
+class="uri">https://caml.inria.fr/pub/docs/u3-ocaml/</a>, <a
+href="http://pauillac.inria.fr/~remy/cours/appsem/"
+class="uri">http://pauillac.inria.fr/~remy/cours/appsem/</a></li>
 </ul>
 <h3>Rust</h3>
 <ul>
@@ -214,555 +693,1370 @@
 <ul>
 <li>Rust by Example
 <ul>
-<li>Rust на примерах: <a href="https://doc.rust-lang.ru/stable/rust-by-example/" class="uri">https://doc.rust-lang.ru/stable/rust-by-example/</a>, <a href="https://github.com/rust-lang-ru/rust-by-example" class="uri">https://github.com/rust-lang-ru/rust-by-example</a></li>
-<li>Rust by Example: <a href="https://doc.rust-lang.org/rust-by-example/" class="uri">https://doc.rust-lang.org/rust-by-example/</a>, <a href="https://github.com/rust-lang/rust-by-example" class="uri">https://github.com/rust-lang/rust-by-example</a></li>
+<li>Rust на примерах: <a
+href="https://doc.rust-lang.ru/stable/rust-by-example/"
+class="uri">https://doc.rust-lang.ru/stable/rust-by-example/</a>, <a
+href="https://github.com/rust-lang-ru/rust-by-example"
+class="uri">https://github.com/rust-lang-ru/rust-by-example</a></li>
+<li>Rust by Example: <a
+href="https://doc.rust-lang.org/rust-by-example/"
+class="uri">https://doc.rust-lang.org/rust-by-example/</a>, <a
+href="https://github.com/rust-lang/rust-by-example"
+class="uri">https://github.com/rust-lang/rust-by-example</a></li>
 </ul></li>
 <li>The Cargo Book
 <ul>
-<li>Cargo - менеджер пакетов для языка программирования Rust: <a href="https://rurust.github.io/cargo-docs-ru/" class="uri">https://rurust.github.io/cargo-docs-ru/</a>, <a href="https://github.com/rust-lang-ru/cargo-docs-ru" class="uri">https://github.com/rust-lang-ru/cargo-docs-ru</a></li>
-<li>The Cargo Book: <a href="https://doc.rust-lang.org/cargo/" class="uri">https://doc.rust-lang.org/cargo/</a>, <a href="https://github.com/rust-lang/cargo/tree/master/src/doc" class="uri">https://github.com/rust-lang/cargo/tree/master/src/doc</a></li>
+<li>Cargo - менеджер пакетов для языка программирования Rust: <a
+href="https://rurust.github.io/cargo-docs-ru/"
+class="uri">https://rurust.github.io/cargo-docs-ru/</a>, <a
+href="https://github.com/rust-lang-ru/cargo-docs-ru"
+class="uri">https://github.com/rust-lang-ru/cargo-docs-ru</a></li>
+<li>The Cargo Book: <a href="https://doc.rust-lang.org/cargo/"
+class="uri">https://doc.rust-lang.org/cargo/</a>, <a
+href="https://github.com/rust-lang/cargo/tree/master/src/doc"
+class="uri">https://github.com/rust-lang/cargo/tree/master/src/doc</a></li>
 </ul></li>
-<li>Command Line Applications in Rust: <a href="https://rust-cli.github.io/book/" class="uri">https://rust-cli.github.io/book/</a>, <a href="https://github.com/rust-cli/book" class="uri">https://github.com/rust-cli/book</a></li>
+<li>Command Line Applications in Rust: <a
+href="https://rust-cli.github.io/book/"
+class="uri">https://rust-cli.github.io/book/</a>, <a
+href="https://github.com/rust-cli/book"
+class="uri">https://github.com/rust-cli/book</a></li>
 <li>The Rust Programming Language
 <ul>
-<li>Язык программирования Rust: <a href="https://doc.rust-lang.ru/book/" class="uri">https://doc.rust-lang.ru/book/</a>, <a href="https://github.com/rust-lang-ru/book" class="uri">https://github.com/rust-lang-ru/book</a></li>
-<li>The Rust Programming Language: <a href="https://doc.rust-lang.org/book/" class="uri">https://doc.rust-lang.org/book/</a>, <a href="https://github.com/rust-lang/book" class="uri">https://github.com/rust-lang/book</a></li>
+<li>Язык программирования Rust: <a href="https://doc.rust-lang.ru/book/"
+class="uri">https://doc.rust-lang.ru/book/</a>, <a
+href="https://github.com/rust-lang-ru/book"
+class="uri">https://github.com/rust-lang-ru/book</a></li>
+<li>The Rust Programming Language: <a
+href="https://doc.rust-lang.org/book/"
+class="uri">https://doc.rust-lang.org/book/</a>, <a
+href="https://github.com/rust-lang/book"
+class="uri">https://github.com/rust-lang/book</a></li>
 </ul></li>
 <li>Rust Cookbook
 <ul>
-<li>Как "готовить" Rust: <a href="https://doc.rust-lang.ru/rust-cookbook/" class="uri">https://doc.rust-lang.ru/rust-cookbook/</a>, <a href="https://github.com/rust-lang-ru/rust-cookbook" class="uri">https://github.com/rust-lang-ru/rust-cookbook</a></li>
-<li>Cookin' with Rust: <a href="https://rust-lang-nursery.github.io/rust-cookbook/" class="uri">https://rust-lang-nursery.github.io/rust-cookbook/</a>, <a href="https://github.com/rust-lang-nursery/rust-cookbook" class="uri">https://github.com/rust-lang-nursery/rust-cookbook</a></li>
+<li>Как "готовить" Rust: <a
+href="https://doc.rust-lang.ru/rust-cookbook/"
+class="uri">https://doc.rust-lang.ru/rust-cookbook/</a>, <a
+href="https://github.com/rust-lang-ru/rust-cookbook"
+class="uri">https://github.com/rust-lang-ru/rust-cookbook</a></li>
+<li>Cookin' with Rust: <a
+href="https://rust-lang-nursery.github.io/rust-cookbook/"
+class="uri">https://rust-lang-nursery.github.io/rust-cookbook/</a>, <a
+href="https://github.com/rust-lang-nursery/rust-cookbook"
+class="uri">https://github.com/rust-lang-nursery/rust-cookbook</a></li>
 </ul></li>
-<li><a href="https://doc.rust-lang.org/std/index.html">The Rust Standard Library</a></li>
-<li>The Rust Reference: <a href="https://doc.rust-lang.org/reference/index.html" class="uri">https://doc.rust-lang.org/reference/index.html</a>, <a href="https://github.com/rust-lang/reference" class="uri">https://github.com/rust-lang/reference</a></li>
+<li><a href="https://doc.rust-lang.org/std/index.html">The Rust Standard
+Library</a></li>
+<li>The Rust Reference: <a
+href="https://doc.rust-lang.org/reference/index.html"
+class="uri">https://doc.rust-lang.org/reference/index.html</a>, <a
+href="https://github.com/rust-lang/reference"
+class="uri">https://github.com/rust-lang/reference</a></li>
 <li>The Rustonomicon
 <ul>
-<li><a href="https://github.com/rust-lang-ru/rustonomicon">Растономикон</a></li>
-<li>The Rustonomicon: <a href="https://doc.rust-lang.org/nomicon/" class="uri">https://doc.rust-lang.org/nomicon/</a>, <a href="https://github.com/rust-lang/nomicon" class="uri">https://github.com/rust-lang/nomicon</a></li>
+<li><a
+href="https://github.com/rust-lang-ru/rustonomicon">Растономикон</a></li>
+<li>The Rustonomicon: <a href="https://doc.rust-lang.org/nomicon/"
+class="uri">https://doc.rust-lang.org/nomicon/</a>, <a
+href="https://github.com/rust-lang/nomicon"
+class="uri">https://github.com/rust-lang/nomicon</a></li>
 </ul></li>
 <li>Asynchronous Programming in Rust
 <ul>
-<li>Асинхронное программирование в Rust: <a href="https://doc.rust-lang.ru/async-book/" class="uri">https://doc.rust-lang.ru/async-book/</a>, <a href="https://github.com/rust-lang-ru/async-book" class="uri">https://github.com/rust-lang-ru/async-book</a></li>
-<li>Asynchronous Programming in Rust: <a href="https://rust-lang.github.io/async-book/" class="uri">https://rust-lang.github.io/async-book/</a>, <a href="https://github.com/rust-lang/async-book" class="uri">https://github.com/rust-lang/async-book</a></li>
+<li>Асинхронное программирование в Rust: <a
+href="https://doc.rust-lang.ru/async-book/"
+class="uri">https://doc.rust-lang.ru/async-book/</a>, <a
+href="https://github.com/rust-lang-ru/async-book"
+class="uri">https://github.com/rust-lang-ru/async-book</a></li>
+<li>Asynchronous Programming in Rust: <a
+href="https://rust-lang.github.io/async-book/"
+class="uri">https://rust-lang.github.io/async-book/</a>, <a
+href="https://github.com/rust-lang/async-book"
+class="uri">https://github.com/rust-lang/async-book</a></li>
 </ul></li>
-<li>Rust API Guidelines: <a href="https://rust-lang.github.io/api-guidelines/" class="uri">https://rust-lang.github.io/api-guidelines/</a>, <a href="https://github.com/rust-lang/api-guidelines" class="uri">https://github.com/rust-lang/api-guidelines</a></li>
+<li>Rust API Guidelines: <a
+href="https://rust-lang.github.io/api-guidelines/"
+class="uri">https://rust-lang.github.io/api-guidelines/</a>, <a
+href="https://github.com/rust-lang/api-guidelines"
+class="uri">https://github.com/rust-lang/api-guidelines</a></li>
 </ul></li>
 <li>Cheat Sheet
 <ul>
-<li><a href="https://cheats.rs/" class="uri">https://cheats.rs/</a>, <a href="https://github.com/ralfbiedert/cheats.rs/" class="uri">https://github.com/ralfbiedert/cheats.rs/</a></li>
-<li><a href="https://docs.google.com/spreadsheets/d/19vSPL6z2d50JlyzwxariaYD6EU2QQUQqIDOGbiGQC7Y/pubhtml?gid=0&amp;single=true">Rust String Conversions</a></li>
-<li><a href="https://github.com/kmcallister/rustic-symmetries">Rustic Symmetries</a></li>
-<li><a href="http://cosmic.mearie.org/2014/01/periodic-table-of-rust-types/">The Periodic Table of Rust Types</a></li>
-<li><a href="https://danielkeep.github.io/itercheat_baked.html">Rust Iterator Cheat Sheet</a></li>
+<li><a href="https://cheats.rs/" class="uri">https://cheats.rs/</a>, <a
+href="https://github.com/ralfbiedert/cheats.rs/"
+class="uri">https://github.com/ralfbiedert/cheats.rs/</a></li>
+<li><a
+href="https://docs.google.com/spreadsheets/d/19vSPL6z2d50JlyzwxariaYD6EU2QQUQqIDOGbiGQC7Y/pubhtml?gid=0&amp;single=true">Rust
+String Conversions</a></li>
+<li><a href="https://github.com/kmcallister/rustic-symmetries">Rustic
+Symmetries</a></li>
+<li><a
+href="http://cosmic.mearie.org/2014/01/periodic-table-of-rust-types/">The
+Periodic Table of Rust Types</a></li>
+<li><a href="https://danielkeep.github.io/itercheat_baked.html">Rust
+Iterator Cheat Sheet</a></li>
 </ul></li>
-<li>Rust for the Polyglot Programmer: <a href="https://www.chiark.greenend.org.uk/%7Eianmdlvl/rust-polyglot/" class="uri">https://www.chiark.greenend.org.uk/%7Eianmdlvl/rust-polyglot/</a>, <a href="https://salsa.debian.org/iwj/rust-polyglot/" class="uri">https://salsa.debian.org/iwj/rust-polyglot/</a></li>
-<li>The Rust Performance Book: <a href="https://nnethercote.github.io/perf-book/" class="uri">https://nnethercote.github.io/perf-book/</a>, <a href="https://github.com/nnethercote/perf-book" class="uri">https://github.com/nnethercote/perf-book</a></li>
-<li><a href="https://github.com/rustomax/rust-iterators/">Basic Rust iterator usage</a></li>
-<li><a href="https://pascalhertleif.de/artikel/good-practices-for-writing-rust-libraries/">Good Practices for Writing Rust Libraries</a></li>
+<li>Rust for the Polyglot Programmer: <a
+href="https://www.chiark.greenend.org.uk/%7Eianmdlvl/rust-polyglot/"
+class="uri">https://www.chiark.greenend.org.uk/%7Eianmdlvl/rust-polyglot/</a>,
+<a href="https://salsa.debian.org/iwj/rust-polyglot/"
+class="uri">https://salsa.debian.org/iwj/rust-polyglot/</a></li>
+<li>The Rust Performance Book: <a
+href="https://nnethercote.github.io/perf-book/"
+class="uri">https://nnethercote.github.io/perf-book/</a>, <a
+href="https://github.com/nnethercote/perf-book"
+class="uri">https://github.com/nnethercote/perf-book</a></li>
+<li><a href="https://github.com/rustomax/rust-iterators/">Basic Rust
+iterator usage</a></li>
+<li><a
+href="https://pascalhertleif.de/artikel/good-practices-for-writing-rust-libraries/">Good
+Practices for Writing Rust Libraries</a></li>
 </ul>
 <h3>Scheme</h3>
 <ul>
 <li><a href="http://www.r6rs.org/">R6RS</a></li>
-<li>R7RS: <a href="https://github.com/johnwcowan/r7rs-work/blob/master/R7RSHomePage.md" class="uri">https://github.com/johnwcowan/r7rs-work/blob/master/R7RSHomePage.md</a>, <a href="https://small.r7rs.org/" class="uri">https://small.r7rs.org/</a>, <a href="http://www.r7rs.org/" class="uri">http://www.r7rs.org/</a>, <a href="http://trac.sacrideo.us/wg/wiki/R7RSHomePage" class="uri">http://trac.sacrideo.us/wg/wiki/R7RSHomePage</a></li>
+<li>R7RS: <a
+href="https://github.com/johnwcowan/r7rs-work/blob/master/R7RSHomePage.md"
+class="uri">https://github.com/johnwcowan/r7rs-work/blob/master/R7RSHomePage.md</a>,
+<a href="https://small.r7rs.org/"
+class="uri">https://small.r7rs.org/</a>, <a href="http://www.r7rs.org/"
+class="uri">http://www.r7rs.org/</a>, <a
+href="http://trac.sacrideo.us/wg/wiki/R7RSHomePage"
+class="uri">http://trac.sacrideo.us/wg/wiki/R7RSHomePage</a></li>
 <li><a href="http://scheme-reports.org/">Scheme Reports</a></li>
-<li><a href="ftp://ftp.cs.utexas.edu/pub/garbage/cs345/schintro-v14/">An Introduction to Scheme and its Implementation</a></li>
-<li>Teach Yourself Scheme in Fixnum Days: <a href="https://ds26gte.github.io/tyscheme/" class="uri">https://ds26gte.github.io/tyscheme/</a>, <a href="https://github.com/ds26gte/tyscheme" class="uri">https://github.com/ds26gte/tyscheme</a></li>
-<li><a href="https://www.scheme.com/tspl4.html">The Scheme Programming Language</a></li>
+<li><a href="ftp://ftp.cs.utexas.edu/pub/garbage/cs345/schintro-v14/">An
+Introduction to Scheme and its Implementation</a></li>
+<li>Teach Yourself Scheme in Fixnum Days: <a
+href="https://ds26gte.github.io/tyscheme/"
+class="uri">https://ds26gte.github.io/tyscheme/</a>, <a
+href="https://github.com/ds26gte/tyscheme"
+class="uri">https://github.com/ds26gte/tyscheme</a></li>
+<li><a href="https://www.scheme.com/tspl4.html">The Scheme Programming
+Language</a></li>
 </ul>
 <h3>TeX</h3>
 <ul>
-<li><a href="https://texblog.net/latex-articles/packages/">Obsolete classes and packages</a></li>
-<li><a href="https://www.ctan.org/tex-archive/info/simplified-latex">Simplified Introduction to Latex</a></li>
-<li>The not so Short Introduction to LaTeX: <a href="https://tobi.oetiker.ch/lshort/" class="uri">https://tobi.oetiker.ch/lshort/</a>, <a href="https://github.com/oetiker/lshort" class="uri">https://github.com/oetiker/lshort</a></li>
-<li><a href="https://ctan.org/tex-archive/info/russian/Computer_Typesetting_Using_LaTeX">Компьютерная типография LaTeX</a></li>
-<li><a href="ftp://ftp.mccme.ru/pub/tex/lvovsky-newbook/">Набор и верстка в пакете LaTeX</a></li>
+<li><a href="https://texblog.net/latex-articles/packages/">Obsolete
+classes and packages</a></li>
+<li><a
+href="https://www.ctan.org/tex-archive/info/simplified-latex">Simplified
+Introduction to Latex</a></li>
+<li>The not so Short Introduction to LaTeX: <a
+href="https://tobi.oetiker.ch/lshort/"
+class="uri">https://tobi.oetiker.ch/lshort/</a>, <a
+href="https://github.com/oetiker/lshort"
+class="uri">https://github.com/oetiker/lshort</a></li>
+<li><a
+href="https://ctan.org/tex-archive/info/russian/Computer_Typesetting_Using_LaTeX">Компьютерная
+типография LaTeX</a></li>
+<li><a href="ftp://ftp.mccme.ru/pub/tex/lvovsky-newbook/">Набор и
+верстка в пакете LaTeX</a></li>
 </ul>
 <h3>Unix</h3>
 <ul>
-<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/">POSIX</a></li>
-<li><a href="https://refspecs.linuxfoundation.org/fhs.shtml">Filesystem Hierarchy Standard</a></li>
-<li><a href="https://mentorembedded.github.io/advancedlinuxprogramming/">Advanced Linux Programming</a></li>
+<li><a
+href="https://pubs.opengroup.org/onlinepubs/9699919799/">POSIX</a></li>
+<li><a href="https://refspecs.linuxfoundation.org/fhs.shtml">Filesystem
+Hierarchy Standard</a></li>
+<li><a
+href="https://mentorembedded.github.io/advancedlinuxprogramming/">Advanced
+Linux Programming</a></li>
 <li><a href="https://wiki.archlinux.org/">ArchWiki</a></li>
 <li><a href="http://mywiki.wooledge.org/BashGuide">BashGuide</a></li>
-<li>Beej's Guide to Unix Interprocess Communication: <a href="https://beej.us/guide/bgipc/" class="uri">https://beej.us/guide/bgipc/</a>, <a href="https://github.com/beejjorgensen/bgipc" class="uri">https://github.com/beejjorgensen/bgipc</a></li>
-<li><a href="http://catb.org/~esr/writings/taoup/">The Art of Unix Programming</a></li>
-<li><a href="https://debian-handbook.info/">The Debian Administrator's Handbook</a></li>
-<li>The Linux Command Line: <a href="http://linuxcommand.org/tlcl.php" class="uri">http://linuxcommand.org/tlcl.php</a>, <a href="https://sourceforge.net/projects/linuxcommand/" class="uri">https://sourceforge.net/projects/linuxcommand/</a></li>
-<li>The UNIX-HATERS Handbook: <a href="https://web.mit.edu/~simsong/www/ugh.pdf" class="uri">https://web.mit.edu/~simsong/www/ugh.pdf</a>, <a href="http://www.simson.net/ref/ugh.pdf" class="uri">http://www.simson.net/ref/ugh.pdf</a></li>
-<li><a href="http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/unix_lecture_notes.php">UNIX Application and System Programming</a></li>
+<li>Beej's Guide to Unix Interprocess Communication: <a
+href="https://beej.us/guide/bgipc/"
+class="uri">https://beej.us/guide/bgipc/</a>, <a
+href="https://github.com/beejjorgensen/bgipc"
+class="uri">https://github.com/beejjorgensen/bgipc</a></li>
+<li><a href="http://catb.org/~esr/writings/taoup/">The Art of Unix
+Programming</a></li>
+<li><a href="https://debian-handbook.info/">The Debian Administrator's
+Handbook</a></li>
+<li>The Linux Command Line: <a href="http://linuxcommand.org/tlcl.php"
+class="uri">http://linuxcommand.org/tlcl.php</a>, <a
+href="https://sourceforge.net/projects/linuxcommand/"
+class="uri">https://sourceforge.net/projects/linuxcommand/</a></li>
+<li>The UNIX-HATERS Handbook: <a
+href="https://web.mit.edu/~simsong/www/ugh.pdf"
+class="uri">https://web.mit.edu/~simsong/www/ugh.pdf</a>, <a
+href="http://www.simson.net/ref/ugh.pdf"
+class="uri">http://www.simson.net/ref/ugh.pdf</a></li>
+<li><a
+href="http://www.compsci.hunter.cuny.edu/~sweiss/course_materials/unix_lecture_notes.php">UNIX
+Application and System Programming</a></li>
 <li><a href="http://cb.vu/unixtoolbox.xhtml">Unix Toolbox</a></li>
 </ul>
 <h3>Vim</h3>
 <ul>
-<li><a href="https://vimhelp.org/" class="uri">https://vimhelp.org/</a></li>
-<li>A Byte of Vim: <a href="https://vim.swaroopch.com/" class="uri">https://vim.swaroopch.com/</a>, <a href="https://github.com/swaroopch/byte-of-vim" class="uri">https://github.com/swaroopch/byte-of-vim</a></li>
-<li><a href="https://danielmiessler.com/study/vim/">Learn vim For the Last Time</a></li>
-<li><a href="https://github.com/iggredible/Learn-Vim">Learn Vim (the Smart Way)</a></li>
-<li><a href="http://www.oualline.com/vim-book.html">The Vim Tutorial and Reference</a></li>
+<li><a href="https://vimhelp.org/"
+class="uri">https://vimhelp.org/</a></li>
+<li>A Byte of Vim: <a href="https://vim.swaroopch.com/"
+class="uri">https://vim.swaroopch.com/</a>, <a
+href="https://github.com/swaroopch/byte-of-vim"
+class="uri">https://github.com/swaroopch/byte-of-vim</a></li>
+<li><a href="https://danielmiessler.com/study/vim/">Learn vim For the
+Last Time</a></li>
+<li><a href="https://github.com/iggredible/Learn-Vim">Learn Vim (the
+Smart Way)</a></li>
+<li><a href="http://www.oualline.com/vim-book.html">The Vim Tutorial and
+Reference</a></li>
 </ul>
 <h3>other</h3>
 <ul>
-<li>POSIX Threads Programming: <a href="https://hpc-tutorials.llnl.gov/posix/" class="uri">https://hpc-tutorials.llnl.gov/posix/</a>, <a href="https://github.com/LLNL/HPC-Tutorials/blob/main/posix/index.md" class="uri">https://github.com/LLNL/HPC-Tutorials/blob/main/posix/index.md</a></li>
-<li><a href="https://oreilly.com/openbook/osfreesoft/">Understanding Open Source and Free Software Licensing</a></li>
-<li><a href="http://citforum.ru/" class="uri">http://citforum.ru/</a></li>
-<li>Freely available programming books: <a href="https://ebookfoundation.github.io/free-programming-books/" class="uri">https://ebookfoundation.github.io/free-programming-books/</a>, <a href="https://github.com/EbookFoundation/free-programming-books" class="uri">https://github.com/EbookFoundation/free-programming-books</a></li>
-<li><a href="https://www.ossblog.org/opensourcebooks/" class="uri">https://www.ossblog.org/opensourcebooks/</a></li>
-<li>Learn X in Y Minutes: <a href="https://learnxinyminutes.com/" class="uri">https://learnxinyminutes.com/</a>, <a href="https://github.com/adambard/learnxinyminutes-docs" class="uri">https://github.com/adambard/learnxinyminutes-docs</a></li>
+<li>POSIX Threads Programming: <a
+href="https://hpc-tutorials.llnl.gov/posix/"
+class="uri">https://hpc-tutorials.llnl.gov/posix/</a>, <a
+href="https://github.com/LLNL/HPC-Tutorials/blob/main/posix/index.md"
+class="uri">https://github.com/LLNL/HPC-Tutorials/blob/main/posix/index.md</a></li>
+<li><a href="https://oreilly.com/openbook/osfreesoft/">Understanding
+Open Source and Free Software Licensing</a></li>
+<li><a href="http://citforum.ru/"
+class="uri">http://citforum.ru/</a></li>
+<li>Freely available programming books: <a
+href="https://ebookfoundation.github.io/free-programming-books/"
+class="uri">https://ebookfoundation.github.io/free-programming-books/</a>,
+<a href="https://github.com/EbookFoundation/free-programming-books"
+class="uri">https://github.com/EbookFoundation/free-programming-books</a></li>
+<li><a href="https://www.ossblog.org/opensourcebooks/"
+class="uri">https://www.ossblog.org/opensourcebooks/</a></li>
+<li>Learn X in Y Minutes: <a href="https://learnxinyminutes.com/"
+class="uri">https://learnxinyminutes.com/</a>, <a
+href="https://github.com/adambard/learnxinyminutes-docs"
+class="uri">https://github.com/adambard/learnxinyminutes-docs</a></li>
 <li><a href="http://licenseit.ru/">LicenseIT</a></li>
-<li><a href="https://github.com/kdeldycke/awesome-falsehood">Falsehoods Programmers Believe in</a></li>
-<li><a href="https://github.com/melling/ComputerLanguages">Computer Language Notes</a></li>
+<li><a href="https://github.com/kdeldycke/awesome-falsehood">Falsehoods
+Programmers Believe in</a></li>
+<li><a href="https://github.com/melling/ComputerLanguages">Computer
+Language Notes</a></li>
 </ul>
 <h2>математика</h2>
 <h3>algebra</h3>
 <ul>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/ComAlg.html">A Course In Commutative Algebra</a></li>
-<li><a href="https://www.math.uwaterloo.ca/~snburris/htdocs/ualg.html">A Course in Universal Algebra</a></li>
-<li><a href="https://www-users.math.umn.edu/~garrett/m/algebra/">Abstract Algebra - Paul Garrett</a></li>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/Algebra.html">Abstract Algebra: The Basic Graduate Year</a></li>
-<li>Abstract Algebra: Theory and Applications: <a href="https://github.com/twjudson/aata" class="uri">https://github.com/twjudson/aata</a>, <a href="http://abstract.pugetsound.edu/" class="uri">http://abstract.pugetsound.edu/</a>, <a href="http://abstract.ups.edu/" class="uri">http://abstract.ups.edu/</a></li>
-<li><a href="http://www.math.stonybrook.edu/~aknapp/books/a2-alg.html">Advanced Algebra by Knapp</a></li>
-<li><a href="http://homepage.math.uiowa.edu/~goodman/algebrabook.dir/algebrabook.html">Algebra: Abstract and Concrete</a></li>
-<li><a href="http://www.math.stonybrook.edu/~aknapp/books/b2-alg.html">Basic Algebra by Knapp</a></li>
-<li><a href="http://shell.cas.usf.edu/~wclark/#ELEMENTARY_ABSTRACT_ALGEBRA">Elementary Abstract Algebra - W. Edwin Clark</a></li>
-<li><a href="https://www.math.miami.edu/~ec/book/">Elements of Abstract and Linear Algebra</a></li>
-<li><a href="https://www-users.cse.umn.edu/~garrett/m/intro_algebra/">Intro to Abstract Algebra - Paul Garrett</a></li>
+<li><a href="https://faculty.math.illinois.edu/~r-ash/ComAlg.html">A
+Course In Commutative Algebra</a></li>
+<li><a href="https://www.math.uwaterloo.ca/~snburris/htdocs/ualg.html">A
+Course in Universal Algebra</a></li>
+<li><a
+href="https://www-users.math.umn.edu/~garrett/m/algebra/">Abstract
+Algebra - Paul Garrett</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~r-ash/Algebra.html">Abstract
+Algebra: The Basic Graduate Year</a></li>
+<li>Abstract Algebra: Theory and Applications: <a
+href="https://github.com/twjudson/aata"
+class="uri">https://github.com/twjudson/aata</a>, <a
+href="http://abstract.pugetsound.edu/"
+class="uri">http://abstract.pugetsound.edu/</a>, <a
+href="http://abstract.ups.edu/"
+class="uri">http://abstract.ups.edu/</a></li>
+<li><a
+href="http://www.math.stonybrook.edu/~aknapp/books/a2-alg.html">Advanced
+Algebra by Knapp</a></li>
+<li><a
+href="http://homepage.math.uiowa.edu/~goodman/algebrabook.dir/algebrabook.html">Algebra:
+Abstract and Concrete</a></li>
+<li><a
+href="http://www.math.stonybrook.edu/~aknapp/books/b2-alg.html">Basic
+Algebra by Knapp</a></li>
+<li><a
+href="http://shell.cas.usf.edu/~wclark/#ELEMENTARY_ABSTRACT_ALGEBRA">Elementary
+Abstract Algebra - W. Edwin Clark</a></li>
+<li><a href="https://www.math.miami.edu/~ec/book/">Elements of Abstract
+and Linear Algebra</a></li>
+<li><a
+href="https://www-users.cse.umn.edu/~garrett/m/intro_algebra/">Intro to
+Abstract Algebra - Paul Garrett</a></li>
 </ul>
 <h3>analysis</h3>
 <ul>
 <li>complex
 <ul>
-<li><a href="http://math.sfsu.edu/beck/complex.html">A First Course in Complex Analysis</a></li>
-<li><a href="https://people.math.gatech.edu/~cain/winter99/complex.html">Complex Analysis by George Cain</a></li>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/CV.html">Complex Variables by Robert B. Ash and W.P. Novinger</a></li>
+<li><a href="http://math.sfsu.edu/beck/complex.html">A First Course in
+Complex Analysis</a></li>
+<li><a
+href="https://people.math.gatech.edu/~cain/winter99/complex.html">Complex
+Analysis by George Cain</a></li>
+<li><a href="https://faculty.math.illinois.edu/~r-ash/CV.html">Complex
+Variables by Robert B. Ash and W.P. Novinger</a></li>
 </ul></li>
-<li><a href="http://www.synechism.org/wp/a-primer-of-real-analysis/">A Primer of Real Analysis</a></li>
-<li><a href="https://people.math.harvard.edu/~shlomo/">Advanced Calculus, Shlomo Sternberg</a></li>
-<li><a href="https://faculty.math.illinois.edu/~ash/AdvCalc.html">Advanced Calculus Notes - Carol Ash</a></li>
-<li><a href="http://www.math.stonybrook.edu/~aknapp/books/a2-real.html">Advanced Real Analysis by Knapp</a></li>
-<li>APEX Calculus: <a href="http://www.apexcalculus.com/" class="uri">http://www.apexcalculus.com/</a>, <a href="https://github.com/APEXCalculus" class="uri">https://github.com/APEXCalculus</a></li>
-<li>Applied Analysis by John Hunter and Bruno Nachtergaele: <a href="https://www.math.ucdavis.edu/~hunter/book/pdfbook.html" class="uri">https://www.math.ucdavis.edu/~hunter/book/pdfbook.html</a>, <a href="https://www.math.ucdavis.edu/~hunter/book/psbook.html" class="uri">https://www.math.ucdavis.edu/~hunter/book/psbook.html</a></li>
-<li>Basic Analysis: Introduction to Real Analysis: <a href="https://www.jirka.org/ra/" class="uri">https://www.jirka.org/ra/</a>, <a href="https://github.com/jirilebl/ra" class="uri">https://github.com/jirilebl/ra</a></li>
-<li><a href="http://www.math.stonybrook.edu/~aknapp/books/b2-real.html">Basic Real Analysis by Knapp</a></li>
-<li><a href="https://ocw.mit.edu/resources/res-18-001-calculus-online-textbook-spring-2005/index.htm">Calculus - Gilbert Strang</a></li>
-<li><a href="http://www.synechism.org/wp/difference-equations-to-differential-equations/">Difference Equations to Differential Equations</a></li>
-<li><a href="https://people.math.wisc.edu/~keisler/calc.html">Elementary Calculus: An Infinitesimal Approach</a></li>
-<li><a href="https://www.mdpi.com/books/pdfview/book/755">Fractional Calculus: Theory and Applications</a></li>
-<li><a href="http://people.reed.edu/~iswanson/112.html">Introduction to Analysis by Irena Swanson</a></li>
-<li><a href="https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.html">Introduction to Analysis - John K. Hunter</a></li>
-<li><a href="https://pdxscholar.library.pdx.edu/pdxopen/12/">Introduction to Mathematical Analysis</a></li>
-<li><a href="https://digitalcommons.trinity.edu/mono/7/">Introduction to Real Analysis, William F. Trench</a></li>
-<li><a href="http://people.reed.edu/~mayer/math112.html/index.html">Math 112 (Introduction to Analysis) - Ray Mayer</a></li>
-<li>Mathematical Analysis by Elias Zakon: <a href="http://www.trillia.com/zakon-analysisI.html" class="uri">http://www.trillia.com/zakon-analysisI.html</a>, <a href="http://www.trillia.com/zakon-analysisII.html" class="uri">http://www.trillia.com/zakon-analysisII.html</a></li>
-<li><a href="https://measure.axler.net/">Measure, Integration &amp; Real Analysis</a></li>
-<li><a href="https://people.math.gatech.edu/~cain/notes/calculus.html">Multivariable Calculus - George Cain &amp; James Herod</a></li>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/RV.html">Real Variables with Basic Metric Space Topology</a></li>
-<li><a href="http://www.synechism.org/wp/the-calculus-of-functions-of-several-variables/">The Calculus of Functions of Several Variables</a></li>
-<li><a href="https://people.math.harvard.edu/~shlomo/">Theory of Functions of real variable, Shlomo Sternberg</a></li>
-<li><a href="http://www.mecmath.net/">Vector Calculus by Michael Corral</a></li>
-<li><a href="http://www.synechism.org/wp/yet-another-calculus-text/">Yet Another Calculus Text</a></li>
+<li><a href="http://www.synechism.org/wp/a-primer-of-real-analysis/">A
+Primer of Real Analysis</a></li>
+<li><a href="https://people.math.harvard.edu/~shlomo/">Advanced
+Calculus, Shlomo Sternberg</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~ash/AdvCalc.html">Advanced
+Calculus Notes - Carol Ash</a></li>
+<li><a
+href="http://www.math.stonybrook.edu/~aknapp/books/a2-real.html">Advanced
+Real Analysis by Knapp</a></li>
+<li>APEX Calculus: <a href="http://www.apexcalculus.com/"
+class="uri">http://www.apexcalculus.com/</a>, <a
+href="https://github.com/APEXCalculus"
+class="uri">https://github.com/APEXCalculus</a></li>
+<li>Applied Analysis by John Hunter and Bruno Nachtergaele: <a
+href="https://www.math.ucdavis.edu/~hunter/book/pdfbook.html"
+class="uri">https://www.math.ucdavis.edu/~hunter/book/pdfbook.html</a>,
+<a href="https://www.math.ucdavis.edu/~hunter/book/psbook.html"
+class="uri">https://www.math.ucdavis.edu/~hunter/book/psbook.html</a></li>
+<li>Basic Analysis: Introduction to Real Analysis: <a
+href="https://www.jirka.org/ra/"
+class="uri">https://www.jirka.org/ra/</a>, <a
+href="https://github.com/jirilebl/ra"
+class="uri">https://github.com/jirilebl/ra</a></li>
+<li><a
+href="http://www.math.stonybrook.edu/~aknapp/books/b2-real.html">Basic
+Real Analysis by Knapp</a></li>
+<li><a
+href="https://ocw.mit.edu/resources/res-18-001-calculus-online-textbook-spring-2005/index.htm">Calculus
+- Gilbert Strang</a></li>
+<li><a
+href="http://www.synechism.org/wp/difference-equations-to-differential-equations/">Difference
+Equations to Differential Equations</a></li>
+<li><a href="https://people.math.wisc.edu/~keisler/calc.html">Elementary
+Calculus: An Infinitesimal Approach</a></li>
+<li><a href="https://www.mdpi.com/books/pdfview/book/755">Fractional
+Calculus: Theory and Applications</a></li>
+<li><a href="http://people.reed.edu/~iswanson/112.html">Introduction to
+Analysis by Irena Swanson</a></li>
+<li><a
+href="https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.html">Introduction
+to Analysis - John K. Hunter</a></li>
+<li><a
+href="https://pdxscholar.library.pdx.edu/pdxopen/12/">Introduction to
+Mathematical Analysis</a></li>
+<li><a href="https://digitalcommons.trinity.edu/mono/7/">Introduction to
+Real Analysis, William F. Trench</a></li>
+<li><a href="http://people.reed.edu/~mayer/math112.html/index.html">Math
+112 (Introduction to Analysis) - Ray Mayer</a></li>
+<li>Mathematical Analysis by Elias Zakon: <a
+href="http://www.trillia.com/zakon-analysisI.html"
+class="uri">http://www.trillia.com/zakon-analysisI.html</a>, <a
+href="http://www.trillia.com/zakon-analysisII.html"
+class="uri">http://www.trillia.com/zakon-analysisII.html</a></li>
+<li><a href="https://measure.axler.net/">Measure, Integration &amp; Real
+Analysis</a></li>
+<li><a
+href="https://people.math.gatech.edu/~cain/notes/calculus.html">Multivariable
+Calculus - George Cain &amp; James Herod</a></li>
+<li><a href="https://faculty.math.illinois.edu/~r-ash/RV.html">Real
+Variables with Basic Metric Space Topology</a></li>
+<li><a
+href="http://www.synechism.org/wp/the-calculus-of-functions-of-several-variables/">The
+Calculus of Functions of Several Variables</a></li>
+<li><a href="https://people.math.harvard.edu/~shlomo/">Theory of
+Functions of real variable, Shlomo Sternberg</a></li>
+<li><a href="http://www.mecmath.net/">Vector Calculus by Michael
+Corral</a></li>
+<li><a href="http://www.synechism.org/wp/yet-another-calculus-text/">Yet
+Another Calculus Text</a></li>
 </ul>
 <h3>coding</h3>
 <ul>
-<li><a href="http://www.ross.net/crc/crcpaper.html">A Painless Guide to CRC Error Detection Algorithms</a></li>
-<li><a href="https://link.springer.com/book/10.1007/978-3-319-51103-0">Error-Correction Coding and Decoding</a></li>
-<li><a href="https://cse.buffalo.edu/faculty/atri/courses/coding-theory/book/">Essential Coding Theory</a></li>
-<li><a href="https://www-users.math.umn.edu/~garrett/coding/">The Mathematics of Coding: Information, Compression, Error Correction, and Finite Fields</a></li>
+<li><a href="http://www.ross.net/crc/crcpaper.html">A Painless Guide to
+CRC Error Detection Algorithms</a></li>
+<li><a
+href="https://link.springer.com/book/10.1007/978-3-319-51103-0">Error-Correction
+Coding and Decoding</a></li>
+<li><a
+href="https://cse.buffalo.edu/faculty/atri/courses/coding-theory/book/">Essential
+Coding Theory</a></li>
+<li><a href="https://www-users.math.umn.edu/~garrett/coding/">The
+Mathematics of Coding: Information, Compression, Error Correction, and
+Finite Fields</a></li>
 </ul>
 <h3>combinatorics</h3>
 <ul>
-<li><a href="https://math.mit.edu/~rstan/algcomb/">Algebraic Combinatorics - Richard P. Stanley</a></li>
-<li><a href="http://algo.inria.fr/flajolet/Publications/AnaCombi/anacombi.html">Analytic Combinatorics</a></li>
-<li>Applied Combinatorics - Keller, Trotter: <a href="https://www.appliedcombinatorics.org/appcomb/" class="uri">https://www.appliedcombinatorics.org/appcomb/</a>, <a href="https://rellek.net/book/app-comb.html" class="uri">https://rellek.net/book/app-comb.html</a>, <a href="https://github.com/mitchkeller/applied-combinatorics/" class="uri">https://github.com/mitchkeller/applied-combinatorics/</a></li>
-<li><a href="https://math.dartmouth.edu/news-resources/electronic/kpbogart/">Combinatorics Through Guided Discovery</a></li>
-<li><a href="https://math.mit.edu/~rstan/ec/">Enumerative Combinatorics</a></li>
+<li><a href="https://math.mit.edu/~rstan/algcomb/">Algebraic
+Combinatorics - Richard P. Stanley</a></li>
+<li><a
+href="http://algo.inria.fr/flajolet/Publications/AnaCombi/anacombi.html">Analytic
+Combinatorics</a></li>
+<li>Applied Combinatorics - Keller, Trotter: <a
+href="https://www.appliedcombinatorics.org/appcomb/"
+class="uri">https://www.appliedcombinatorics.org/appcomb/</a>, <a
+href="https://rellek.net/book/app-comb.html"
+class="uri">https://rellek.net/book/app-comb.html</a>, <a
+href="https://github.com/mitchkeller/applied-combinatorics/"
+class="uri">https://github.com/mitchkeller/applied-combinatorics/</a></li>
+<li><a
+href="https://math.dartmouth.edu/news-resources/electronic/kpbogart/">Combinatorics
+Through Guided Discovery</a></li>
+<li><a href="https://math.mit.edu/~rstan/ec/">Enumerative
+Combinatorics</a></li>
 </ul>
 <h3>communication</h3>
 <ul>
-<li><a href="https://www.afidc.ethz.ch/A_Foundation_in_Digital_Communication/Home.html">A Foundation in Digital Communication</a></li>
-<li><a href="https://evervault.com/papers/shannon">A Mathematical Theory of Communication</a></li>
+<li><a
+href="https://www.afidc.ethz.ch/A_Foundation_in_Digital_Communication/Home.html">A
+Foundation in Digital Communication</a></li>
+<li><a href="https://evervault.com/papers/shannon">A Mathematical Theory
+of Communication</a></li>
 </ul>
 <h3>differential equations</h3>
 <ul>
-<li><a href="https://people.physics.anu.edu.au/~gvn105/">Analytic Methods in Partial Differential Equations</a></li>
-<li><a href="https://faculty.math.illinois.edu/~ash/DE.html">Differential Equations Notes - Carol Ash</a></li>
-<li><a href="https://digitalcommons.trinity.edu/mono/9/">Elementary Differential Equations with Boundary Value Problems, William F. Trench</a></li>
-<li><a href="https://www.math.ust.hk/~machas/differential-equations.pdf">Introduction to Differential Equations - Jeffrey R. Chasnov</a></li>
-<li>Notes on Diffy Qs: Differential Equations for Engineers: <a href="https://www.jirka.org/diffyqs/" class="uri">https://www.jirka.org/diffyqs/</a>, <a href="https://github.com/jirilebl/diffyqs" class="uri">https://github.com/jirilebl/diffyqs</a></li>
-<li><a href="https://users.math.msu.edu/users/gnagy/">Ordinary Differential Equations - Gabriel Nagy</a></li>
-<li><a href="https://figshare.com/articles/Ordinary_Differential_Equations/5311612">Ordinary Differential Equations - Stephen Wiggins</a></li>
-<li><a href="https://math.temple.edu/~conrad/DownloadODE.html">Ordinary Differential Equations: A Systems Approach</a></li>
-<li><a href="https://people.maths.ox.ac.uk/trefethen/pdectb.html">PDE COFFEE TABLE BOOK</a></li>
+<li><a href="https://people.physics.anu.edu.au/~gvn105/">Analytic
+Methods in Partial Differential Equations</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~ash/DE.html">Differential
+Equations Notes - Carol Ash</a></li>
+<li><a href="https://digitalcommons.trinity.edu/mono/9/">Elementary
+Differential Equations with Boundary Value Problems, William F.
+Trench</a></li>
+<li><a
+href="https://www.math.ust.hk/~machas/differential-equations.pdf">Introduction
+to Differential Equations - Jeffrey R. Chasnov</a></li>
+<li>Notes on Diffy Qs: Differential Equations for Engineers: <a
+href="https://www.jirka.org/diffyqs/"
+class="uri">https://www.jirka.org/diffyqs/</a>, <a
+href="https://github.com/jirilebl/diffyqs"
+class="uri">https://github.com/jirilebl/diffyqs</a></li>
+<li><a href="https://users.math.msu.edu/users/gnagy/">Ordinary
+Differential Equations - Gabriel Nagy</a></li>
+<li><a
+href="https://figshare.com/articles/Ordinary_Differential_Equations/5311612">Ordinary
+Differential Equations - Stephen Wiggins</a></li>
+<li><a href="https://math.temple.edu/~conrad/DownloadODE.html">Ordinary
+Differential Equations: A Systems Approach</a></li>
+<li><a href="https://people.maths.ox.ac.uk/trefethen/pdectb.html">PDE
+COFFEE TABLE BOOK</a></li>
 </ul>
 <h3>discrete</h3>
 <ul>
-<li>A Course in Discrete Structures - R. Pass and W. Tseng: <a href="http://www.cs.cornell.edu/courses/cs2800/2013sp/" class="uri">http://www.cs.cornell.edu/courses/cs2800/2013sp/</a>, <a href="http://www.cs.cornell.edu/~rafael/" class="uri">http://www.cs.cornell.edu/~rafael/</a>, <a href="http://www.cs.cornell.edu/~rafael/discmath.pdf" class="uri">http://www.cs.cornell.edu/~rafael/discmath.pdf</a></li>
-<li>Applied Discrete Structures: <a href="https://discretemath.org/" class="uri">https://discretemath.org/</a>, <a href="https://github.com/klevasseur/ads/" class="uri">https://github.com/klevasseur/ads/</a></li>
-<li><a href="https://faculty.math.illinois.edu/~ash/Discrete.html">Discrete Math Notes - Carol Ash</a></li>
-<li>Discrete Mathematics: An Open Introduction: <a href="http://discrete.openmathbooks.org/" class="uri">http://discrete.openmathbooks.org/</a>, <a href="https://github.com/oscarlevin/discrete-book" class="uri">https://github.com/oscarlevin/discrete-book</a></li>
-<li><a href="http://cs.yale.edu/homes/aspnes/classes/202/">Notes on Discrete Mathematics - Aspnes</a></li>
+<li>A Course in Discrete Structures - R. Pass and W. Tseng: <a
+href="http://www.cs.cornell.edu/courses/cs2800/2013sp/"
+class="uri">http://www.cs.cornell.edu/courses/cs2800/2013sp/</a>, <a
+href="http://www.cs.cornell.edu/~rafael/"
+class="uri">http://www.cs.cornell.edu/~rafael/</a>, <a
+href="http://www.cs.cornell.edu/~rafael/discmath.pdf"
+class="uri">http://www.cs.cornell.edu/~rafael/discmath.pdf</a></li>
+<li>Applied Discrete Structures: <a href="https://discretemath.org/"
+class="uri">https://discretemath.org/</a>, <a
+href="https://github.com/klevasseur/ads/"
+class="uri">https://github.com/klevasseur/ads/</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~ash/Discrete.html">Discrete
+Math Notes - Carol Ash</a></li>
+<li>Discrete Mathematics: An Open Introduction: <a
+href="http://discrete.openmathbooks.org/"
+class="uri">http://discrete.openmathbooks.org/</a>, <a
+href="https://github.com/oscarlevin/discrete-book"
+class="uri">https://github.com/oscarlevin/discrete-book</a></li>
+<li><a href="http://cs.yale.edu/homes/aspnes/classes/202/">Notes on
+Discrete Mathematics - Aspnes</a></li>
 </ul>
 <h3>DSP</h3>
 <ul>
-<li><a href="https://ee.stanford.edu/~gray/sp.html">An Introduction to Statistical Signal Processing</a></li>
-<li><a href="http://www.cs.unc.edu/~tracker/ref/s2001/kalman/">An Introduction to the Kalman Filter</a></li>
-<li>Fast Fourier Transforms - C. Sidney Burrus: <a href="https://archive.org/details/cnx-org-col10550" class="uri">https://archive.org/details/cnx-org-col10550</a>, <a href="https://archive.org/details/cnx-org-col10683" class="uri">https://archive.org/details/cnx-org-col10683</a>, <a href="https://github.com/cnx-user-books/cnxbook-fast-fourier-transforms" class="uri">https://github.com/cnx-user-books/cnxbook-fast-fourier-transforms</a>, <a href="https://cnx.org/contents/gua6b7go@22.1:-1XsePkH@10/Preface-Fast-Fourier-Transforms" class="uri">https://cnx.org/contents/gua6b7go@22.1:-1XsePkH@10/Preface-Fast-Fourier-Transforms</a>, <a href="https://open.umn.edu/opentextbooks/BookDetail.aspx?bookId=261" class="uri">https://open.umn.edu/opentextbooks/BookDetail.aspx?bookId=261</a></li>
-<li>Introduction to Signal Processing, Orfanidis: <a href="https://www.ece.rutgers.edu/~orfanidi/intro2sp/" class="uri">https://www.ece.rutgers.edu/~orfanidi/intro2sp/</a>, <a href="http://eceweb1.rutgers.edu/~orfanidi/intro2sp/" class="uri">http://eceweb1.rutgers.edu/~orfanidi/intro2sp/</a></li>
-<li>Optimum Signal Processing: <a href="https://www.ece.rutgers.edu/~orfanidi/osp2e/" class="uri">https://www.ece.rutgers.edu/~orfanidi/osp2e/</a>, <a href="http://eceweb1.rutgers.edu/~orfanidi/osp2e/" class="uri">http://eceweb1.rutgers.edu/~orfanidi/osp2e/</a></li>
-<li>Signal Computing: Digital Signals in the Software Domain: <a href="https://faculty.washington.edu/stiber/pubs/Signal-Computing/" class="uri">https://faculty.washington.edu/stiber/pubs/Signal-Computing/</a>, <a href="https://stiber.github.io/Signal-Computing/" class="uri">https://stiber.github.io/Signal-Computing/</a>, <a href="https://github.com/stiber/Signal-Computing" class="uri">https://github.com/stiber/Signal-Computing</a></li>
-<li><a href="https://ptolemy.berkeley.edu/books/leevaraiya/">Structure and Interpretation of Signals and Systems - Lee and Varaiya</a></li>
+<li><a href="https://ee.stanford.edu/~gray/sp.html">An Introduction to
+Statistical Signal Processing</a></li>
+<li><a href="http://www.cs.unc.edu/~tracker/ref/s2001/kalman/">An
+Introduction to the Kalman Filter</a></li>
+<li>Fast Fourier Transforms - C. Sidney Burrus: <a
+href="https://archive.org/details/cnx-org-col10550"
+class="uri">https://archive.org/details/cnx-org-col10550</a>, <a
+href="https://archive.org/details/cnx-org-col10683"
+class="uri">https://archive.org/details/cnx-org-col10683</a>, <a
+href="https://github.com/cnx-user-books/cnxbook-fast-fourier-transforms"
+class="uri">https://github.com/cnx-user-books/cnxbook-fast-fourier-transforms</a>,
+<a
+href="https://cnx.org/contents/gua6b7go@22.1:-1XsePkH@10/Preface-Fast-Fourier-Transforms"
+class="uri">https://cnx.org/contents/gua6b7go@22.1:-1XsePkH@10/Preface-Fast-Fourier-Transforms</a>,
+<a href="https://open.umn.edu/opentextbooks/BookDetail.aspx?bookId=261"
+class="uri">https://open.umn.edu/opentextbooks/BookDetail.aspx?bookId=261</a></li>
+<li>Introduction to Signal Processing, Orfanidis: <a
+href="https://www.ece.rutgers.edu/~orfanidi/intro2sp/"
+class="uri">https://www.ece.rutgers.edu/~orfanidi/intro2sp/</a>, <a
+href="http://eceweb1.rutgers.edu/~orfanidi/intro2sp/"
+class="uri">http://eceweb1.rutgers.edu/~orfanidi/intro2sp/</a></li>
+<li>Optimum Signal Processing: <a
+href="https://www.ece.rutgers.edu/~orfanidi/osp2e/"
+class="uri">https://www.ece.rutgers.edu/~orfanidi/osp2e/</a>, <a
+href="http://eceweb1.rutgers.edu/~orfanidi/osp2e/"
+class="uri">http://eceweb1.rutgers.edu/~orfanidi/osp2e/</a></li>
+<li>Signal Computing: Digital Signals in the Software Domain: <a
+href="https://faculty.washington.edu/stiber/pubs/Signal-Computing/"
+class="uri">https://faculty.washington.edu/stiber/pubs/Signal-Computing/</a>,
+<a href="https://stiber.github.io/Signal-Computing/"
+class="uri">https://stiber.github.io/Signal-Computing/</a>, <a
+href="https://github.com/stiber/Signal-Computing"
+class="uri">https://github.com/stiber/Signal-Computing</a></li>
+<li><a href="https://ptolemy.berkeley.edu/books/leevaraiya/">Structure
+and Interpretation of Signals and Systems - Lee and Varaiya</a></li>
 </ul>
 <h3>Euclid</h3>
 <ul>
-<li><a href="http://starrhorse.com/euclid/">Euclid's "Elements" Redux</a></li>
-<li>The first six books of the Elements of Euclid - Oliver Byrne: <a href="https://github.com/jemmybutton/byrne-euclid" class="uri">https://github.com/jemmybutton/byrne-euclid</a>, <a href="http://jemmybutton.livejournal.com/" class="uri">http://jemmybutton.livejournal.com/</a></li>
+<li><a href="http://starrhorse.com/euclid/">Euclid's "Elements"
+Redux</a></li>
+<li>The first six books of the Elements of Euclid - Oliver Byrne: <a
+href="https://github.com/jemmybutton/byrne-euclid"
+class="uri">https://github.com/jemmybutton/byrne-euclid</a>, <a
+href="http://jemmybutton.livejournal.com/"
+class="uri">http://jemmybutton.livejournal.com/</a></li>
 </ul>
 <h3>game theory</h3>
 <ul>
-<li>Algorithmic Game Theory: <a href="https://www.cambridge.org/us/academic/subjects/computer-science/algorithmics-complexity-computer-algebra-and-computational-g/algorithmic-game-theory?format=HB" class="uri">https://www.cambridge.org/us/academic/subjects/computer-science/algorithmics-complexity-computer-algebra-and-computational-g/algorithmic-game-theory?format=HB</a>, <a href="https://www.cambridge.org/download_file/909426" class="uri">https://www.cambridge.org/download_file/909426</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/GameTheory.html">Computational Game Theory - Christopher Griffin</a></li>
-<li><a href="https://faculty.econ.ucdavis.edu/faculty/bonanno/DM_Book.html">Decision Making</a></li>
-<li>Game Theory - Giacomo Bonanno: <a href="https://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html" class="uri">https://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html</a>, <a href="https://arxiv.org/abs/1512.06808" class="uri">https://arxiv.org/abs/1512.06808</a>, <a href="https://archive.org/details/1512.06808v1" class="uri">https://archive.org/details/1512.06808v1</a></li>
-<li><a href="https://homes.cs.washington.edu/~karlin/">Game Theory, Alive</a></li>
+<li>Algorithmic Game Theory: <a
+href="https://www.cambridge.org/us/academic/subjects/computer-science/algorithmics-complexity-computer-algebra-and-computational-g/algorithmic-game-theory?format=HB"
+class="uri">https://www.cambridge.org/us/academic/subjects/computer-science/algorithmics-complexity-computer-algebra-and-computational-g/algorithmic-game-theory?format=HB</a>,
+<a href="https://www.cambridge.org/download_file/909426"
+class="uri">https://www.cambridge.org/download_file/909426</a></li>
+<li><a
+href="http://www.personal.psu.edu/cxg286/GameTheory.html">Computational
+Game Theory - Christopher Griffin</a></li>
+<li><a
+href="https://faculty.econ.ucdavis.edu/faculty/bonanno/DM_Book.html">Decision
+Making</a></li>
+<li>Game Theory - Giacomo Bonanno: <a
+href="https://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html"
+class="uri">https://faculty.econ.ucdavis.edu/faculty/bonanno/GT_Book.html</a>,
+<a href="https://arxiv.org/abs/1512.06808"
+class="uri">https://arxiv.org/abs/1512.06808</a>, <a
+href="https://archive.org/details/1512.06808v1"
+class="uri">https://archive.org/details/1512.06808v1</a></li>
+<li><a href="https://homes.cs.washington.edu/~karlin/">Game Theory,
+Alive</a></li>
 </ul>
 <h3>graph theory</h3>
 <ul>
-<li><a href="https://code.google.com/archive/p/graphbook/">Algorithmic Graph Theory and Sage</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/GraphTheory.html">Graph and Network Algorithms - Christopher Griffin</a></li>
-<li><a href="https://math.tut.fi/~ruohonen/english.html">Graph Theory - Keijo Ruohonen</a></li>
-<li><a href="https://diestel-graph-theory.com/">Graph Theory - Reinhard Diestel</a></li>
-<li><a href="https://cs.brown.edu/people/rtamassi/gdhandbook/">Handbook of Graph Drawing and Visualization</a></li>
+<li><a href="https://code.google.com/archive/p/graphbook/">Algorithmic
+Graph Theory and Sage</a></li>
+<li><a href="http://www.personal.psu.edu/cxg286/GraphTheory.html">Graph
+and Network Algorithms - Christopher Griffin</a></li>
+<li><a href="https://math.tut.fi/~ruohonen/english.html">Graph Theory -
+Keijo Ruohonen</a></li>
+<li><a href="https://diestel-graph-theory.com/">Graph Theory - Reinhard
+Diestel</a></li>
+<li><a href="https://cs.brown.edu/people/rtamassi/gdhandbook/">Handbook
+of Graph Drawing and Visualization</a></li>
 </ul>
 <h3>linear algebra</h3>
 <ul>
-<li>A First Course in Linear Algebra - Robert A. Beezer: <a href="http://linear.pugetsound.edu/" class="uri">http://linear.pugetsound.edu/</a>, <a href="http://linear.ups.edu/" class="uri">http://linear.ups.edu/</a>, <a href="https://github.com/rbeezer/fcla" class="uri">https://github.com/rbeezer/fcla</a></li>
-<li><a href="https://lyryx.com/bookpages/linalg.html">A First Course in Linear Algebra by K. Kuttler</a></li>
-<li><a href="http://www.maths.gla.ac.uk/%7Eajb/dvi-ps/2w-notes.pdf">Basic Linear Algebra - Andrew Baker</a></li>
-<li><a href="https://cseweb.ucsd.edu/~gill/CILASite/">Comprehensive Introduction to Linear Algebra</a></li>
-<li><a href="http://www.numbertheory.org/book/">Elementary Linear Algebra by Keith Matthews</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/LinearAlgebra.html">Intermediate Linear Algebra - Christopher Griffin</a></li>
-<li><a href="https://web.stanford.edu/~boyd/vmls/">Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares</a></li>
-<li><a href="https://www.math.ucdavis.edu/~linear/">Linear Algebra by David Cherney, Tom Denton and Andrew Waldron</a></li>
-<li><a href="https://users.math.msu.edu/users/gnagy/">Linear Algebra - Gabriel Nagy</a></li>
-<li>Linear Algebra, Jim Hefferon: <a href="https://hefferon.net/linearalgebra/" class="uri">https://hefferon.net/linearalgebra/</a>, <a href="http://joshua.smcvt.edu/linearalgebra/" class="uri">http://joshua.smcvt.edu/linearalgebra/</a>, <a href="https://gitlab.com/jim.hefferon/linear-algebra" class="uri">https://gitlab.com/jim.hefferon/linear-algebra</a></li>
-<li><a href="https://www.math.ucdavis.edu/%7Eanne/linear_algebra/index.html">Linear Algebra - As an Introduction to Abstract Mathematics</a></li>
-<li><a href="http://www.math.brown.edu/~treil/papers/LADW/LADW.html">Linear Algebra Done Wrong</a></li>
-<li><a href="https://faculty.math.illinois.edu/~ash/LinearAlg.html">Linear Algebra Notes - Carol Ash</a></li>
-<li><a href="https://sites.google.com/site/winitzki/linalg">Linear Algebra via Exterior Products</a></li>
-<li><a href="https://lyryx.com/products/mathematics/linear-algebra-applications/">Linear Algebra with Applications by W. Keith Nicholson</a></li>
-<li>Matrix Theory and Linear Algebra: <a href="https://www.mathstat.dal.ca/~selinger/linear-algebra/" class="uri">https://www.mathstat.dal.ca/~selinger/linear-algebra/</a>, <a href="https://github.com/selinger/linear-algebra" class="uri">https://github.com/selinger/linear-algebra</a></li>
+<li>A First Course in Linear Algebra - Robert A. Beezer: <a
+href="http://linear.pugetsound.edu/"
+class="uri">http://linear.pugetsound.edu/</a>, <a
+href="http://linear.ups.edu/" class="uri">http://linear.ups.edu/</a>, <a
+href="https://github.com/rbeezer/fcla"
+class="uri">https://github.com/rbeezer/fcla</a></li>
+<li><a href="https://lyryx.com/bookpages/linalg.html">A First Course in
+Linear Algebra by K. Kuttler</a></li>
+<li><a
+href="http://www.maths.gla.ac.uk/%7Eajb/dvi-ps/2w-notes.pdf">Basic
+Linear Algebra - Andrew Baker</a></li>
+<li><a href="https://cseweb.ucsd.edu/~gill/CILASite/">Comprehensive
+Introduction to Linear Algebra</a></li>
+<li><a href="http://www.numbertheory.org/book/">Elementary Linear
+Algebra by Keith Matthews</a></li>
+<li><a
+href="http://www.personal.psu.edu/cxg286/LinearAlgebra.html">Intermediate
+Linear Algebra - Christopher Griffin</a></li>
+<li><a href="https://web.stanford.edu/~boyd/vmls/">Introduction to
+Applied Linear Algebra – Vectors, Matrices, and Least Squares</a></li>
+<li><a href="https://www.math.ucdavis.edu/~linear/">Linear Algebra by
+David Cherney, Tom Denton and Andrew Waldron</a></li>
+<li><a href="https://users.math.msu.edu/users/gnagy/">Linear Algebra -
+Gabriel Nagy</a></li>
+<li>Linear Algebra, Jim Hefferon: <a
+href="https://hefferon.net/linearalgebra/"
+class="uri">https://hefferon.net/linearalgebra/</a>, <a
+href="http://joshua.smcvt.edu/linearalgebra/"
+class="uri">http://joshua.smcvt.edu/linearalgebra/</a>, <a
+href="https://gitlab.com/jim.hefferon/linear-algebra"
+class="uri">https://gitlab.com/jim.hefferon/linear-algebra</a></li>
+<li><a
+href="https://www.math.ucdavis.edu/%7Eanne/linear_algebra/index.html">Linear
+Algebra - As an Introduction to Abstract Mathematics</a></li>
+<li><a
+href="https://link.springer.com/book/10.1007/978-3-031-41026-0">Linear
+Algebra Done Right</a></li>
+<li><a
+href="http://www.math.brown.edu/~treil/papers/LADW/LADW.html">Linear
+Algebra Done Wrong</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~ash/LinearAlg.html">Linear
+Algebra Notes - Carol Ash</a></li>
+<li><a href="https://sites.google.com/site/winitzki/linalg">Linear
+Algebra via Exterior Products</a></li>
+<li><a
+href="https://lyryx.com/products/mathematics/linear-algebra-applications/">Linear
+Algebra with Applications by W. Keith Nicholson</a></li>
+<li>Matrix Theory and Linear Algebra: <a
+href="https://www.mathstat.dal.ca/~selinger/linear-algebra/"
+class="uri">https://www.mathstat.dal.ca/~selinger/linear-algebra/</a>,
+<a href="https://github.com/selinger/linear-algebra"
+class="uri">https://github.com/selinger/linear-algebra</a></li>
 </ul>
 <h3>logic</h3>
 <ul>
-<li><a href="https://milneopentextbooks.org/concise-introduction-to-logic/">A Concise Introduction to Logic</a></li>
-<li><a href="https://knightscholar.geneseo.edu/geneseo-authors/6/">A Friendly Introduction to Mathematical Logic</a></li>
-<li><a href="https://www.logicmatters.net/ifl/">An Introduction to Formal Logic</a></li>
-<li><a href="https://www.logicmatters.net/igt/">An Introduction to Gödel’s Theorems</a></li>
-<li><a href="https://www.math.vt.edu/people/day/ProofsBook/">An Introduction to Proofs and the Mathematical Vernacular</a></li>
-<li><a href="http://www.people.vcu.edu/~rhammack/BookOfProof/">Book of Proof</a></li>
-<li>Constructing and Writing Proofs: <a href="https://www.tedsundstrom.com/proofs" class="uri">https://www.tedsundstrom.com/proofs</a>, <a href="https://scholarworks.gvsu.edu/books/23/" class="uri">https://scholarworks.gvsu.edu/books/23/</a></li>
-<li><a href="https://textbooks.open.tudelft.nl/textbooks/catalog/book/53">Delftse Foundations of Computation</a></li>
-<li><a href="https://github.com/antonyeagle/edl">Elements of Deductive Logic</a></li>
-<li>forall x: <a href="https://www.fecundity.com/logic/" class="uri">https://www.fecundity.com/logic/</a>, <a href="https://github.com/OpenLogicProject/forallx" class="uri">https://github.com/OpenLogicProject/forallx</a></li>
-<li><a href="https://open.umn.edu/opentextbooks/textbooks/457">Introduction to Logic and Critical Thinking</a></li>
-<li><a href="https://www.math.ku.edu/~roitman/">Introduction to Modern Set Theory</a></li>
-<li>Mathematical Reasoning: Writing and Proof: <a href="https://www.tedsundstrom.com/mathematical-reasoning-3" class="uri">https://www.tedsundstrom.com/mathematical-reasoning-3</a>, <a href="https://scholarworks.gvsu.edu/books/24/" class="uri">https://scholarworks.gvsu.edu/books/24/</a></li>
-<li><a href="https://people.uleth.ca/~dave.morris/books/proofs+concepts.html">Proofs and Concepts</a></li>
-<li><a href="http://www.cosc.brocku.ca/~duentsch/papers/methprimer1.html">Sets, Relations, Functions</a></li>
+<li><a
+href="https://milneopentextbooks.org/concise-introduction-to-logic/">A
+Concise Introduction to Logic</a></li>
+<li><a href="https://knightscholar.geneseo.edu/geneseo-authors/6/">A
+Friendly Introduction to Mathematical Logic</a></li>
+<li><a href="https://www.logicmatters.net/ifl/">An Introduction to
+Formal Logic</a></li>
+<li><a href="https://www.logicmatters.net/igt/">An Introduction to
+Gödel’s Theorems</a></li>
+<li><a href="https://www.math.vt.edu/people/day/ProofsBook/">An
+Introduction to Proofs and the Mathematical Vernacular</a></li>
+<li><a href="http://www.people.vcu.edu/~rhammack/BookOfProof/">Book of
+Proof</a></li>
+<li>Constructing and Writing Proofs: <a
+href="https://www.tedsundstrom.com/proofs"
+class="uri">https://www.tedsundstrom.com/proofs</a>, <a
+href="https://scholarworks.gvsu.edu/books/23/"
+class="uri">https://scholarworks.gvsu.edu/books/23/</a></li>
+<li><a
+href="https://textbooks.open.tudelft.nl/textbooks/catalog/book/53">Delftse
+Foundations of Computation</a></li>
+<li><a href="https://github.com/antonyeagle/edl">Elements of Deductive
+Logic</a></li>
+<li>forall x: <a href="https://www.fecundity.com/logic/"
+class="uri">https://www.fecundity.com/logic/</a>, <a
+href="https://github.com/OpenLogicProject/forallx"
+class="uri">https://github.com/OpenLogicProject/forallx</a></li>
+<li><a
+href="https://open.umn.edu/opentextbooks/textbooks/457">Introduction to
+Logic and Critical Thinking</a></li>
+<li><a href="https://www.math.ku.edu/~roitman/">Introduction to Modern
+Set Theory</a></li>
+<li>Mathematical Reasoning: Writing and Proof: <a
+href="https://www.tedsundstrom.com/mathematical-reasoning-3"
+class="uri">https://www.tedsundstrom.com/mathematical-reasoning-3</a>,
+<a href="https://scholarworks.gvsu.edu/books/24/"
+class="uri">https://scholarworks.gvsu.edu/books/24/</a></li>
+<li><a
+href="https://people.uleth.ca/~dave.morris/books/proofs+concepts.html">Proofs
+and Concepts</a></li>
+<li><a
+href="http://www.cosc.brocku.ca/~duentsch/papers/methprimer1.html">Sets,
+Relations, Functions</a></li>
 </ul>
 <h3>matrix</h3>
 <ul>
-<li>Fundamentals of Matrix Algebra by Gregory Hartman: <a href="https://www.vmi.edu/academics/departments/applied-mathematics/affordable-textbooks-apex/" class="uri">https://www.vmi.edu/academics/departments/applied-mathematics/affordable-textbooks-apex/</a>, <a href="https://github.com/APEXCalculus" class="uri">https://github.com/APEXCalculus</a></li>
-<li>Introduction to Matrix Algebra: <a href="http://autarkaw.com/books/matrixalgebra/index.html" class="uri">http://autarkaw.com/books/matrixalgebra/index.html</a>, <a href="http://ma.mathforcollege.com/textbook/index.html" class="uri">http://ma.mathforcollege.com/textbook/index.html</a></li>
-<li>Matrix Analysis and Algorithms: <a href="https://authors.library.caltech.edu/71920/" class="uri">https://authors.library.caltech.edu/71920/</a>, <a href="http://resolver.caltech.edu/CaltechAUTHORS:20161110-160355297" class="uri">http://resolver.caltech.edu/CaltechAUTHORS:20161110-160355297</a></li>
-<li><a href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id#3274">The Matrix Cookbook</a></li>
-<li>Gantmacher - The Theory of Matrices: <a href="https://archive.org/details/gantmacher-the-theory-of-matrices-vol-1-1959" class="uri">https://archive.org/details/gantmacher-the-theory-of-matrices-vol-1-1959</a>, <a href="https://archive.org/details/gantmacher-the-theory-of-matrices-vol-2-1959/" class="uri">https://archive.org/details/gantmacher-the-theory-of-matrices-vol-2-1959/</a></li>
+<li>Fundamentals of Matrix Algebra by Gregory Hartman: <a
+href="https://www.vmi.edu/academics/departments/applied-mathematics/affordable-textbooks-apex/"
+class="uri">https://www.vmi.edu/academics/departments/applied-mathematics/affordable-textbooks-apex/</a>,
+<a href="https://github.com/APEXCalculus"
+class="uri">https://github.com/APEXCalculus</a></li>
+<li>Introduction to Matrix Algebra: <a
+href="http://autarkaw.com/books/matrixalgebra/index.html"
+class="uri">http://autarkaw.com/books/matrixalgebra/index.html</a>, <a
+href="http://ma.mathforcollege.com/textbook/index.html"
+class="uri">http://ma.mathforcollege.com/textbook/index.html</a></li>
+<li>Matrix Analysis and Algorithms: <a
+href="https://authors.library.caltech.edu/71920/"
+class="uri">https://authors.library.caltech.edu/71920/</a>, <a
+href="http://resolver.caltech.edu/CaltechAUTHORS:20161110-160355297"
+class="uri">http://resolver.caltech.edu/CaltechAUTHORS:20161110-160355297</a></li>
+<li><a
+href="http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id#3274">The
+Matrix Cookbook</a></li>
+<li>Gantmacher - The Theory of Matrices: <a
+href="https://archive.org/details/gantmacher-the-theory-of-matrices-vol-1-1959"
+class="uri">https://archive.org/details/gantmacher-the-theory-of-matrices-vol-1-1959</a>,
+<a
+href="https://archive.org/details/gantmacher-the-theory-of-matrices-vol-2-1959/"
+class="uri">https://archive.org/details/gantmacher-the-theory-of-matrices-vol-2-1959/</a></li>
 </ul>
 <h3>number theory</h3>
 <ul>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/ANT.html">A Course In Algebraic Number Theory</a></li>
-<li>Algebraic Number Theory, a Computational Approach: <a href="https://wstein.org/books/ant/" class="uri">https://wstein.org/books/ant/</a>, <a href="https://github.com/williamstein/ant" class="uri">https://github.com/williamstein/ant</a></li>
-<li><a href="http://www.trillia.com/moser-number.html">An Introduction to the Theory of Numbers by Leo Moser</a></li>
-<li><a href="https://www.saylor.org/books/">An Introductory Course in Elementary Number Theory, by Wissam Raji</a></li>
-<li><a href="http://shell.cas.usf.edu/~wclark/#ELEMENTARY_NUMBER_THEORY">Elementary Number Theory - W. Edwin Clark</a></li>
-<li>Elementary Number Theory: Primes, Congruences, and Secrets: <a href="https://wstein.org/books/ent/" class="uri">https://wstein.org/books/ent/</a>, <a href="https://github.com/williamstein/ent" class="uri">https://github.com/williamstein/ent</a></li>
-<li><a href="https://faculty.math.illinois.edu/~hildebr/ant/">Introduction to Analytic Number Theory</a></li>
-<li><a href="http://pi.math.cornell.edu/~hatcher/TN/TNpage.html">Topology of Numbers</a></li>
-<li><a href="https://www.poritz.net/jonathan/share/yaintt/">Yet Another Introductory Introductory Number Theory Textbook</a></li>
+<li><a href="https://faculty.math.illinois.edu/~r-ash/ANT.html">A Course
+In Algebraic Number Theory</a></li>
+<li>Algebraic Number Theory, a Computational Approach: <a
+href="https://wstein.org/books/ant/"
+class="uri">https://wstein.org/books/ant/</a>, <a
+href="https://github.com/williamstein/ant"
+class="uri">https://github.com/williamstein/ant</a></li>
+<li><a href="http://www.trillia.com/moser-number.html">An Introduction
+to the Theory of Numbers by Leo Moser</a></li>
+<li><a href="https://www.saylor.org/books/">An Introductory Course in
+Elementary Number Theory, by Wissam Raji</a></li>
+<li><a
+href="http://shell.cas.usf.edu/~wclark/#ELEMENTARY_NUMBER_THEORY">Elementary
+Number Theory - W. Edwin Clark</a></li>
+<li>Elementary Number Theory: Primes, Congruences, and Secrets: <a
+href="https://wstein.org/books/ent/"
+class="uri">https://wstein.org/books/ent/</a>, <a
+href="https://github.com/williamstein/ent"
+class="uri">https://github.com/williamstein/ent</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~hildebr/ant/">Introduction to
+Analytic Number Theory</a></li>
+<li><a
+href="http://pi.math.cornell.edu/~hatcher/TN/TNpage.html">Topology of
+Numbers</a></li>
+<li><a href="https://www.poritz.net/jonathan/share/yaintt/">Yet Another
+Introductory Introductory Number Theory Textbook</a></li>
 </ul>
 <h3>numerical</h3>
 <ul>
-<li><a href="https://people.maths.ox.ac.uk/trefethen/pdetext.html">Finite Difference and Spectral Methods for Ordinary and Partial Differential Equations</a></li>
-<li><a href="https://link.springer.com/book/10.1007/978-3-319-29439-1">Finite Difference Computing with Exponential Decay Models</a></li>
-<li><a href="https://link.springer.com/book/10.1007/978-3-319-55456-3">Finite Difference Computing with PDEs</a></li>
-<li><a href="http://bifrost.cwru.edu/personal/collins/Numbk/">Fundamental Numerical Methods and Data Analysis</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/MathModel.html">Introduction to Mathematical Modeling - Christopher Griffin</a></li>
-<li><a href="http://www.ipgp.fr/~tarantola/Files/Professional/Books/index.html">Inverse Problem Theory - Albert Tarantola</a></li>
-<li>Non-Uniform Random Variate Generation: <a href="http://luc.devroye.org/rnbookindex.html" class="uri">http://luc.devroye.org/rnbookindex.html</a>, <a href="http://www.nrbook.com/devroye/" class="uri">http://www.nrbook.com/devroye/</a></li>
-<li><a href="https://people.csail.mit.edu/jsolomon/">Numerical Algorithms - Justin Solomon</a></li>
+<li><a
+href="https://people.maths.ox.ac.uk/trefethen/pdetext.html">Finite
+Difference and Spectral Methods for Ordinary and Partial Differential
+Equations</a></li>
+<li><a
+href="https://link.springer.com/book/10.1007/978-3-319-29439-1">Finite
+Difference Computing with Exponential Decay Models</a></li>
+<li><a
+href="https://link.springer.com/book/10.1007/978-3-319-55456-3">Finite
+Difference Computing with PDEs</a></li>
+<li><a
+href="http://bifrost.cwru.edu/personal/collins/Numbk/">Fundamental
+Numerical Methods and Data Analysis</a></li>
+<li><a
+href="http://www.personal.psu.edu/cxg286/MathModel.html">Introduction to
+Mathematical Modeling - Christopher Griffin</a></li>
+<li><a
+href="http://www.ipgp.fr/~tarantola/Files/Professional/Books/index.html">Inverse
+Problem Theory - Albert Tarantola</a></li>
+<li>Non-Uniform Random Variate Generation: <a
+href="http://luc.devroye.org/rnbookindex.html"
+class="uri">http://luc.devroye.org/rnbookindex.html</a>, <a
+href="http://www.nrbook.com/devroye/"
+class="uri">http://www.nrbook.com/devroye/</a></li>
+<li><a href="https://people.csail.mit.edu/jsolomon/">Numerical
+Algorithms - Justin Solomon</a></li>
 </ul>
 <h3>optimization</h3>
 <ul>
-<li><a href="http://web.mit.edu/15.053/www/">Applied Mathematical Programming by Bradley, Hax, and Magnanti</a></li>
-<li><a href="https://web.stanford.edu/~boyd/cvxbook/">Convex Optimization – Boyd and Vandenberghe</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/LinearProgramming.html">Linear Programming - Christopher Griffin</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/NumericalOptimization.html">Numerical Optimization - Christopher Griffin</a></li>
+<li><a href="http://web.mit.edu/15.053/www/">Applied Mathematical
+Programming by Bradley, Hax, and Magnanti</a></li>
+<li><a href="https://web.stanford.edu/~boyd/cvxbook/">Convex
+Optimization – Boyd and Vandenberghe</a></li>
+<li><a
+href="http://www.personal.psu.edu/cxg286/LinearProgramming.html">Linear
+Programming - Christopher Griffin</a></li>
+<li><a
+href="http://www.personal.psu.edu/cxg286/NumericalOptimization.html">Numerical
+Optimization - Christopher Griffin</a></li>
 </ul>
 <h3>probability and statistics</h3>
 <ul>
-<li>A Course on Elementary Probability Theory: <a href="https://arxiv.org/abs/1703.09648" class="uri">https://arxiv.org/abs/1703.09648</a>, <a href="http://dx.doi.org/10.16929/sbs/2016.0003" class="uri">http://dx.doi.org/10.16929/sbs/2016.0003</a></li>
-<li>Advanced High School Statistics: <a href="https://www.openintro.org/book/ahss/" class="uri">https://www.openintro.org/book/ahss/</a>, <a href="https://github.com/OpenIntroOrg/advanced-high-school-statistics" class="uri">https://github.com/OpenIntroOrg/advanced-high-school-statistics</a></li>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/BPT.html">Basic Probability Theory by Robert B. Ash</a></li>
-<li><a href="https://sites.google.com/site/offthebeatenmathpath/foundations-in-statistical-reasoning-second-edition">Foundations in Statistical Reasoning</a></li>
-<li>Foundations of the Theory of Probability by A. N. Kolmogorov: <a href="https://mathematik.com/Kolmogorov/" class="uri">https://mathematik.com/Kolmogorov/</a>, <a href="https://mirtitles.org/2022/02/27/foundations-of-the-theory-of-probability-kolmogorov/" class="uri">https://mirtitles.org/2022/02/27/foundations-of-the-theory-of-probability-kolmogorov/</a>, <a href="https://archive.org/details/kolmogorov_202112" class="uri">https://archive.org/details/kolmogorov_202112</a></li>
-<li>From Algorithms to Z-Scores: Probabilistic and Statistical Modeling in Computer Science: <a href="https://heather.cs.ucdavis.edu/probstatbook" class="uri">https://heather.cs.ucdavis.edu/probstatbook</a>, <a href="https://heather.cs.ucdavis.edu/matloff/public_html/probstatbook.html" class="uri">https://heather.cs.ucdavis.edu/matloff/public_html/probstatbook.html</a>, <a href="https://heather.cs.ucdavis.edu/~matloff/132/PLN/" class="uri">https://heather.cs.ucdavis.edu/~matloff/132/PLN/</a></li>
-<li><a href="https://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html">Grinstead and Snell's Introduction to Probability</a></li>
-<li><a href="https://people.math.umass.edu/~lavine/Book/book.html">Introduction to Statistical Thought</a></li>
-<li><a href="https://faculty.math.illinois.edu/~r-ash/Stat.html">Lectures on Statistics - Robert B. Ash</a></li>
-<li><a href="https://www.poritz.net/jonathan/share/ldlos/">Lies, Damend Lies, or Statistics</a></li>
-<li>Mathematical Foundations of Probability Theory: <a href="https://arxiv.org/abs/1808.01713" class="uri">https://arxiv.org/abs/1808.01713</a>, <a href="https://dx.doi.org/10.16929/sbs/2016.0008" class="uri">https://dx.doi.org/10.16929/sbs/2016.0008</a></li>
-<li>OpenIntro Statistics: <a href="https://www.openintro.org/book/os/" class="uri">https://www.openintro.org/book/os/</a>, <a href="https://github.com/OpenIntroOrg/openintro-statistics" class="uri">https://github.com/OpenIntroOrg/openintro-statistics</a></li>
-<li><a href="https://www.stat.cmu.edu/~kadane/">Principles of Uncertainty</a></li>
-<li><a href="https://services.math.duke.edu/~rtd/PTE/pte.html">Probability: Theory and Examples</a></li>
-<li>Probability and Statistics Cookbook: <a href="http://statistics.zone/" class="uri">http://statistics.zone/</a>, <a href="https://github.com/mavam/stat-cookbook" class="uri">https://github.com/mavam/stat-cookbook</a></li>
-<li><a href="https://people.math.harvard.edu/~knill/books/">Probability Theory and Stochastic Processes with Applications</a></li>
-<li><a href="https://www.statisticsdonewrong.com/">Statistics Done Wrong</a></li>
-<li><a href="https://www.statlect.com/">Statlect by Marco Taboga</a></li>
+<li>A Course on Elementary Probability Theory: <a
+href="https://arxiv.org/abs/1703.09648"
+class="uri">https://arxiv.org/abs/1703.09648</a>, <a
+href="http://dx.doi.org/10.16929/sbs/2016.0003"
+class="uri">http://dx.doi.org/10.16929/sbs/2016.0003</a></li>
+<li>Advanced High School Statistics: <a
+href="https://www.openintro.org/book/ahss/"
+class="uri">https://www.openintro.org/book/ahss/</a>, <a
+href="https://github.com/OpenIntroOrg/advanced-high-school-statistics"
+class="uri">https://github.com/OpenIntroOrg/advanced-high-school-statistics</a></li>
+<li><a href="https://faculty.math.illinois.edu/~r-ash/BPT.html">Basic
+Probability Theory by Robert B. Ash</a></li>
+<li><a
+href="https://sites.google.com/site/offthebeatenmathpath/foundations-in-statistical-reasoning-second-edition">Foundations
+in Statistical Reasoning</a></li>
+<li>Foundations of the Theory of Probability by A. N. Kolmogorov: <a
+href="https://mathematik.com/Kolmogorov/"
+class="uri">https://mathematik.com/Kolmogorov/</a>, <a
+href="https://mirtitles.org/2022/02/27/foundations-of-the-theory-of-probability-kolmogorov/"
+class="uri">https://mirtitles.org/2022/02/27/foundations-of-the-theory-of-probability-kolmogorov/</a>,
+<a href="https://archive.org/details/kolmogorov_202112"
+class="uri">https://archive.org/details/kolmogorov_202112</a></li>
+<li>From Algorithms to Z-Scores: Probabilistic and Statistical Modeling
+in Computer Science: <a
+href="https://heather.cs.ucdavis.edu/probstatbook"
+class="uri">https://heather.cs.ucdavis.edu/probstatbook</a>, <a
+href="https://heather.cs.ucdavis.edu/matloff/public_html/probstatbook.html"
+class="uri">https://heather.cs.ucdavis.edu/matloff/public_html/probstatbook.html</a>,
+<a href="https://heather.cs.ucdavis.edu/~matloff/132/PLN/"
+class="uri">https://heather.cs.ucdavis.edu/~matloff/132/PLN/</a></li>
+<li><a
+href="https://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html">Grinstead
+and Snell's Introduction to Probability</a></li>
+<li><a
+href="https://people.math.umass.edu/~lavine/Book/book.html">Introduction
+to Statistical Thought</a></li>
+<li><a
+href="https://faculty.math.illinois.edu/~r-ash/Stat.html">Lectures on
+Statistics - Robert B. Ash</a></li>
+<li><a href="https://www.poritz.net/jonathan/share/ldlos/">Lies, Damend
+Lies, or Statistics</a></li>
+<li>Mathematical Foundations of Probability Theory: <a
+href="https://arxiv.org/abs/1808.01713"
+class="uri">https://arxiv.org/abs/1808.01713</a>, <a
+href="https://dx.doi.org/10.16929/sbs/2016.0008"
+class="uri">https://dx.doi.org/10.16929/sbs/2016.0008</a></li>
+<li>OpenIntro Statistics: <a href="https://www.openintro.org/book/os/"
+class="uri">https://www.openintro.org/book/os/</a>, <a
+href="https://github.com/OpenIntroOrg/openintro-statistics"
+class="uri">https://github.com/OpenIntroOrg/openintro-statistics</a></li>
+<li><a href="https://www.stat.cmu.edu/~kadane/">Principles of
+Uncertainty</a></li>
+<li><a
+href="https://services.math.duke.edu/~rtd/PTE/pte.html">Probability:
+Theory and Examples</a></li>
+<li>Probability and Statistics Cookbook: <a
+href="http://statistics.zone/" class="uri">http://statistics.zone/</a>,
+<a href="https://github.com/mavam/stat-cookbook"
+class="uri">https://github.com/mavam/stat-cookbook</a></li>
+<li><a href="https://people.math.harvard.edu/~knill/books/">Probability
+Theory and Stochastic Processes with Applications</a></li>
+<li><a href="https://www.statisticsdonewrong.com/">Statistics Done
+Wrong</a></li>
+<li><a href="https://www.statlect.com/">Statlect by Marco
+Taboga</a></li>
 </ul>
 <h3>tensor</h3>
 <ul>
-<li><a href="https://www.ita.uni-heidelberg.de/~dullemond/lectures/tensor/index.shtml?lang=en">Introduction to tensor calculus</a></li>
-<li><a href="https://vixra.org/abs/1610.0148">Tensor Calculus - Taha Soch</a></li>
+<li><a
+href="https://www.ita.uni-heidelberg.de/~dullemond/lectures/tensor/index.shtml?lang=en">Introduction
+to tensor calculus</a></li>
+<li><a href="https://vixra.org/abs/1610.0148">Tensor Calculus - Taha
+Soch</a></li>
 </ul>
 <h3>other</h3>
 <ul>
-<li><a href="https://shoup.net/ntb/">A Computational Introduction to Number Theory and Algebra</a></li>
-<li>A gentle introduction to the art of mathematics: <a href="https://osj1961.github.io/giam/" class="uri">https://osj1961.github.io/giam/</a>, <a href="http://giam.southernct.edu/GIAM/" class="uri">http://giam.southernct.edu/GIAM/</a>, <a href="https://github.com/osj1961/giam" class="uri">https://github.com/osj1961/giam</a></li>
-<li>Abramowitz and Stegun: Handbook of Mathematical Functions: <a href="https://personal.math.ubc.ca/~cbm/aands/" class="uri">https://personal.math.ubc.ca/~cbm/aands/</a>, <a href="https://www.iopb.res.in/~somen/abramowitz_and_stegun/" class="uri">https://www.iopb.res.in/~somen/abramowitz_and_stegun/</a>, <a href="https://www.cs.bham.ac.uk/~aps/research/projects/as/" class="uri">https://www.cs.bham.ac.uk/~aps/research/projects/as/</a>, <a href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.asp" class="uri">http://www.convertit.com/Go/ConvertIt/Reference/AMS55.asp</a></li>
-<li><a href="https://sites.google.com/site/abstractalgebramaya/">Abstract Algebra for Polynomial Operations</a></li>
-<li><a href="https://www.math.ksu.edu/~dbski/fm.htm">Advanced High-School Mathematics</a></li>
-<li><a href="http://www.maths.gla.ac.uk/~ajb/dvi-ps/3q-notes.pdf">Algebra and Number Theory - Andrew Baker</a></li>
-<li>An infinite descent into pure mathematics: <a href="https://infinitedescent.xyz/" class="uri">https://infinitedescent.xyz/</a>, <a href="https://gitlab.com/cnewstead/infdesc" class="uri">https://gitlab.com/cnewstead/infdesc</a></li>
-<li>An Infinitely Large Napkin: <a href="https://web.evanchen.cc/napkin.html" class="uri">https://web.evanchen.cc/napkin.html</a>, <a href="https://blog.evanchen.cc/napkin/" class="uri">https://blog.evanchen.cc/napkin/</a>, <a href="https://github.com/vEnhance/napkin/" class="uri">https://github.com/vEnhance/napkin/</a>, <a href="https://venhance.github.io/napkin/" class="uri">https://venhance.github.io/napkin/</a></li>
-<li><a href="https://www.dpmms.cam.ac.uk/~twk/">An Introduction to Fourier Analysis</a></li>
-<li><a href="http://www.its.caltech.edu/~sean/book.html">Applied Math</a></li>
-<li><a href="https://www.math.ucdavis.edu/~hunter/m280_09/applied_math.html">Applied Mathematics: Methods and Models</a></li>
-<li><a href="http://www.trillia.com/zakon1.html">Basic Concepts of Mathematics by Elias Zakon</a></li>
-<li><a href="http://www.derivations.org/">Derivations of Applied Mathematics</a></li>
-<li><a href="https://www.cs.cmu.edu/~kmcrane/Projects/DDG/">Discrete Differential Geometry: An Applied Introduction</a></li>
-<li><a href="https://www.encyclopediaofmath.org/">Encyclopedia of Mathematics</a></li>
-<li><a href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html">ENCYCLOPEDIA OF TRIANGLE CENTERS</a></li>
-<li><a href="https://ee.stanford.edu/~gray/it.html">Entropy and Information Theory</a></li>
-<li>Euclidean plane and its relatives: <a href="https://anton-petrunin.github.io/birkhoff/" class="uri">https://anton-petrunin.github.io/birkhoff/</a>, <a href="https://github.com/anton-petrunin/birkhoff" class="uri">https://github.com/anton-petrunin/birkhoff</a>, <a href="https://arxiv.org/abs/1302.1630" class="uri">https://arxiv.org/abs/1302.1630</a></li>
-<li><a href="https://www.whitman.edu/mathematics/cgt_online/">Introduction to Combinatorics and Graph Theory</a></li>
-<li><a href="https://cseweb.ucsd.edu/~gill/BWLectSite/">Lists, Decisions, and Graphs</a></li>
-<li><a href="https://mathstat.slu.edu/escher/index.php/Math_and_the_Art_of_M._C._Escher">Math and the Art of M. C. Escher</a></li>
-<li>Mathematical Surprises: <a href="http://www.weizmann.ac.il/sci-tea/benari/books-1" class="uri">http://www.weizmann.ac.il/sci-tea/benari/books-1</a>, <a href="https://link.springer.com/book/10.1007/978-3-031-13566-8" class="uri">https://link.springer.com/book/10.1007/978-3-031-13566-8</a>, <a href="https://github.com/motib/surprises" class="uri">https://github.com/motib/surprises</a></li>
-<li><a href="http://www.physics.miami.edu/~nearing/mathmethods/">Mathematical Tools for Physics</a></li>
-<li><a href="https://johanw.home.xs4all.nl/">Mathematics formulary</a></li>
-<li><a href="https://www.dpmms.cam.ac.uk/~twk/">Metric and Topological Spaces</a></li>
-<li><a href="https://arxiv.org/abs/1807.08416">Some Fundamental Theorems in Mathematics</a></li>
-<li><a href="https://mitpress.mit.edu/books/street-fighting-mathematics">Street-Fighting Mathematics</a></li>
-<li><a href="https://www.saylor.org/books/">Topics in Applied Mathematics, by Charles Chui</a></li>
-<li><a href="http://www.mecmath.net/trig/index.html">Trigonometry by Michael Corral</a></li>
-<li>Trigonometry by Ted Sundstrom and Steven Schlicker: <a href="https://www.tedsundstrom.com/trigonometry" class="uri">https://www.tedsundstrom.com/trigonometry</a>, <a href="https://scholarworks.gvsu.edu/books/12/" class="uri">https://scholarworks.gvsu.edu/books/12/</a></li>
-<li><a href="https://arxiv.org/abs/1805.11933">Tunneling Through the Math Barrier</a></li>
-<li><a href="https://math.tut.fi/~ruohonen/english.html">Vector Fields - Keijo Ruohonen</a></li>
+<li><a href="https://shoup.net/ntb/">A Computational Introduction to
+Number Theory and Algebra</a></li>
+<li>A gentle introduction to the art of mathematics: <a
+href="https://osj1961.github.io/giam/"
+class="uri">https://osj1961.github.io/giam/</a>, <a
+href="http://giam.southernct.edu/GIAM/"
+class="uri">http://giam.southernct.edu/GIAM/</a>, <a
+href="https://github.com/osj1961/giam"
+class="uri">https://github.com/osj1961/giam</a></li>
+<li>Abramowitz and Stegun: Handbook of Mathematical Functions: <a
+href="https://personal.math.ubc.ca/~cbm/aands/"
+class="uri">https://personal.math.ubc.ca/~cbm/aands/</a>, <a
+href="https://www.iopb.res.in/~somen/abramowitz_and_stegun/"
+class="uri">https://www.iopb.res.in/~somen/abramowitz_and_stegun/</a>,
+<a href="https://www.cs.bham.ac.uk/~aps/research/projects/as/"
+class="uri">https://www.cs.bham.ac.uk/~aps/research/projects/as/</a>, <a
+href="http://www.convertit.com/Go/ConvertIt/Reference/AMS55.asp"
+class="uri">http://www.convertit.com/Go/ConvertIt/Reference/AMS55.asp</a></li>
+<li><a
+href="https://sites.google.com/site/abstractalgebramaya/">Abstract
+Algebra for Polynomial Operations</a></li>
+<li><a href="https://www.math.ksu.edu/~dbski/fm.htm">Advanced
+High-School Mathematics</a></li>
+<li><a
+href="http://www.maths.gla.ac.uk/~ajb/dvi-ps/3q-notes.pdf">Algebra and
+Number Theory - Andrew Baker</a></li>
+<li>An infinite descent into pure mathematics: <a
+href="https://infinitedescent.xyz/"
+class="uri">https://infinitedescent.xyz/</a>, <a
+href="https://gitlab.com/cnewstead/infdesc"
+class="uri">https://gitlab.com/cnewstead/infdesc</a></li>
+<li>An Infinitely Large Napkin: <a
+href="https://web.evanchen.cc/napkin.html"
+class="uri">https://web.evanchen.cc/napkin.html</a>, <a
+href="https://blog.evanchen.cc/napkin/"
+class="uri">https://blog.evanchen.cc/napkin/</a>, <a
+href="https://github.com/vEnhance/napkin/"
+class="uri">https://github.com/vEnhance/napkin/</a>, <a
+href="https://venhance.github.io/napkin/"
+class="uri">https://venhance.github.io/napkin/</a></li>
+<li><a href="https://www.dpmms.cam.ac.uk/~twk/">An Introduction to
+Fourier Analysis</a></li>
+<li><a href="http://www.its.caltech.edu/~sean/book.html">Applied
+Math</a></li>
+<li><a
+href="https://www.math.ucdavis.edu/~hunter/m280_09/applied_math.html">Applied
+Mathematics: Methods and Models</a></li>
+<li><a href="http://www.trillia.com/zakon1.html">Basic Concepts of
+Mathematics by Elias Zakon</a></li>
+<li><a href="http://www.derivations.org/">Derivations of Applied
+Mathematics</a></li>
+<li><a href="https://www.cs.cmu.edu/~kmcrane/Projects/DDG/">Discrete
+Differential Geometry: An Applied Introduction</a></li>
+<li><a href="https://www.encyclopediaofmath.org/">Encyclopedia of
+Mathematics</a></li>
+<li><a
+href="https://faculty.evansville.edu/ck6/encyclopedia/ETC.html">ENCYCLOPEDIA
+OF TRIANGLE CENTERS</a></li>
+<li><a href="https://ee.stanford.edu/~gray/it.html">Entropy and
+Information Theory</a></li>
+<li>Euclidean plane and its relatives: <a
+href="https://anton-petrunin.github.io/birkhoff/"
+class="uri">https://anton-petrunin.github.io/birkhoff/</a>, <a
+href="https://github.com/anton-petrunin/birkhoff"
+class="uri">https://github.com/anton-petrunin/birkhoff</a>, <a
+href="https://arxiv.org/abs/1302.1630"
+class="uri">https://arxiv.org/abs/1302.1630</a></li>
+<li><a
+href="https://www.whitman.edu/mathematics/cgt_online/">Introduction to
+Combinatorics and Graph Theory</a></li>
+<li><a href="https://cseweb.ucsd.edu/~gill/BWLectSite/">Lists,
+Decisions, and Graphs</a></li>
+<li><a
+href="https://mathstat.slu.edu/escher/index.php/Math_and_the_Art_of_M._C._Escher">Math
+and the Art of M. C. Escher</a></li>
+<li>Mathematical Surprises: <a
+href="http://www.weizmann.ac.il/sci-tea/benari/books-1"
+class="uri">http://www.weizmann.ac.il/sci-tea/benari/books-1</a>, <a
+href="https://link.springer.com/book/10.1007/978-3-031-13566-8"
+class="uri">https://link.springer.com/book/10.1007/978-3-031-13566-8</a>,
+<a href="https://github.com/motib/surprises"
+class="uri">https://github.com/motib/surprises</a></li>
+<li><a
+href="http://www.physics.miami.edu/~nearing/mathmethods/">Mathematical
+Tools for Physics</a></li>
+<li><a href="https://johanw.home.xs4all.nl/">Mathematics
+formulary</a></li>
+<li><a href="https://www.dpmms.cam.ac.uk/~twk/">Metric and Topological
+Spaces</a></li>
+<li><a href="https://arxiv.org/abs/1807.08416">Some Fundamental Theorems
+in Mathematics</a></li>
+<li><a
+href="https://mitpress.mit.edu/books/street-fighting-mathematics">Street-Fighting
+Mathematics</a></li>
+<li><a href="https://www.saylor.org/books/">Topics in Applied
+Mathematics, by Charles Chui</a></li>
+<li><a href="http://www.mecmath.net/trig/index.html">Trigonometry by
+Michael Corral</a></li>
+<li>Trigonometry by Ted Sundstrom and Steven Schlicker: <a
+href="https://www.tedsundstrom.com/trigonometry"
+class="uri">https://www.tedsundstrom.com/trigonometry</a>, <a
+href="https://scholarworks.gvsu.edu/books/12/"
+class="uri">https://scholarworks.gvsu.edu/books/12/</a></li>
+<li><a href="https://arxiv.org/abs/1805.11933">Tunneling Through the
+Math Barrier</a></li>
+<li><a href="https://math.tut.fi/~ruohonen/english.html">Vector Fields -
+Keijo Ruohonen</a></li>
 </ul>
 <h3>библиотеки</h3>
 <ul>
-<li><a href="https://www.mccme.ru/free-books/" class="uri">https://www.mccme.ru/free-books/</a></li>
+<li><a href="https://www.mccme.ru/free-books/"
+class="uri">https://www.mccme.ru/free-books/</a></li>
 <li><a href="https://realnotcomplex.com/">Free Math Resources</a></li>
 <li><a href="http://library.msri.org/books/">MSRI Book Series</a></li>
-<li><a href="https://aimath.org/textbooks/approved-textbooks/">Approved Textbooks</a></li>
+<li><a href="https://aimath.org/textbooks/approved-textbooks/">Approved
+Textbooks</a></li>
 </ul>
 <h2>физика</h2>
 <ul>
 <li>electromagnetism
 <ul>
-<li><a href="https://farside.ph.utexas.edu/teaching/jk1/jk1.html">Classical Electromagnetism By Richard Fitzpatrick</a></li>
-<li><a href="http://www.damtp.cam.ac.uk/user/tong/em.html">David Tong: Lectures on Electromagnetism</a></li>
-<li><a href="https://archive.org/details/matveev-the-principles-of-electrodynamics">The Principles Of Electrodynamics - Matveyev</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/jk1/jk1.html">Classical
+Electromagnetism By Richard Fitzpatrick</a></li>
+<li><a href="http://www.damtp.cam.ac.uk/user/tong/em.html">David Tong:
+Lectures on Electromagnetism</a></li>
+<li><a
+href="https://archive.org/details/matveev-the-principles-of-electrodynamics">The
+Principles Of Electrodynamics - Matveyev</a></li>
 </ul></li>
 <li>mechanics
 <ul>
-<li>Analytical Elements of Mechanics - Kane: <a href="https://ecommons.cornell.edu/handle/1813/640" class="uri">https://ecommons.cornell.edu/handle/1813/640</a>, <a href="https://ecommons.cornell.edu/handle/1813/641" class="uri">https://ecommons.cornell.edu/handle/1813/641</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/301/301.html">Classical Mechanics By Richard Fitzpatrick</a></li>
-<li><a href="http://www.damtp.cam.ac.uk/user/tong/dynamics.html">David Tong: Lectures on Classical Dynamics</a></li>
-<li><a href="https://ecommons.cornell.edu/handle/1813/638">Dynamics, Theory and Applications - Kane</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/336k/336k.html">Newtonian Dynamics By Richard Fitzpatrick</a></li>
-<li><a href="http://classicalmechanics.lib.rochester.edu/">Variational Principles in Classical Mechanics by Douglas Cline</a></li>
+<li>Analytical Elements of Mechanics - Kane: <a
+href="https://ecommons.cornell.edu/handle/1813/640"
+class="uri">https://ecommons.cornell.edu/handle/1813/640</a>, <a
+href="https://ecommons.cornell.edu/handle/1813/641"
+class="uri">https://ecommons.cornell.edu/handle/1813/641</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/301/301.html">Classical
+Mechanics By Richard Fitzpatrick</a></li>
+<li><a href="http://www.damtp.cam.ac.uk/user/tong/dynamics.html">David
+Tong: Lectures on Classical Dynamics</a></li>
+<li><a href="https://ecommons.cornell.edu/handle/1813/638">Dynamics,
+Theory and Applications - Kane</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/336k/336k.html">Newtonian
+Dynamics By Richard Fitzpatrick</a></li>
+<li><a href="http://classicalmechanics.lib.rochester.edu/">Variational
+Principles in Classical Mechanics by Douglas Cline</a></li>
 </ul></li>
 <li>optics
 <ul>
-<li><a href="https://archive.org/details/TarasovTarasovaDiscussionsOnRefractionOfLight">Discussions On Refraction Of Light</a></li>
-<li><a href="https://archive.org/details/matveev-optics">Optics - Matveyev</a></li>
-<li><a href="https://optics.byu.edu/textbook.aspx">Physics of Light and Optics</a></li>
+<li><a
+href="https://archive.org/details/TarasovTarasovaDiscussionsOnRefractionOfLight">Discussions
+On Refraction Of Light</a></li>
+<li><a href="https://archive.org/details/matveev-optics">Optics -
+Matveyev</a></li>
+<li><a href="https://optics.byu.edu/textbook.aspx">Physics of Light and
+Optics</a></li>
 </ul></li>
 <li>quantum
 <ul>
-<li>Basic Concepts of Quantum Mechanics – Tarasov: <a href="https://archive.org/details/tarasov-basic-concepts-of-quantum-mechanics-2021" class="uri">https://archive.org/details/tarasov-basic-concepts-of-quantum-mechanics-2021</a>, <a href="https://gitlab.com/mirtitles/tarasov-qm" class="uri">https://gitlab.com/mirtitles/tarasov-qm</a></li>
-<li><a href="http://gregnaber.com/">Foundations of Quantum Mechanics</a></li>
-<li><a href="http://www.johnboccio.com/Books/indexqm.html">In Search of Quantum Reality - John Boccio</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/qmech/qmech.html">Quantum Mechanics By Richard Fitzpatric</a></li>
-<li><a href="https://www.springer.com/us/book/9783319412849">The Cellular Automaton Interpretation of Quantum Mechanics</a></li>
+<li>Basic Concepts of Quantum Mechanics – Tarasov: <a
+href="https://archive.org/details/tarasov-basic-concepts-of-quantum-mechanics-2021"
+class="uri">https://archive.org/details/tarasov-basic-concepts-of-quantum-mechanics-2021</a>,
+<a href="https://gitlab.com/mirtitles/tarasov-qm"
+class="uri">https://gitlab.com/mirtitles/tarasov-qm</a></li>
+<li><a href="http://gregnaber.com/">Foundations of Quantum
+Mechanics</a></li>
+<li><a href="http://www.johnboccio.com/Books/indexqm.html">In Search of
+Quantum Reality - John Boccio</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/qmech/qmech.html">Quantum
+Mechanics By Richard Fitzpatric</a></li>
+<li><a href="https://www.springer.com/us/book/9783319412849">The
+Cellular Automaton Interpretation of Quantum Mechanics</a></li>
 </ul></li>
 <li>statistics
 <ul>
-<li><a href="http://www.damtp.cam.ac.uk/user/tong/kinetic.html">David Tong: Lectures on Kinetic Theory</a></li>
-<li><a href="http://www.damtp.cam.ac.uk/user/tong/statphys.html">David Tong: Lectures on Statistical Physics</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/sm1/sm1.html">Thermodynamics and Statistical Mechanics By Richard Fitzpatrick</a></li>
+<li><a href="http://www.damtp.cam.ac.uk/user/tong/kinetic.html">David
+Tong: Lectures on Kinetic Theory</a></li>
+<li><a href="http://www.damtp.cam.ac.uk/user/tong/statphys.html">David
+Tong: Lectures on Statistical Physics</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/sm1/sm1.html">Thermodynamics
+and Statistical Mechanics By Richard Fitzpatrick</a></li>
 </ul></li>
-<li><a href="http://kestrel.nmt.edu/~raymond/books/radphys/radphys.xhtml">A Radically Modern Approach to Introductory Physics</a></li>
-<li><a href="http://www.damtp.cam.ac.uk/user/tong/relativity.html">David Tong: Lectures on Dynamics and Relativity</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/302l/302l.html">Electromagnetism and Optics By Richard Fitzpatrick</a></li>
-<li><a href="http://www.ipgp.fr/~tarantola/Files/Professional/Books/index.html">Elements for Physics - Albert Tarantola</a></li>
-<li>Essential Graduate Physics - Konstantin K. Likharev: <a href="https://sites.google.com/site/likharevegp/" class="uri">https://sites.google.com/site/likharevegp/</a>, <a href="https://commons.library.stonybrook.edu/egp/" class="uri">https://commons.library.stonybrook.edu/egp/</a></li>
-<li><a href="https://farside.ph.utexas.edu/teaching/336L/336l.html">Fluid Mechanics By Richard Fitzpatrick</a></li>
-<li><a href="https://archive.org/details/MatveevMechanicsAndTheoryOfRelativity">Mechanics And Theory Of Relativity - Matveyev</a></li>
-<li><a href="https://archive.org/details/MatveevMolecularPhysics">Molecular Physics - Matveyev</a></li>
-<li><a href="http://www.inference.org.uk/sanjoy/oom/">Order of Magnitude Physics</a></li>
+<li><a
+href="http://kestrel.nmt.edu/~raymond/books/radphys/radphys.xhtml">A
+Radically Modern Approach to Introductory Physics</a></li>
+<li><a href="http://www.damtp.cam.ac.uk/user/tong/relativity.html">David
+Tong: Lectures on Dynamics and Relativity</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/302l/302l.html">Electromagnetism
+and Optics By Richard Fitzpatrick</a></li>
+<li><a
+href="http://www.ipgp.fr/~tarantola/Files/Professional/Books/index.html">Elements
+for Physics - Albert Tarantola</a></li>
+<li>Essential Graduate Physics - Konstantin K. Likharev: <a
+href="https://sites.google.com/site/likharevegp/"
+class="uri">https://sites.google.com/site/likharevegp/</a>, <a
+href="https://commons.library.stonybrook.edu/egp/"
+class="uri">https://commons.library.stonybrook.edu/egp/</a></li>
+<li><a
+href="https://farside.ph.utexas.edu/teaching/336L/336l.html">Fluid
+Mechanics By Richard Fitzpatrick</a></li>
+<li><a
+href="https://archive.org/details/MatveevMechanicsAndTheoryOfRelativity">Mechanics
+And Theory Of Relativity - Matveyev</a></li>
+<li><a
+href="https://archive.org/details/MatveevMolecularPhysics">Molecular
+Physics - Matveyev</a></li>
+<li><a href="http://www.inference.org.uk/sanjoy/oom/">Order of Magnitude
+Physics</a></li>
 <li><a href="https://johanw.home.xs4all.nl/">Physics Formulary</a></li>
-<li><a href="http://www.johnboccio.com/courses/RSTG_2017/index.html">Relativity, Spacetime, Gravity and Cosmology - John Boccio</a></li>
-<li><a href="https://www.feynmanlectures.caltech.edu/">The Feynman Lectures on Physics</a></li>
-<li>Theoretical Physics Reference: <a href="https://www.theoretical-physics.net/" class="uri">https://www.theoretical-physics.net/</a>, <a href="https://github.com/certik/theoretical-physics" class="uri">https://github.com/certik/theoretical-physics</a></li>
+<li><a
+href="http://www.johnboccio.com/courses/RSTG_2017/index.html">Relativity,
+Spacetime, Gravity and Cosmology - John Boccio</a></li>
+<li><a href="https://www.feynmanlectures.caltech.edu/">The Feynman
+Lectures on Physics</a></li>
+<li>Theoretical Physics Reference: <a
+href="https://www.theoretical-physics.net/"
+class="uri">https://www.theoretical-physics.net/</a>, <a
+href="https://github.com/certik/theoretical-physics"
+class="uri">https://github.com/certik/theoretical-physics</a></li>
 </ul>
 <h2>криптография</h2>
 <ul>
-<li>A Course in Cryptography - R. Pass and A. Shelat: <a href="http://www.cs.cornell.edu/courses/cs4830/2010fa/" class="uri">http://www.cs.cornell.edu/courses/cs4830/2010fa/</a>, <a href="http://www.cs.cornell.edu/~rafael/" class="uri">http://www.cs.cornell.edu/~rafael/</a>, <a href="http://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf" class="uri">http://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf</a></li>
-<li><a href="https://eprint.iacr.org/2016/1171">A Salad of Block Ciphers</a></li>
-<li>A Tutorial on Linear and Differential Cryptanalysi: <a href="https://www.engr.mun.ca/~howard/Research/Papers/index.html" class="uri">https://www.engr.mun.ca/~howard/Research/Papers/index.html</a>, <a href="https://www.engr.mun.ca/~howard/PAPERS/ldc_tutorial.pdf" class="uri">https://www.engr.mun.ca/~howard/PAPERS/ldc_tutorial.pdf</a></li>
-<li>A Graduate Course in Applied Cryptography: <a href="https://toc.cryptobook.us/" class="uri">https://toc.cryptobook.us/</a>, <a href="https://crypto.stanford.edu/~dabo/cryptobook/" class="uri">https://crypto.stanford.edu/~dabo/cryptobook/</a></li>
-<li>An Intensive Introduction to Cryptography: <a href="https://www.intensecrypto.org/" class="uri">https://www.intensecrypto.org/</a>, <a href="https://github.com/boazbk/crypto" class="uri">https://github.com/boazbk/crypto</a></li>
-<li>Communication Theory of Secrecy Systems: <a href="http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf" class="uri">http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf</a>, <a href="https://evervault.com/papers/shannon" class="uri">https://evervault.com/papers/shannon</a></li>
-<li>Crypto 101: <a href="https://www.crypto101.io/" class="uri">https://www.crypto101.io/</a>, <a href="https://github.com/crypto101/book" class="uri">https://github.com/crypto101/book</a></li>
-<li><a href="https://homes.esat.kuleuven.be/~nsmart/Crypto_Book/">Cryptography, An Introduction</a></li>
-<li><a href="https://cacr.uwaterloo.ca/hac/">Handbook of Applied Cryptography</a></li>
-<li><a href="https://math.tut.fi/~ruohonen/english.html">Mathematical Cryptology - Keijo Ruohonen</a></li>
-<li>Modern Cryptography - Zhiyong Zheng: <a href="https://link.springer.com/book/10.1007/978-981-19-0920-7" class="uri">https://link.springer.com/book/10.1007/978-981-19-0920-7</a>, <a href="https://link.springer.com/book/10.1007/978-981-19-7644-5" class="uri">https://link.springer.com/book/10.1007/978-981-19-7644-5</a></li>
-<li>Practical Cryptography for Developers: <a href="https://cryptobook.nakov.com/" class="uri">https://cryptobook.nakov.com/</a>, <a href="https://github.com/nakov/practical-cryptography-for-developers-book" class="uri">https://github.com/nakov/practical-cryptography-for-developers-book</a></li>
-<li>Защита информации - Габидулин, Кшевецкий, Колыбельников и Владимиров: <a href="https://vlsergey.github.io/infosec/" class="uri">https://vlsergey.github.io/infosec/</a>, <a href="https://github.com/vlsergey/infosec" class="uri">https://github.com/vlsergey/infosec</a></li>
+<li>A Course in Cryptography - R. Pass and A. Shelat: <a
+href="http://www.cs.cornell.edu/courses/cs4830/2010fa/"
+class="uri">http://www.cs.cornell.edu/courses/cs4830/2010fa/</a>, <a
+href="http://www.cs.cornell.edu/~rafael/"
+class="uri">http://www.cs.cornell.edu/~rafael/</a>, <a
+href="http://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf"
+class="uri">http://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf</a></li>
+<li><a href="https://eprint.iacr.org/2016/1171">A Salad of Block
+Ciphers</a></li>
+<li>A Tutorial on Linear and Differential Cryptanalysi: <a
+href="https://www.engr.mun.ca/~howard/Research/Papers/index.html"
+class="uri">https://www.engr.mun.ca/~howard/Research/Papers/index.html</a>,
+<a href="https://www.engr.mun.ca/~howard/PAPERS/ldc_tutorial.pdf"
+class="uri">https://www.engr.mun.ca/~howard/PAPERS/ldc_tutorial.pdf</a></li>
+<li>A Graduate Course in Applied Cryptography: <a
+href="https://toc.cryptobook.us/"
+class="uri">https://toc.cryptobook.us/</a>, <a
+href="https://crypto.stanford.edu/~dabo/cryptobook/"
+class="uri">https://crypto.stanford.edu/~dabo/cryptobook/</a></li>
+<li>An Intensive Introduction to Cryptography: <a
+href="https://www.intensecrypto.org/"
+class="uri">https://www.intensecrypto.org/</a>, <a
+href="https://github.com/boazbk/crypto"
+class="uri">https://github.com/boazbk/crypto</a></li>
+<li>Communication Theory of Secrecy Systems: <a
+href="http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf"
+class="uri">http://netlab.cs.ucla.edu/wiki/files/shannon1949.pdf</a>, <a
+href="https://evervault.com/papers/shannon"
+class="uri">https://evervault.com/papers/shannon</a></li>
+<li>Crypto 101: <a href="https://www.crypto101.io/"
+class="uri">https://www.crypto101.io/</a>, <a
+href="https://github.com/crypto101/book"
+class="uri">https://github.com/crypto101/book</a></li>
+<li><a
+href="https://homes.esat.kuleuven.be/~nsmart/Crypto_Book/">Cryptography,
+An Introduction</a></li>
+<li><a href="https://cacr.uwaterloo.ca/hac/">Handbook of Applied
+Cryptography</a></li>
+<li><a href="https://math.tut.fi/~ruohonen/english.html">Mathematical
+Cryptology - Keijo Ruohonen</a></li>
+<li>Modern Cryptography - Zhiyong Zheng: <a
+href="https://link.springer.com/book/10.1007/978-981-19-0920-7"
+class="uri">https://link.springer.com/book/10.1007/978-981-19-0920-7</a>,
+<a href="https://link.springer.com/book/10.1007/978-981-19-7644-5"
+class="uri">https://link.springer.com/book/10.1007/978-981-19-7644-5</a></li>
+<li>Practical Cryptography for Developers: <a
+href="https://cryptobook.nakov.com/"
+class="uri">https://cryptobook.nakov.com/</a>, <a
+href="https://github.com/nakov/practical-cryptography-for-developers-book"
+class="uri">https://github.com/nakov/practical-cryptography-for-developers-book</a></li>
+<li>Защита информации - Габидулин, Кшевецкий, Колыбельников и
+Владимиров: <a href="https://vlsergey.github.io/infosec/"
+class="uri">https://vlsergey.github.io/infosec/</a>, <a
+href="https://github.com/vlsergey/infosec"
+class="uri">https://github.com/vlsergey/infosec</a></li>
 </ul>
 <h2>ai</h2>
 <ul>
 <li>нейронные сети
 <ul>
-<li><a href="http://www.dkriesel.com/en/science/neural_networks">A Brief Introduction to Neural Networks</a></li>
-<li><a href="https://arxiv.org/abs/1901.05639">Machine learning with neural networks - B. Mehlig</a></li>
-<li><a href="http://neuralnetworksanddeeplearning.com/">Neural Networks and Deep Learning</a></li>
-<li><a href="https://hagan.okstate.edu/nnd.html">Neural Network Design</a></li>
+<li><a href="http://www.dkriesel.com/en/science/neural_networks">A Brief
+Introduction to Neural Networks</a></li>
+<li><a href="https://arxiv.org/abs/1901.05639">Machine learning with
+neural networks - B. Mehlig</a></li>
+<li><a href="http://neuralnetworksanddeeplearning.com/">Neural Networks
+and Deep Learning</a></li>
+<li><a href="https://hagan.okstate.edu/nnd.html">Neural Network
+Design</a></li>
 </ul></li>
 <li>learning
 <ul>
-<li>A Course in Machine Learning: <a href="http://ciml.info/" class="uri">http://ciml.info/</a>, <a href="https://github.com/hal3/ciml/" class="uri">https://github.com/hal3/ciml/</a></li>
-<li><a href="https://mitpress.mit.edu/books/boosting">Boosting: Foundations and Algorithms</a></li>
-<li><a href="https://www.deeplearningbook.org/">Deep Learning - Ian Goodfellow and Yoshua Bengio and Aaron Courville</a></li>
-<li><a href="http://www.personal.psu.edu/cxg286/MathML.html">Mathematics of Machine Learning - Christopher Griffin</a></li>
-<li><a href="http://incompleteideas.net/book/the-book.html">Reinforcement Learning: An Introduction - Sutton &amp; Barto</a></li>
-<li>Statistical Learning and Sequential Prediction: <a href="http://stat.wharton.upenn.edu/~rakhlin/courses/stat928/" class="uri">http://stat.wharton.upenn.edu/~rakhlin/courses/stat928/</a>, <a href="http://stat.wharton.upenn.edu/~rakhlin/book_draft.pdf" class="uri">http://stat.wharton.upenn.edu/~rakhlin/book_draft.pdf</a></li>
-<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The Elements of Statistical Learning</a></li>
+<li>A Course in Machine Learning: <a href="http://ciml.info/"
+class="uri">http://ciml.info/</a>, <a
+href="https://github.com/hal3/ciml/"
+class="uri">https://github.com/hal3/ciml/</a></li>
+<li><a href="https://mitpress.mit.edu/books/boosting">Boosting:
+Foundations and Algorithms</a></li>
+<li><a href="https://www.deeplearningbook.org/">Deep Learning - Ian
+Goodfellow and Yoshua Bengio and Aaron Courville</a></li>
+<li><a href="http://www.personal.psu.edu/cxg286/MathML.html">Mathematics
+of Machine Learning - Christopher Griffin</a></li>
+<li><a
+href="http://incompleteideas.net/book/the-book.html">Reinforcement
+Learning: An Introduction - Sutton &amp; Barto</a></li>
+<li>Statistical Learning and Sequential Prediction: <a
+href="http://stat.wharton.upenn.edu/~rakhlin/courses/stat928/"
+class="uri">http://stat.wharton.upenn.edu/~rakhlin/courses/stat928/</a>,
+<a href="http://stat.wharton.upenn.edu/~rakhlin/book_draft.pdf"
+class="uri">http://stat.wharton.upenn.edu/~rakhlin/book_draft.pdf</a></li>
+<li><a href="https://web.stanford.edu/~hastie/ElemStatLearn/">The
+Elements of Statistical Learning</a></li>
 </ul></li>
 <li>language
 <ul>
-<li><a href="https://www.gelbukh.com/clbook/">Computational Linguistics</a></li>
-<li><a href="https://foundations-computational-linguistics.github.io/">Foundations of Computational Linguistics</a></li>
-<li><a href="https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes">Natural Language Processing - Jacob Eisenstein</a></li>
-<li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and Language Processing - Dan Jurafsky and James H. Martin</a></li>
+<li><a href="https://www.gelbukh.com/clbook/">Computational
+Linguistics</a></li>
+<li><a
+href="https://foundations-computational-linguistics.github.io/">Foundations
+of Computational Linguistics</a></li>
+<li><a
+href="https://github.com/jacobeisenstein/gt-nlp-class/tree/master/notes">Natural
+Language Processing - Jacob Eisenstein</a></li>
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/">Speech and
+Language Processing - Dan Jurafsky and James H. Martin</a></li>
 </ul></li>
-<li><a href="http://www.gp-field-guide.org.uk/">A Field Guide to Genetic Programming</a></li>
-<li><a href="https://www.cs.bham.ac.uk/research/projects/poplog/computers-and-thought/">Computers and Thought</a></li>
-<li>Paradigms of Artificial Intelligence Programming: <a href="https://github.com/norvig/paip-lisp" class="uri">https://github.com/norvig/paip-lisp</a>, <a href="http://www.norvig.com/paip.html" class="uri">http://www.norvig.com/paip.html</a></li>
-<li><a href="http://arek-paterek.com/book/">Predicting movie ratings and recommender systems</a></li>
+<li><a href="http://www.gp-field-guide.org.uk/">A Field Guide to Genetic
+Programming</a></li>
+<li><a
+href="https://www.cs.bham.ac.uk/research/projects/poplog/computers-and-thought/">Computers
+and Thought</a></li>
+<li>Paradigms of Artificial Intelligence Programming: <a
+href="https://github.com/norvig/paip-lisp"
+class="uri">https://github.com/norvig/paip-lisp</a>, <a
+href="http://www.norvig.com/paip.html"
+class="uri">http://www.norvig.com/paip.html</a></li>
+<li><a href="http://arek-paterek.com/book/">Predicting movie ratings and
+recommender systems</a></li>
 </ul>
 <h2>электроника</h2>
 <ul>
-<li><a href="https://lcamtuf.coredump.cx/electronics/">Concise electronics for geeks</a></li>
-<li>Electromagnetic Waves and Antennas: <a href="https://www.ece.rutgers.edu/~orfanidi/ewa/" class="uri">https://www.ece.rutgers.edu/~orfanidi/ewa/</a>, <a href="http://eceweb1.rutgers.edu/~orfanidi/ewa/" class="uri">http://eceweb1.rutgers.edu/~orfanidi/ewa/</a></li>
-<li>Lessons In Electric Circuits: <a href="http://www.ibiblio.org/kuphaldt/electricCircuits/" class="uri">http://www.ibiblio.org/kuphaldt/electricCircuits/</a>, <a href="https://www.allaboutcircuits.com/textbook/" class="uri">https://www.allaboutcircuits.com/textbook/</a></li>
-<li><a href="https://www.radartutorial.eu/index.en.html">Radar Basics</a></li>
-<li>Дао изоленты: <a href="https://github.com/Serkov/Dao" class="uri">https://github.com/Serkov/Dao</a>, <a href="https://serkov.su/blog/?page_id=2573" class="uri">https://serkov.su/blog/?page_id=2573</a></li>
-<li><a href="https://www.ruselectronic.com/prakticheskaya-elektronika-version-2-0/">Практическая электроника version 2.0</a></li>
-<li><a href="http://www.moskatov.narod.ru/Electronic_technics.html">Электронная техника. Начало</a></li>
+<li><a href="https://lcamtuf.coredump.cx/electronics/">Concise
+electronics for geeks</a></li>
+<li>Electromagnetic Waves and Antennas: <a
+href="https://www.ece.rutgers.edu/~orfanidi/ewa/"
+class="uri">https://www.ece.rutgers.edu/~orfanidi/ewa/</a>, <a
+href="http://eceweb1.rutgers.edu/~orfanidi/ewa/"
+class="uri">http://eceweb1.rutgers.edu/~orfanidi/ewa/</a></li>
+<li>Lessons In Electric Circuits: <a
+href="http://www.ibiblio.org/kuphaldt/electricCircuits/"
+class="uri">http://www.ibiblio.org/kuphaldt/electricCircuits/</a>, <a
+href="https://www.allaboutcircuits.com/textbook/"
+class="uri">https://www.allaboutcircuits.com/textbook/</a></li>
+<li><a href="https://www.radartutorial.eu/index.en.html">Radar
+Basics</a></li>
+<li>Дао изоленты: <a href="https://github.com/Serkov/Dao"
+class="uri">https://github.com/Serkov/Dao</a>, <a
+href="https://serkov.su/blog/?page_id=2573"
+class="uri">https://serkov.su/blog/?page_id=2573</a></li>
+<li><a
+href="https://www.ruselectronic.com/prakticheskaya-elektronika-version-2-0/">Практическая
+электроника version 2.0</a></li>
+<li><a
+href="http://www.moskatov.narod.ru/Electronic_technics.html">Электронная
+техника. Начало</a></li>
 </ul>
 <h2>security</h2>
 <ul>
-<li><a href="https://github.com/veeral-patel/how-to-secure-anything">How to Secure Anything</a></li>
-<li><a href="https://www.subspacefield.org/security/security_concepts.html">Security Concepts</a></li>
-<li><a href="https://www.cl.cam.ac.uk/~rja14/book.html">Security Engineering</a></li>
-<li><a href="https://antipolygraph.org/pubs.shtml">The Lie Behind the Lie Detector</a></li>
+<li><a href="https://github.com/veeral-patel/how-to-secure-anything">How
+to Secure Anything</a></li>
+<li><a
+href="https://www.subspacefield.org/security/security_concepts.html">Security
+Concepts</a></li>
+<li><a href="https://www.cl.cam.ac.uk/~rja14/book.html">Security
+Engineering</a></li>
+<li><a href="https://antipolygraph.org/pubs.shtml">The Lie Behind the
+Lie Detector</a></li>
 </ul>
 <h2>medic</h2>
 <ul>
-<li><a href="https://archive.org/details/AnatomyAtAGlance">Anatomy At a Glance</a></li>
-<li><a href="https://archive.org/details/ClinicalAnatomyAppliedAnatomyForStudents">Clinical anatomy Applied anatomy for students</a></li>
-<li>The ship captain's medical guide: <a href="https://www.gov.uk/government/publications/the-ship-captains-medical-guide" class="uri">https://www.gov.uk/government/publications/the-ship-captains-medical-guide</a>, <a href="https://archive.org/details/ShipCaptainsMedicalGuide22ndEd" class="uri">https://archive.org/details/ShipCaptainsMedicalGuide22ndEd</a></li>
-<li><a href="http://www.freebooks4doctors.com/">FreeBooks4Doctors</a></li>
+<li><a href="https://archive.org/details/AnatomyAtAGlance">Anatomy At a
+Glance</a></li>
+<li><a
+href="https://archive.org/details/ClinicalAnatomyAppliedAnatomyForStudents">Clinical
+anatomy Applied anatomy for students</a></li>
+<li>The ship captain's medical guide: <a
+href="https://www.gov.uk/government/publications/the-ship-captains-medical-guide"
+class="uri">https://www.gov.uk/government/publications/the-ship-captains-medical-guide</a>,
+<a href="https://archive.org/details/ShipCaptainsMedicalGuide22ndEd"
+class="uri">https://archive.org/details/ShipCaptainsMedicalGuide22ndEd</a></li>
+<li><a
+href="http://www.freebooks4doctors.com/">FreeBooks4Doctors</a></li>
 </ul>
 <h2>robots</h2>
 <ul>
-<li>Elements of Robotics: <a href="http://www.weizmann.ac.il/sci-tea/benari/books-1" class="uri">http://www.weizmann.ac.il/sci-tea/benari/books-1</a>, <a href="https://www.springer.com/gp/book/9783319625324" class="uri">https://www.springer.com/gp/book/9783319625324</a>, <a href="https://unglue.it/work/251498/" class="uri">https://unglue.it/work/251498/</a>, <a href="https://github.com/motib/elements-of-robotics" class="uri">https://github.com/motib/elements-of-robotics</a></li>
-<li>Introduction to Autonomous Robots: <a href="https://introduction-to-autonomous-robots.github.io/" class="uri">https://introduction-to-autonomous-robots.github.io/</a>, <a href="https://github.com/correll/Introduction-to-Autonomous-Robots" class="uri">https://github.com/correll/Introduction-to-Autonomous-Robots</a></li>
+<li>Elements of Robotics: <a
+href="http://www.weizmann.ac.il/sci-tea/benari/books-1"
+class="uri">http://www.weizmann.ac.il/sci-tea/benari/books-1</a>, <a
+href="https://www.springer.com/gp/book/9783319625324"
+class="uri">https://www.springer.com/gp/book/9783319625324</a>, <a
+href="https://unglue.it/work/251498/"
+class="uri">https://unglue.it/work/251498/</a>, <a
+href="https://github.com/motib/elements-of-robotics"
+class="uri">https://github.com/motib/elements-of-robotics</a></li>
+<li>Introduction to Autonomous Robots: <a
+href="https://introduction-to-autonomous-robots.github.io/"
+class="uri">https://introduction-to-autonomous-robots.github.io/</a>, <a
+href="https://github.com/correll/Introduction-to-Autonomous-Robots"
+class="uri">https://github.com/correll/Introduction-to-Autonomous-Robots</a></li>
 </ul>
 <h2>sci misc</h2>
 <ul>
-<li><a href="https://arxiv.org/abs/1612.04888">A Primer of Mathematical Writing</a></li>
-<li><a href="https://chaosbook.org/">Chaos: Classical and Quantum</a></li>
-<li><a href="https://people.math.harvard.edu/~shlomo/">Curvature, Shlomo Sternberg</a></li>
-<li><a href="http://www.math.odu.edu/~jhh/counter2.html">Introduction to Tensor Calculus and Continuum Mechanics</a></li>
-<li><a href="http://www.johnboccio.com/courses/CFSCE_2016/index.html">Notes for Chaos, Fractals, Self-Organization and Emergence</a></li>
-<li><a href="https://ocw.mit.edu/resources/res-6-011-the-art-of-insight-in-science-and-engineering-mastering-complexity-fall-2014/online-textbook/">The Art of Insight in Science and Engineering</a></li>
-<li><a href="http://www.nada.kth.se/~cgjoh/book.html">The Clock and the Arrow</a></li>
-<li>The World Is Built On Probability: <a href="https://archive.org/details/lev-tarasov-the-world-is-built-on-probability-mir-2023" class="uri">https://archive.org/details/lev-tarasov-the-world-is-built-on-probability-mir-2023</a>, <a href="https://gitlab.com/mirtitles/twibop/" class="uri">https://gitlab.com/mirtitles/twibop/</a>, <a href="https://archive.org/details/TheWorldIsBuiltOnProbability" class="uri">https://archive.org/details/TheWorldIsBuiltOnProbability</a></li>
-<li><a href="https://www.uclpress.co.uk/products/83521">Why Icebergs Float: Exploring Science in Everyday Life</a></li>
-<li>Mir Books: <a href="https://mirtitles.org/" class="uri">https://mirtitles.org/</a>, <a href="https://archive.org/details/mir-titles" class="uri">https://archive.org/details/mir-titles</a></li>
-<li><a href="http://www.sciencebooksonline.info/">Science Books Online</a></li>
-<li><a href="https://github.com/EbookFoundation/free-science-books">Free Science Books</a></li>
-<li><a href="https://github.com/melling/MathAndScienceNotes" class="uri">https://github.com/melling/MathAndScienceNotes</a></li>
-<li><a href="https://vsenauka.ru/knigi/besplatnyie-knigi.html">Бесплатные книги : Всенаука</a></li>
+<li><a href="https://arxiv.org/abs/1612.04888">A Primer of Mathematical
+Writing</a></li>
+<li><a href="https://chaosbook.org/">Chaos: Classical and
+Quantum</a></li>
+<li><a href="https://people.math.harvard.edu/~shlomo/">Curvature, Shlomo
+Sternberg</a></li>
+<li><a href="http://www.math.odu.edu/~jhh/counter2.html">Introduction to
+Tensor Calculus and Continuum Mechanics</a></li>
+<li><a
+href="http://www.johnboccio.com/courses/CFSCE_2016/index.html">Notes for
+Chaos, Fractals, Self-Organization and Emergence</a></li>
+<li><a
+href="https://ocw.mit.edu/resources/res-6-011-the-art-of-insight-in-science-and-engineering-mastering-complexity-fall-2014/online-textbook/">The
+Art of Insight in Science and Engineering</a></li>
+<li><a href="http://www.nada.kth.se/~cgjoh/book.html">The Clock and the
+Arrow</a></li>
+<li>The World Is Built On Probability: <a
+href="https://archive.org/details/lev-tarasov-the-world-is-built-on-probability-mir-2023"
+class="uri">https://archive.org/details/lev-tarasov-the-world-is-built-on-probability-mir-2023</a>,
+<a href="https://gitlab.com/mirtitles/twibop/"
+class="uri">https://gitlab.com/mirtitles/twibop/</a>, <a
+href="https://archive.org/details/TheWorldIsBuiltOnProbability"
+class="uri">https://archive.org/details/TheWorldIsBuiltOnProbability</a></li>
+<li><a href="https://www.uclpress.co.uk/products/83521">Why Icebergs
+Float: Exploring Science in Everyday Life</a></li>
+<li>Mir Books: <a href="https://mirtitles.org/"
+class="uri">https://mirtitles.org/</a>, <a
+href="https://archive.org/details/mir-titles"
+class="uri">https://archive.org/details/mir-titles</a></li>
+<li><a href="http://www.sciencebooksonline.info/">Science Books
+Online</a></li>
+<li><a href="https://github.com/EbookFoundation/free-science-books">Free
+Science Books</a></li>
+<li><a href="https://github.com/melling/MathAndScienceNotes"
+class="uri">https://github.com/melling/MathAndScienceNotes</a></li>
+<li><a
+href="https://vsenauka.ru/knigi/besplatnyie-knigi.html">Бесплатные книги
+: Всенаука</a></li>
 </ul>
 <h2>tech</h2>
 <ul>
-<li><a href="http://www.lysator.liu.se/mit-guide/">Guide to Lock Picking</a></li>
-<li><a href="http://sdu.ictp.it/3D/">Low-cost 3D Printing for Science, Education and Sustainable Development</a></li>
+<li><a href="http://www.lysator.liu.se/mit-guide/">Guide to Lock
+Picking</a></li>
+<li><a href="http://sdu.ictp.it/3D/">Low-cost 3D Printing for Science,
+Education and Sustainable Development</a></li>
 </ul>
 <h2>Earth</h2>
 <ul>
-<li><a href="https://www.nasa.gov/connect/ebooks/earth_detail.html">Earth - Michael Carlowicz, Lawrence Friedl, Kevin Ward</a></li>
-<li><a href="https://www.nasa.gov/connect/ebooks/earth_art_detail.html">Earth As Art</a></li>
-<li><a href="https://www.nasa.gov/connect/ebooks/earthatnight_detail.html">Earth at Night</a></li>
+<li><a
+href="https://www.nasa.gov/connect/ebooks/earth_detail.html">Earth -
+Michael Carlowicz, Lawrence Friedl, Kevin Ward</a></li>
+<li><a
+href="https://www.nasa.gov/connect/ebooks/earth_art_detail.html">Earth
+As Art</a></li>
+<li><a
+href="https://www.nasa.gov/connect/ebooks/earthatnight_detail.html">Earth
+at Night</a></li>
 </ul>
 <h2>библиотеки</h2>
 <ul>
-<li><a href="https://www.e-booksdirectory.com/">E-Books Directory</a></li>
-<li><a href="https://github.com/learn-anything/books">Free and non free books all can learn from</a></li>
+<li><a href="https://www.e-booksdirectory.com/">E-Books
+Directory</a></li>
+<li><a href="https://github.com/learn-anything/books">Free and non free
+books all can learn from</a></li>
 <li><a href="https://www.freetechbooks.com/">FreeTechBooks</a></li>
 <li><a href="https://ocw.mit.edu/index.htm">MIT OpenCourseWare</a></li>
 <li><a href="https://www.planetebook.com/">Planet eBook</a></li>
 <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
-<li>Standard Ebooks: <a href="https://standardebooks.org/" class="uri">https://standardebooks.org/</a>, <a href="https://github.com/standardebooks" class="uri">https://github.com/standardebooks</a></li>
+<li>Standard Ebooks: <a href="https://standardebooks.org/"
+class="uri">https://standardebooks.org/</a>, <a
+href="https://github.com/standardebooks"
+class="uri">https://github.com/standardebooks</a></li>
 <li><a href="http://lib.ru/">Библиотека Максима Мошкова</a></li>
-<li><a href="https://ru.wikibooks.org/">Викиучебник</a>, <a href="https://en.wikibooks.org/">Wikibooks</a></li>
+<li><a href="https://ru.wikibooks.org/">Викиучебник</a>, <a
+href="https://en.wikibooks.org/">Wikibooks</a></li>
 </ul>
 <h2>прочее</h2>
 <ul>
-<li>1984: <a href="https://www.orwell.ru/library/novels/1984/" class="uri">https://www.orwell.ru/library/novels/1984/</a>, <a href="http://gutenberg.net.au/ebooks01/0100021.txt" class="uri">http://gutenberg.net.au/ebooks01/0100021.txt</a></li>
-<li>451 градус по Фаренгейту: <a href="http://lib.ru/INOFANT/BRADBURY/farengejt.txt" class="uri">http://lib.ru/INOFANT/BRADBURY/farengejt.txt</a>, <a href="https://raybradbury.ru/library/novels/f451/" class="uri">https://raybradbury.ru/library/novels/f451/</a></li>
-<li><a href="http://davidsalomon.name/PhotoBook/PhoAd.html">A Book on Photography</a></li>
-<li><a href="https://www.openbookpublishers.com/product/1232">B C, Before Computers: On Information Technology from Writing to the Age of Digital Data</a></li>
+<li>1984: <a href="https://www.orwell.ru/library/novels/1984/"
+class="uri">https://www.orwell.ru/library/novels/1984/</a>, <a
+href="http://gutenberg.net.au/ebooks01/0100021.txt"
+class="uri">http://gutenberg.net.au/ebooks01/0100021.txt</a></li>
+<li>451 градус по Фаренгейту: <a
+href="http://lib.ru/INOFANT/BRADBURY/farengejt.txt"
+class="uri">http://lib.ru/INOFANT/BRADBURY/farengejt.txt</a>, <a
+href="https://raybradbury.ru/library/novels/f451/"
+class="uri">https://raybradbury.ru/library/novels/f451/</a></li>
+<li><a href="http://davidsalomon.name/PhotoBook/PhoAd.html">A Book on
+Photography</a></li>
+<li><a href="https://www.openbookpublishers.com/product/1232">B C,
+Before Computers: On Information Technology from Writing to the Age of
+Digital Data</a></li>
 <li><a href="https://cheatography.com/">Cheatography</a></li>
-<li><a href="https://www.dpmms.cam.ac.uk/~twk/">Coding and Cryptography</a></li>
-<li><a href="https://www.cis.upenn.edu/~jean/gbooks/geom1.html">Curves and Surfaces in Geometric Modeling</a></li>
-<li><a href="https://www.ece.rice.edu/~dhj/courses/elec241/">ELEC 241: Fundamentals of Electrical Engineering I</a></li>
+<li><a href="https://www.dpmms.cam.ac.uk/~twk/">Coding and
+Cryptography</a></li>
+<li><a href="https://www.cis.upenn.edu/~jean/gbooks/geom1.html">Curves
+and Surfaces in Geometric Modeling</a></li>
+<li><a href="https://www.ece.rice.edu/~dhj/courses/elec241/">ELEC 241:
+Fundamentals of Electrical Engineering I</a></li>
 <li><a href="https://giscommons.org/">GIS Commons</a></li>
-<li>HAKMEM: <a href="https://www.jjj.de/hakmem/hakmem.html" class="uri">https://www.jjj.de/hakmem/hakmem.html</a>, <a href="https://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html" class="uri">https://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html</a>, <a href="http://hakmem.org/" class="uri">http://hakmem.org/</a>, <a href="http://w3.pppl.gov/~hammett/work/2009/AIM-239-ocr.pdf" class="uri">http://w3.pppl.gov/~hammett/work/2009/AIM-239-ocr.pdf</a>, <a href="http://www.pipeline.com/~hbaker1/hakmem/hakmem.html" class="uri">http://www.pipeline.com/~hbaker1/hakmem/hakmem.html</a></li>
-<li><a href="https://archive.org/details/IntroductionToSoundProcessing">Introduction to Sound Processing</a></li>
-<li><a href="https://homepages.abdn.ac.uk/d.j.benson/pages/html/maths-music.html">Music: a Mathematical Offering</a></li>
-<li><a href="https://www.cs.cornell.edu/home/kleinber/networks-book/">Networks, Crowds, and Markets: Reasoning About a Highly Connected World</a></li>
-<li><a href="https://github.com/bobeff/programming-math-science">Programming, Math, Science</a></li>
-<li><a href="https://www.gutenberg.org/ebooks/972">The Devil's Dictionary</a></li>
+<li>HAKMEM: <a href="https://www.jjj.de/hakmem/hakmem.html"
+class="uri">https://www.jjj.de/hakmem/hakmem.html</a>, <a
+href="https://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html"
+class="uri">https://www.inwap.com/pdp10/hbaker/hakmem/hakmem.html</a>,
+<a href="http://hakmem.org/" class="uri">http://hakmem.org/</a>, <a
+href="http://w3.pppl.gov/~hammett/work/2009/AIM-239-ocr.pdf"
+class="uri">http://w3.pppl.gov/~hammett/work/2009/AIM-239-ocr.pdf</a>,
+<a href="http://www.pipeline.com/~hbaker1/hakmem/hakmem.html"
+class="uri">http://www.pipeline.com/~hbaker1/hakmem/hakmem.html</a></li>
+<li><a
+href="https://archive.org/details/IntroductionToSoundProcessing">Introduction
+to Sound Processing</a></li>
+<li><a
+href="https://homepages.abdn.ac.uk/d.j.benson/pages/html/maths-music.html">Music:
+a Mathematical Offering</a></li>
+<li><a
+href="https://www.cs.cornell.edu/home/kleinber/networks-book/">Networks,
+Crowds, and Markets: Reasoning About a Highly Connected World</a></li>
+<li><a
+href="https://github.com/bobeff/programming-math-science">Programming,
+Math, Science</a></li>
+<li><a href="https://www.gutenberg.org/ebooks/972">The Devil's
+Dictionary</a></li>
 <li><a href="http://www.catb.org/jargon/">The Jargon File</a></li>
-<li><a href="https://www.cia.gov/the-world-factbook/">The World Factbook</a></li>
-<li><a href="http://nashnasreddin.ru/">всё о Ходже Насреддине из книги Леонида Соловьёва и не только…</a></li>
-<li><a href="http://lib.ru/ANEKDOTY/fedot.txt">Про Федота-стрельца, удалого молодца</a></li>
+<li><a href="https://www.cia.gov/the-world-factbook/">The World
+Factbook</a></li>
+<li><a href="http://nashnasreddin.ru/">всё о Ходже Насреддине из книги
+Леонида Соловьёва и не только…</a></li>
+<li><a href="http://lib.ru/ANEKDOTY/fedot.txt">Про Федота-стрельца,
+удалого молодца</a></li>
 </ul>
 </body>
 </html>
