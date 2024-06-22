@@ -10,7 +10,7 @@ autotools="autoconf automake libtool"
 qt="libqt4-dev qt5-qmake qtbase5-dev qttools5-dev-tools"
 #sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
 common_dev="$autotools build-essential cmake pkg-config $qt"
-# libglib2.0-dev $gtk libpango1.0-dev $sdl libsqlite3-dev libssl-dev libz-dev
+# libglib2.0-dev $gtk libpango1.0-dev $sdl
 
 c_cpp="gcc g++"
 check="cppcheck splint"
@@ -30,8 +30,9 @@ dev="$common_dev $my_dev $unetbootin"
 
 
 download="wget yt-dlp"
-sylpheed="sylpheed bsfilter"
-net="liferea qbittorrent tor $download $sylpheed"
+#sylpheed="sylpheed bsfilter"
+net="liferea qbittorrent tor $download"
+# $sylpheed
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
@@ -52,12 +53,10 @@ apt="apt-doc aptitude aptitude-doc-en"
 debian="debtree apt-transport-tor $apt"
 # debmirror
 system="$files $disk $debian $encfs htop shellcheck"
-# bum
 
 images="geeqie rawtherapee hugin"
-#cue="cuetools shntool flac"
-players="audacious vlc"
-# $cue
+cue="cuetools shntool flac"
+players="audacious $cue vlc"
 other="$images $players alsa-utils"
 
 

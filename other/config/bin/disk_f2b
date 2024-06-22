@@ -4,8 +4,9 @@ dir=$(pwd -P)
 
 mv -v "${dir}"/travmaturg/семейное "${dir}"/backup/personal/latest || exit 1
 
-#mv -v '${dir}"/travmaturg/archive "${dir}"/backup/downloadable/latest
+#mv -v "${dir}"/travmaturg/archive "${dir}"/backup/downloadable/latest
 #mv -v "${dir}"/travmaturg/public "${dir}"/backup/downloadable/latest
+mv -v "${dir}"/travmaturg/archive_big "${dir}"/backup/downloadable/latest
 mv -v "${dir}"/travmaturg/public_extra "${dir}"/backup/downloadable/latest
 
 mkdir -p "${dir}"/backup/other

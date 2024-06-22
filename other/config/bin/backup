@@ -102,6 +102,8 @@ process () {
 
   if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/archive archive; fi
 
+  if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir_big}"/archive_big archive_big; fi
+
   mk_snapshot "${rs_filter}" "${tr_dir}"/raw_samples raw_samples
 
   if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/public public; fi
@@ -134,7 +136,7 @@ if
   try_mnt "${corsair_survivor_stealth_128_gb}" || \
   false
 then
-  process "${lvl_flash}" "${usb_dir}"/backup
+  process "${lvl_flash}" "${usb_dir}"/travmaturg_backup
   umount "${usb_dir}"
   exit 0
 fi
@@ -148,7 +150,7 @@ if
   try_mnt "${wd_red_1_tb}" || \
   false
 then
-  process "${lvl_ext_1}" "${usb_dir}"/backup
+  process "${lvl_ext_1}" "${usb_dir}"/travmaturg_backup
   umount "${usb_dir}"
   exit 0
 fi
@@ -162,7 +164,7 @@ if
   try_mnt "${wd_my_passport_ultra_3_tb_blue}" || \
   false
 then
-  process "${lvl_ext_2}" "${usb_dir}"/backup
+  process "${lvl_ext_2}" "${usb_dir}"/travmaturg_backup
   umount "${usb_dir}"
   exit 0
 fi
@@ -176,13 +178,13 @@ toshiba_n300_6_tb="a23c6653-062e-4461-a692-3e17863ebf28"
 toshiba_x300_8_tb="951c1617-4b02-4ac6-9d64-99506b1cb36e"
 
 if
-  #try_mnt "${seagate_ironwolf_6_tb}" || \
+  try_mnt "${seagate_ironwolf_6_tb}" || \
   try_mnt "${toshiba_mg_6_tb}" || \
   try_mnt "${toshiba_n300_6_tb}" || \
-  try_mnt "${toshiba_x300_8_tb}" || \
+  #try_mnt "${toshiba_x300_8_tb}" || \
   false
 then
-  process "${lvl_das}" "${usb_dir}"/backup
+  process "${lvl_das}" "${usb_dir}"/travmaturg_backup
   umount "${usb_dir}"
   exit 0
 fi
@@ -193,7 +195,7 @@ fi
 if
   true
 then
-  process "${lvl_local}" /big_files/backup
+  process "${lvl_local}" /big_files/travmaturg_backup
   exit 0
 fi
 

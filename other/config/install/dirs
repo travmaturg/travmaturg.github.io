@@ -11,9 +11,10 @@ l="ln -s -T"
 $l /media ~/0_media
 $l /usr/share/doc ~/0_doc
 
-tmp=/var/tmp/travmaturg
-mkdir -p $tmp
-$l $tmp ~/0_tmp
+#tmp=/var/tmp/travmaturg
+#tmp=$f/tmp
+#mkdir -p $tmp
+#$l $tmp ~/0_tmp
 
 download=$bf/download
 mkdir -p $download
@@ -28,6 +29,7 @@ $l $f/my ~/0_my
 $l $f/public ~/0_public
 $l $f/raw_samples ~/0_raw_samples
 
+$l $bf/archive_big ~/0_archive_big
 $l $bf/porn ~/0_porn
 $l $bf/public_extra ~/0_public_extra
 $l $bf/unsorted ~/0_unsorted
