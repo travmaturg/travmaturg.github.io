@@ -102,7 +102,7 @@ process () {
 
   if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir}"/archive archive; fi
 
-  if [ "$1" -ge "${lvl_ext_1}" ] || [ "$1" -eq "${lvl_local}" ]; then mk_snapshot "" "${tr_dir_big}"/archive_big archive_big; fi
+  if [ "$1" -ge "${lvl_ext_1}" ]; then mk_snapshot "" "${tr_dir_big}"/archive_big archive_big; fi
 
   mk_snapshot "${rs_filter}" "${tr_dir}"/raw_samples raw_samples
 

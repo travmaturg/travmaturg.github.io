@@ -2,15 +2,15 @@
 
 dir=$(pwd -P)
 
-mv -v "${dir}"/travmaturg/семейное "${dir}"/backup/personal/latest || exit 1
+mv -v "${dir}"/travmaturg/семейное "${dir}"/travmaturg_backup/personal/latest || exit 1
 
-#mv -v "${dir}"/travmaturg/archive "${dir}"/backup/downloadable/latest
-#mv -v "${dir}"/travmaturg/public "${dir}"/backup/downloadable/latest
-mv -v "${dir}"/travmaturg/archive_big "${dir}"/backup/downloadable/latest
-mv -v "${dir}"/travmaturg/public_extra "${dir}"/backup/downloadable/latest
+#mv -v "${dir}"/travmaturg/archive "${dir}"/travmaturg_backup/downloadable/latest
+#mv -v "${dir}"/travmaturg/public "${dir}"/travmaturg_backup/downloadable/latest
+mv -v "${dir}"/travmaturg/archive_big "${dir}"/travmaturg_backup/downloadable/latest
+mv -v "${dir}"/travmaturg/public_extra "${dir}"/travmaturg_backup/downloadable/latest
 
-mkdir -p "${dir}"/backup/other
+mkdir -p "${dir}"/travmaturg_backup/other
 
-mv -v "${dir}"/travmaturg/porn "${dir}"/backup/other
-mv -v "${dir}"/travmaturg/unsorted "${dir}"/backup/other
+mv -v "${dir}"/travmaturg/porn "${dir}"/travmaturg_backup/other
+mv -v "${dir}"/travmaturg/unsorted "${dir}"/travmaturg_backup/other
 
