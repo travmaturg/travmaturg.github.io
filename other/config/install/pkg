@@ -44,7 +44,7 @@ tex="texlive texlive-lang-cyrillic texlive-htmlxml"
 vim="vim-gtk3 vim-doc"
 text="$dict $diff $view $tex $vim asciidoc pandoc"
 
-space="gdmap qdirstat ncdu fslint fdupes"
+space="gdmap qdirstat ncdu fdupes"
 archives="zip unzip unar p7zip"
 files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"

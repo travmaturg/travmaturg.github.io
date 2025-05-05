@@ -161,7 +161,7 @@ fi
 wd_my_passport_ultra_3_tb_blue="a15c91ba-73de-4e11-86b0-8968360a2d18"
 
 if
-  try_mnt "${wd_my_passport_ultra_3_tb_blue}" || \
+  #try_mnt "${wd_my_passport_ultra_3_tb_blue}" || \
   false
 then
   process "${lvl_ext_2}" "${usb_dir}"/travmaturg_backup
@@ -179,9 +179,9 @@ toshiba_x300_8_tb="951c1617-4b02-4ac6-9d64-99506b1cb36e"
 
 if
   try_mnt "${seagate_ironwolf_6_tb}" || \
-  try_mnt "${toshiba_mg_6_tb}" || \
+  #try_mnt "${toshiba_mg_6_tb}" || \
   try_mnt "${toshiba_n300_6_tb}" || \
-  #try_mnt "${toshiba_x300_8_tb}" || \
+  try_mnt "${toshiba_x300_8_tb}" || \
   false
 then
   process "${lvl_das}" "${usb_dir}"/travmaturg_backup
