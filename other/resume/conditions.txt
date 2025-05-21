@@ -1,0 +1,38 @@
+<<<>>>=
+Я пытался экономить моё время и время работодателей, но у кадровиков от этого ломается скрипт.
+Придётся озвучивать в процессе работы.
+
+I have tried to save my time and employers' time, but HRs can't process that due to broken script.
+So the remaining option is to inform when work has already started.
+
+
+<<<rus>>>=
+\section{Условия работы}
+
+\begin{itemize}
+\item Я сохраняю копирайт на мои вещи, которые не связаны с работой.
+\item Рабочие аккаунты отдельно, личные отдельно. Без моего паспорта и биометрии.
+\item Выходные - это выходные. Подальше от продакшена, чтобы не звонили ночью.
+\item Я не заинтересован в карьере менеджера и у меня нет способностей к этому.
+\item Я не посещаю тоталитарные дыры с <<<Key disclosure law>>>.
+\item Никакой гостайны.
+\end{itemize}
+
+
+<<<eng>>>=
+\section{Working conditions}
+
+\begin{itemize}
+\item I keep copyright on my stuff that is not related to work.
+\item Work and personal accounts are separate. Without my passport and biometrics.
+\item Weekends are weekends. Far from production so I don't have night calls.
+\item I'm not interested in becoming manager and I lack talent for it.
+\item I'm not visiting totalitarian holes with <<<Key disclosure law>>>.
+\item No classified information.
+\end{itemize}
+
+
+<<<Key disclosure law>>>=
+\url{https://en.wikipedia.org/wiki/Key_disclosure_law}
+<<<>>>=
+
