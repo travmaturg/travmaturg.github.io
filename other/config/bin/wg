@@ -1,4 +1,0 @@
-#!/bin/sh
-
-wget --force-directories --adjust-extension --recursive --convert-links --no-parent "$1"
-

@@ -1,4 +1,0 @@
-#!/bin/sh
-
-yt-dlp --trim-filenames 100 --prefer-free-formats "$1"
-

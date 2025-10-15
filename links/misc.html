@@ -7,9 +7,6 @@
   <title>misc</title>
   <style type="text/css">
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -58,6 +58,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -84,9 +88,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -148,10 +153,18 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
@@ -171,6 +184,7 @@ class="uri">https://www.news2.ru/</a></li>
 <li><a href="https://22century.ru/">XX2 век</a></li>
 <li><a href="https://phys.org/" class="uri">https://phys.org/</a></li>
 <li><a href="https://newatlas.com/">New Atlas</a></li>
+<li><a href="https://hightech.plus/">Хайтек+</a></li>
 </ul>
 <h2>блоги</h2>
 <ul>
@@ -355,20 +369,27 @@ href="https://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D
 <li>rutor: <a href="https://rutor.info/"
 class="uri">https://rutor.info/</a>, <a href="https://rutor.is/"
 class="uri">https://rutor.is/</a></li>
-<li><a href="https://nnmclub.to/">NNM-Club</a></li>
+<li>NNM-Club: <a href="https://nnmclub.to/"
+class="uri">https://nnmclub.to/</a>, <a
+href="http://nnmclub2vvjqzjne6q4rrozkkkdmlvnrcsyes2bbkm7e5ut2aproy4id.onion/"
+class="uri">http://nnmclub2vvjqzjne6q4rrozkkkdmlvnrcsyes2bbkm7e5ut2aproy4id.onion/</a></li>
 <li>BTSOW: <a href="https://btsow.lol/"
 class="uri">https://btsow.lol/</a>, <a href="https://btsow.pics/"
 class="uri">https://btsow.pics/</a>, <a href="https://btsow.com/"
 class="uri">https://btsow.com/</a>, <a href="https://tellme.pw/btsow"
 class="uri">https://tellme.pw/btsow</a></li>
-<li>LimeTorrents: <a href="https://www.limetorrents.lol/"
+<li>LimeTorrents: <a href="https://www.limetorrents.fun/"
+class="uri">https://www.limetorrents.fun/</a>, <a
+href="https://www.limetorrents.lol/"
 class="uri">https://www.limetorrents.lol/</a>, <a
 href="https://www.limetorrents.info/"
 class="uri">https://www.limetorrents.info/</a>, <a
 href="https://www.limetorrents.co/"
 class="uri">https://www.limetorrents.co/</a>, <a
 href="https://www.limetorrents.cc/"
-class="uri">https://www.limetorrents.cc/</a></li>
+class="uri">https://www.limetorrents.cc/</a>, <a
+href="https://www.limetorrents.asia/"
+class="uri">https://www.limetorrents.asia/</a></li>
 <li>YourBittorrent: <a href="https://yourbittorrent.com/"
 class="uri">https://yourbittorrent.com/</a>, <a
 href="https://yourbittorrent2.com/"

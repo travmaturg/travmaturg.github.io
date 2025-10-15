@@ -1,38 +1,32 @@
 #!/bin/sh
 
 
-#install="aptitude --without-recommends install"
 install="apt-get --no-install-recommends --ignore-missing --show-progress install"
 
 
 autotools="autoconf automake libtool"
-#gtk="libgtk-3-dev"
-qt="libqt4-dev qt5-qmake qtbase5-dev qttools5-dev-tools"
-#sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
-common_dev="$autotools build-essential cmake pkg-config $qt"
-# libglib2.0-dev $gtk libpango1.0-dev $sdl
-
 c_cpp="gcc g++"
+common_dev="$autotools build-essential $c_cpp cmake make pkg-config"
+
 check="cppcheck splint"
 git="git git-doc gitk git-gui"
 scheme="racket racket-doc"
 tiff="libtiff-dev libtiff-doc"
-my_dev="$c_cpp $check $git make manpages-dev libpng-dev $scheme $tiff"
+manpages="manpages-dev manpages-posix manpages-posix-dev"
+my_dev="$check $git $manpages libpng-dev $scheme $tiff"
 
-#freeciv="libatk1.0-dev libcurl-dev libgdk-pixbuf2.0-dev libicu-dev liblua5.4-dev"
-# glib gtk pango pkg-config sdl
+#sdl="libsdl2-dev libsdl2-mixer-dev libsdl2-net-dev"
+#freeciv="libcurl-dev libgtk-3-dev libicu-dev liblua5.4-dev $sdl"
 
-unetbootin="mtools syslinux"
-# qt
+qt="qt5-qmake qtbase5-dev qttools5-dev"
+unetbootin="mtools $qt syslinux"
 
 dev="$common_dev $my_dev $unetbootin"
 # $freeciv
 
 
 download="wget yt-dlp"
-#sylpheed="sylpheed bsfilter"
 net="liferea qbittorrent tor $download"
-# $sylpheed
 
 dict_en_ru="dict-freedict-eng-rus mueller7-dict"
 dict_comp="dict-foldoc dict-jargon dict-vera"
@@ -44,15 +38,14 @@ tex="texlive texlive-lang-cyrillic texlive-htmlxml"
 vim="vim-gtk3 vim-doc"
 text="$dict $diff $view $tex $vim asciidoc pandoc"
 
-space="gdmap qdirstat ncdu fdupes"
+space="czkawka-gui fdupes gdmap ncdu qdirstat"
 archives="zip unzip unar p7zip"
 files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"
 encfs="encfs libpam-encfs"
 apt="apt-doc aptitude aptitude-doc-en"
-debian="debtree apt-transport-tor $apt"
-# debmirror
-system="$files $disk $debian $encfs htop shellcheck"
+debian="debmirror debtree apt-transport-tor $apt"
+system="$files $disk $debian $encfs htop memtest86+ shellcheck"
 
 images="geeqie rawtherapee hugin"
 cue="cuetools shntool flac"

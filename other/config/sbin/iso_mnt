@@ -1,4 +1,0 @@
-#!/bin/sh
-
-mkdir "$1.mnt"
-mount "$1" "$1.mnt" -t iso9660 -o loop

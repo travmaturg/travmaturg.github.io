@@ -1,6 +1,0 @@
-#!/bin/sh
-
-sync
-badblocks -n -s -v "$1"
-sync
-

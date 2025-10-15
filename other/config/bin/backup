@@ -178,8 +178,8 @@ toshiba_n300_6_tb="a23c6653-062e-4461-a692-3e17863ebf28"
 toshiba_x300_8_tb="951c1617-4b02-4ac6-9d64-99506b1cb36e"
 
 if
-  try_mnt "${seagate_ironwolf_6_tb}" || \
-  #try_mnt "${toshiba_mg_6_tb}" || \
+  #try_mnt "${seagate_ironwolf_6_tb}" || \
+  try_mnt "${toshiba_mg_6_tb}" || \
   try_mnt "${toshiba_n300_6_tb}" || \
   try_mnt "${toshiba_x300_8_tb}" || \
   false
