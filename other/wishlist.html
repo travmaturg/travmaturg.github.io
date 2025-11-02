@@ -7,9 +7,6 @@
   <title>wishlist</title>
   <style type="text/css">
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -58,6 +58,10 @@
       color: #1a1a1a;
     }
     img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
       max-width: 100%;
     }
     h1, h2, h3, h4, h5, h6 {
@@ -84,9 +88,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -148,10 +153,18 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
@@ -176,11 +189,10 @@
 Nero</a></li>
 <li><a href="http://www.bjoernsted.de/en/chocolates/">björnsted</a></li>
 <li><a href="https://blanxart.com/en/">Blanxart</a></li>
-<li><a href="https://cacaocrudo.it/en/chocolate-and-cacao-3">Cacao
-Crudo</a></li>
+<li><a href="https://cacaocrudo.it/en">Cacao Crudo</a></li>
 <li><a
 href="https://www.kimchoc.be/cachet/tablets-bars/">Cachet</a></li>
-<li><a href="https://cluizel.com/en/category/bars/dark">CLUIZEL</a></li>
+<li><a href="https://cluizel.com/en/37-chocolate-bars">CLUIZEL</a></li>
 <li><a href="https://www.hachez.de/produktwelt/">HACHEZ</a></li>
 <li><a href="https://www.munz.ch/en/swiss-organic">Munz Organic</a></li>
 <li><a href="https://greenmania.ru/chocolate">Nilambari</a></li>
@@ -189,12 +201,10 @@ href="https://www.kimchoc.be/cachet/tablets-bars/">Cachet</a></li>
 href="https://www.swisschocolate.ch/en/chocolates">Stella</a></li>
 <li><a href="https://vivani.de/chocolates/">Vivani</a></li>
 <li><a href="https://www.chococraft.ru/">Добро</a></li>
-<li><a href="https://bio2you.ru/shokolad">Живые снеки</a></li>
 <li><a
 href="https://store.pobedavkusa.ru/catalog/iz-unikalnykh-kakao-bobov-9869/"
 class="uri">https://store.pobedavkusa.ru/catalog/iz-unikalnykh-kakao-bobov-9869/</a></li>
-<li><a href="https://namedu.me/index.php/products">Шоколад На
-Меду</a></li>
+<li><a href="https://namedu.me/">Шоколад На Меду</a></li>
 </ul>
 <h2>пыльца из разных частей планеты</h2>
 <p>(я её ем, потому что в организме чего-то не хватает)</p>
@@ -226,7 +236,7 @@ USB Data Blocker</a></li>
 <ul>
 <li><a href="https://centrance.com/dacport-hd/">CEntrance DACport
 HD</a></li>
-<li><a href="https://m-audio.com/products/view3/transit-pro">M-Audio
+<li><a href="https://www.m-audio.com/legacy/transit-pro.html">M-Audio
 Transit Pro</a></li>
 <li><a href="http://www.nu-force.ru/nuforce/1380557134/">NuForce
 uDAC-3</a></li>
@@ -288,8 +298,8 @@ class="uri">https://geekboards.ru/collection/keyboards/without-numpad</a></li>
 </ul>
 <p>примеры:</p>
 <ul>
-<li><a href="https://global.beyerdynamic.com/dt-150.html">Beyerdynamic
-DT 150</a></li>
+<li><a href="https://global.beyerdynamic.com/p/dt-150">Beyerdynamic DT
+150</a></li>
 <li><a href="https://www.roland.com/ru/products/rh-300/">Roland
 RH-300</a></li>
 </ul>
