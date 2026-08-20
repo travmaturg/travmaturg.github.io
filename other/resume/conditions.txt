@@ -16,6 +16,7 @@ So the remaining option is to inform when work has already started.
 \item Я не заинтересован в карьере менеджера и у меня нет способностей к этому.
 \item Я не посещаю тоталитарные дыры с <<<Key disclosure law>>>.
 \item Никакой гостайны.
+\item Я не отвечаю за действия ИИ.
 \end{itemize}
 
 
@@ -29,6 +30,7 @@ So the remaining option is to inform when work has already started.
 \item I'm not interested in becoming manager and I lack talent for it.
 \item I'm not visiting totalitarian holes with <<<Key disclosure law>>>.
 \item No classified information.
+\item I'm not responsible for what AI do.
 \end{itemize}
 
 
