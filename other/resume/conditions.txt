@@ -28,7 +28,7 @@ So the remaining option is to inform when work has already started.
 \item Work and personal accounts are separate. Without my passport and biometrics.
 \item Weekends are weekends. Far from production so I don't have night calls.
 \item I'm not interested in becoming manager and I lack talent for it.
-\item I'm not visiting totalitarian holes with <<<Key disclosure law>>>.
+\item I don't visit totalitarian holes with <<<Key disclosure law>>>.
 \item No classified information.
 \item I'm not responsible for what AI do.
 \end{itemize}
