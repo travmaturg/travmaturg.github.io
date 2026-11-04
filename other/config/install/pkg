@@ -39,7 +39,7 @@ vim="vim-gtk3 vim-doc"
 text="$dict $diff $view $tex $vim asciidoc pandoc"
 
 space="czkawka-gui fdupes gdmap ncdu qdirstat"
-archives="zip unzip unar p7zip"
+archives="zip unzip unar 7zip"
 files="$space $archives mc rsync"
 disk="gparted gsmartcontrol"
 encfs="encfs libpam-encfs"
